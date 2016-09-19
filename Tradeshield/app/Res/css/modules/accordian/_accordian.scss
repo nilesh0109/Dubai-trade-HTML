@@ -1,0 +1,54 @@
+.accordian {
+    .panel {
+        box-shadow: none;
+        margin: 10px -15px;
+        border-radius: 0;
+
+        .panel-title {
+            font-size: $font-24;
+            font-family: $font-helveticaLt;
+            color: $black;
+            position: relative;
+
+            > a {
+                display: block;
+                position: relative;
+                z-index: 1;
+
+                @include padding-right(30px);
+            }
+
+            &:after {
+                content: "+";
+                color: $red-color;
+                font-size: $font-24;
+                position: absolute;
+
+                @include right(0);
+
+                top: 0;
+                line-height: 16px;
+            }
+        }
+
+        .panel-body {
+            font-size: $font-14;
+            line-height: 1.5;
+            padding: 25px 30px;
+        }
+
+        &.open {
+            border: 1px solid $lightgray;
+
+            .panel-title {
+                &:after {
+                    content: "";
+                    width: 18px;
+                    height: 1px;
+                    background: $red-color;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

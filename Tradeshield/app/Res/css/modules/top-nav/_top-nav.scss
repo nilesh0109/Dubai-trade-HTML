@@ -1,0 +1,161 @@
+.navContainer {
+    background: $white;
+    padding: 8px 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    > .container {
+        font-size: 0px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        position: relative;
+    }
+
+    .logo-wrapper {
+        display: inline-block;
+        vertical-align: middle;
+        width: 20%;
+        font-size: 16px;
+
+        @media (max-width: $screen-xs-max) {
+            width: 50%;
+        }
+
+        .logo-link {
+            display: inline-block;
+        }
+    }
+
+    .top-nav-wrapper {
+        @media (max-width: $screen-xs-max) {
+            width: 300px;
+            position: fixed;
+
+            @include right(-300px);
+
+            background: #fff;
+            z-index: 1;
+            top: 0;
+            bottom: 0;
+            transition: $text-right 0.25s ease-in-out;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        display: inline-block;
+        vertical-align: middle;
+        text-align: $text-right;
+        width: 80%;
+        font-size: 16px;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    ul.top-nav {
+        @media (min-width: $screen-sm-min) {
+            display: table;
+            table-layout: fixed;
+
+            @include margin-left(auto);
+
+            @include margin-right(0px);
+        }
+
+        > li {
+            display: table-cell;
+            vertical-align: top;
+            text-align: $text-right;
+            text-transform: uppercase;
+
+            @include padding-right(20px);
+
+            @media (max-width: $screen-sm-max) {
+                font-size: $font-14;
+
+                @include padding-right(12px);
+            }
+
+            @media (max-width: $screen-xs-max) {
+                width: auto !important;
+            }
+
+            &:last-child {
+                @include padding-right(0px);
+            }
+
+            > a {
+                color: $gray;
+            }
+
+            &.active {
+                > a {
+                    color: $yellow;
+                }
+            }
+
+            @media (max-width: $screen-xs-max) {
+                display: block;
+                padding: 15px;
+                font-size: $font-20;
+                margin: 0;
+                border-bottom: 1px solid $lightgray;
+                text-align: $text-left;
+
+                @include margin-left(2px);
+
+                &:not(.hamburger-logo) {
+                    &.active, &:hover {
+                        background: $red-color;
+
+                        > a {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mobile-menu-btn {
+    cursor: pointer;
+    position: absolute;
+
+    @include right(10px);
+
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+
+    @media (min-width: $screen-sm-min) {
+        display: none;
+    }
+}
+
+body {
+    position: relative;
+
+    @include right(0);
+
+    transition: $text-right 0.25s ease-in-out;
+
+    &.pushed-left {
+        @include right(300px);
+
+        overflow: hidden;
+
+        @media (max-width: $screen-xs-max) {
+            header {
+                .top-nav-wrapper {
+                    @include right(0px);
+
+                    box-shadow: 11px -5px 6px -10px $gray inset;
+                }
+            }
+        }
+    }
+}

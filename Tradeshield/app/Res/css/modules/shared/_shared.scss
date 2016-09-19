@@ -1,0 +1,172 @@
+.remove-pad {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.float-l {
+    float: left;
+}
+
+.float-r {
+    float: right;
+}
+
+.display-inline-block-ele {
+    display: inline-block;
+}
+
+.display-block-ele {
+    display: block;
+}
+
+.display-none-ele {
+    display: none;
+}
+
+.display-table-ele {
+    display: table;
+}
+
+.display-table-cell-ele {
+    display: table-cell;
+}
+
+.red-text {
+    color: $red-color;
+}
+
+.textWrapper {
+    overflow: hidden;
+}
+
+.mob-text-left {
+    @media (max-width: $screen-xs-max) {
+        text-align: $text-left;
+    }
+}
+
+.mob-text-center {
+    @media (max-width: $screen-xs-max) {
+        text-align: center;
+    }
+}
+
+.vertical-align-parent {
+    position: relative;
+}
+
+.vertical-align-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vertical-center-element {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+ol,
+ol li {
+    list-style-type: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+body .wrapper {
+    background-color: $white;
+}
+
+.content p.line-height-1 {
+    line-height: 1;
+}
+
+h2.page-title {
+    color: $red-color;
+    font-size: $font-36;
+    font-family: $font-helveticaLt;
+    padding: 20px 0;
+}
+
+.black-text {
+    color: $black;
+
+    &:hover {
+        color: $black;
+    }
+}
+
+.link {
+    color: $yellow;
+
+    &:hover, &:focus, &:active {
+        color: $yellow;
+    }
+}
+
+.yellow-text {
+    color: $yellow;
+
+    &:hover, &:focus, &:active {
+        color: $yellow;
+    }
+}
+
+.red-button {
+    background: $red-color;
+    padding: 5px 30px;
+    color: $white;
+    display: inline-block;
+
+    &:hover, &:focus, &:active {
+        background: $red-color;
+        color: $white;
+    }
+
+    &.disabled {
+        background: $lightgray;
+    }
+}
+
+.no-left-padding {
+    @include padding-left(0);
+
+    clear: both;
+}
+
+.no-right-padding {
+    @include padding-right(0);
+}
+
+.read-only {
+    visibility: hidden;
+    z-index: -1000;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+
+a.red-text {
+    color: #bd0926;
+
+    &:hover {
+        color: #bd0926;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+header + .main-content,
+header + .breadcrumb-wrapper {
+    @media (min-width: $screen-sm-min) {
+        margin-top: 100px;
+    }
+}

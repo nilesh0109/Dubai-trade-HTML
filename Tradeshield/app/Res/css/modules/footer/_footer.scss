@@ -1,0 +1,100 @@
+footer {
+    padding: 20px 0;
+    background: $lightgray;
+    border-top: 1px solid $red-color;
+
+    a {
+        &:hover {
+            color: $gray;
+        }
+    }
+
+    .bottom-bar {
+        ul {
+            > li {
+                @extend .float-l;
+
+                padding: 0 15px;
+
+                &:first-child {
+                    @include padding-left(0);
+                }
+
+                &:last-child {
+                    @include padding-right(0);
+                }
+
+                @media (max-width: $screen-xs-max) {
+                    float: none;
+                    display: block;
+                    padding: 3px 0;
+                }
+            }
+
+            &.footer-links {
+                li {
+                    @media (min-width: $screen-sm-min) {
+                        position: relative;
+
+                        &:after {
+                            content: '|';
+                            position: absolute;
+
+                            @include right(0px);
+
+                            top: 0px;
+                        }
+
+                        &:last-child:after {
+                            content: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .textContainer {
+            margin-top: 14px;
+            font-size: $font-14;
+
+            @extend .float-l;
+
+            @media (max-width: $screen-xs-max) {
+                text-align: center;
+                width: 100%;
+                clear: both;
+            }
+
+            .terms-link {
+                display: inline-block;
+
+                @media (max-width: $screen-xs-max) {
+                    display: block;
+                }
+
+                a.red-text:hover {
+                    color: $red-color;
+                }
+            }
+        }
+
+        .socialContainer {
+            margin-top: 14px;
+
+            @media (max-width: $screen-xs-max) {
+                margin-top: 5px;
+            }
+
+            .social-links {
+                display: inline-block;
+                vertical-align: bottom;
+
+                li {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}

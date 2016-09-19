@@ -1,0 +1,79 @@
+.card-container {
+    margin-top: 80px;
+    display: table;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 20px 10px;
+
+    @media (max-width: $screen-xs-max) {
+        display: block;
+        border-spacing: 0;
+    }
+
+    .card {
+        display: table-cell;
+        width: 50%;
+        border: 1px solid $lightgray;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 0 2px 0 $lightgray;
+
+        @media (max-width: $screen-xs-max) {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .card-heading {
+            font-size: $font-32;
+            font-family: $font-helveticaLt;
+
+            &:after {
+                content: "";
+                background: $red-color;
+                margin-top: 20px;
+                width: 100px;
+                height: 2px;
+                display: block;
+                margin: 10px auto 20px;
+            }
+
+            margin-top: 20px;
+        }
+
+        .card-copy {
+            line-height: 2;
+        }
+
+        &:before {
+            content: "";
+            transition: all 0.15s ease-in-out;
+            width: 80px;
+            height: 80px;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: $yellow;
+            background-image: url("../images/services/services_sprite.png");
+            background-repeat: no-repeat;
+            margin-top: -50%;
+        }
+
+        &.cover {
+            &:before {
+                background-position: 20px 15px;
+            }
+        }
+
+        &.shipment {
+            &:before {
+                background-position: -430px 15px;
+            }
+        }
+
+        + .card {
+            @media (max-width: $screen-xs-max) {
+                margin-top: 70px;
+            }
+        }
+    }
+}

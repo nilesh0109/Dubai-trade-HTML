@@ -1,0 +1,108 @@
+.breadcrumb-wrapper {
+    > .container {
+        padding: 15px 15px 0;
+
+        .breadcrumb-wrapper {
+            border-bottom: 1px solid $lightgray;
+            font-size: $font-14;
+            padding-bottom: 15px;
+        }
+
+        .breadcrumb {
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+
+            > li {
+                white-space: nowrap;
+
+                > a {
+                    color: $lightgray;
+                    white-space: nowrap;
+                }
+
+                + li {
+                    &:before {
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+
+                        @include rotate(-45deg);
+
+                        display: inline-block;
+
+                        @include margin-right(10px);
+
+                        @include border-right(2px, $lightgray);
+
+                        border-bottom: 2px solid $lightgray;
+                    }
+                }
+
+                &:first-child {
+                    > a {
+                        color: $yellow;
+                    }
+
+                    + li {
+                        &:before {
+                            border-color: $yellow;
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: $screen-xs-max) {
+                float: none  !important;
+            }
+        }
+
+        .print-container {
+            > a {
+                display: inline-block;
+
+                @include margin-right(20px);
+
+                &:last-child {
+                    @include margin-right(0px);
+                }
+
+                @media (max-width: $screen-xs-max) {
+                    @include margin-right(10px);
+
+                    &:last-child {
+                        @include margin-right(0px);
+                    }
+                }
+            }
+
+            @media (max-width: $screen-xs-max) {
+                float: none !important;
+                margin-top: 15px;
+                clear: both;
+            }
+        }
+
+        .print-copy {
+            @include margin-left(10px);
+        }
+
+        .fb {
+            > i {
+                color: $fb;
+            }
+        }
+
+        .twitter {
+            > i {
+                color: $twitter;
+            }
+        }
+
+        .linkedIn {
+            > i {
+                color: $linkedIn;
+            }
+        }
+    }
+}

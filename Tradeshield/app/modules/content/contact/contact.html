@@ -1,0 +1,112 @@
+<div class='container'>
+	<h2 class='page-title text-uppercase'>Contact Dubai Trade</h2>
+	<div class='contact-details black-text'>
+		<strong >Dubai Trade FZE</strong>
+		<p>Floor 10, Galleries #4 Building</p>
+		<p>Downtown Jebel Ali</p>
+		<p>P.O.Box 18666</p>
+		<p>Dubai, UAE</p>
+	</div>
+	<div class='contact-card black-text clearfix'>
+		<div class='contact-data'>
+			<strong>For e-Services Support Contact:</strong>
+			<p>Contact Number: 600 55 55 54</p>
+			<p>International Number: + 971 600 55 55 54</p>
+			<p>Fax: +971 4 812 6777</p>
+			<p class='email'>
+				<span class='email-label'>Email:</span>
+				<a class='red-text' href='mailto:webmaster@example.com'>customercare@dubaitrade.ae</a>
+			</p>
+		</div>
+		<div class='contact-data'>
+			<strong>For Online Advertising Contact:</strong>
+			<p>Raghda Al Tamimi</p>
+			<p>Direct: +971 4 4339396</p>
+			<p>Mobile: +971 56 6819595</p>
+			<p class='email'>
+				<span class='email-label'>Email:</span>
+				<a class='red-text' href='mailto:webmaster@example.com'>raghda.altamimi@dubaitrade.ae</a>
+			</p>
+		</div>
+		<div class='contact-data'>
+			<strong>For General Enquiries Contact Main Reception:</strong>
+			<p>+971 4 4339333</p>
+			<p class='email'>
+				<span class='email-label'>Email:</span>
+				<a class='red-text' href='mailto:webmaster@example.com'>info@dubaitrade.ae</a>
+			</p>
+		</div>
+		<div class='contact-data'>
+			<strong>For Recruitment Contact:</strong>
+			<p class='email'>
+				<span class='email-label'>Email:</span>
+				<a class='red-text' href='mailto:webmaster@example.com'>recruitment@dubaitrade.ae</a>
+			</p>
+		</div>
+	</div>
+	
+	<form autocomplete="off" class='black-text contact-form'>
+		<div class='row'>
+			<div class="form-group col-sm-6 ">
+				<label for="first_name">First name<span class='regMark red-text'>&#42;</span></label>
+				<input type="text" class="form-control" id='first-name' name='first-name' data-rule-required="true" data-msg-required="Please enter your first name" autocomplete="off"/>
+			</div>
+			
+			<div class="form-group  col-sm-6">
+				<label for="last-name">Last name<span class='regMark red-text'>&#42;</span></label>
+				<input type="text" class="form-control" id='last-name' name='last-name' data-rule-required="true" data-msg-required="Please enter your last name" autocomplete="off"/>
+			</div>
+		</div>
+		<div class='row'>
+			<div class="col-sm-6">
+				<div class="form-group" >
+					<label for="company-name">Company Name</label>
+					<input type="text" class="form-control" id="company-name" name="company-name" autocomplete="off"/>
+				</div>
+				<div class="form-group" >
+					<label for="company-address">Company Address</label>
+					<input type="text" class="form-control" id="company-address"  name="company-address" autocomplete="off"/>
+				</div>
+			</div>
+			<div class="form-group  col-sm-6">
+				<label for="comments">Comments</label>
+				<textarea class="form-control" id="comments" name="comments" rows="6" autocomplete="off"></textarea>
+			</div>
+		</div>
+		<div class='row'>
+			<div class="col-sm-6 email-container">
+				<div class="form-group" >
+					<label for="email-address">Email Address<span class='regMark red-text'>&#42;</span></label>
+					<input type="email" class="form-control" id="email-address" name="email-address" data-rule-required="true" data-rule-email="true" data-msg-required="Please enter your email address" data-msg-email="Please enter a valid email address" autocomplete="off"/>
+				</div>
+				<div class="form-group" >
+					<label for="business-activity">Business Activity</label>
+					<input type="text" class="form-control" id="business-activity" name="business-activity" autocomplete="off"/>
+				</div>
+				
+				<div class="form-group" >
+					<label for="phone-number">Phone Number<span class='regMark red-text'>&#42;</span></label>
+					<input type="tel" class="form-control" id="phone-number" name="phone-number" data-rule-required="true" data-msg-required="Please enter your phone number" data-msg-tel="Invalid phone number.Please use Numbers Only(i.e. 971501234567,041234567)" autocomplete="off"/>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group" >
+					<label class="reload-captcha" onclick="Captcha();"><span class="reload"></span></label>
+					<input type="hidden" class="form-control" id="contact-captcha-hidden" name="contact-captcha" value="" disabled />
+					<div class="contact-captcha" id="contact-captcha">
+					</div>
+				</div>
+				
+				<div class="form-group" >
+					<label for="phone-number">Please type the text you see<span class='regMark red-text'>&#42;</span></label>
+					<input type="text" class="form-control" id="input-captcha" name="input-captcha" equalTo='#contact-captcha-hidden'  data-rule-required="true" data-msg-equalTo="Captcha is not matching " data-msg-required="Please enter above captcha" autocomplete="off" />
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<button type="submit" class="btn btn-default red-button">Submit</button>
+		</div>
+		
+	</form>
+</div>

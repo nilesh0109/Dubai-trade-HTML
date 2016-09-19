@@ -1,0 +1,480 @@
+.shipment-nav-container {
+    color: $medgray;
+
+    li {
+        @extend .float-l;
+
+        width: 20%;
+        position: relative;
+
+        @media (max-width: $screen-xs-max) {
+            width: 50%;
+            margin-top: 10px;
+        }
+
+        .step-no {
+            background: $white;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            border: 2px solid $lightgray;
+
+            &:hover {
+                color: $gray;
+            }
+
+            @extend .float-l;
+
+            font-size: $font-32;
+            font-family: $font-helveticaLt;
+            position: relative;
+            z-index: 1;
+
+            &:after {
+                content: "";
+                width: 10px;
+                height: 10px;
+
+                @include rotate(-45deg);
+
+                display: inline-block;
+                background: $white;
+
+                @include border-right($lightgray, 2px);
+
+                border-bottom: 2px solid $lightgray;
+                margin-top: -5px;
+                position: absolute;
+
+                @include right(-6px);
+
+                top: 50%;
+            }
+        }
+
+        .step-desc {
+            margin-top: 32px;
+            color: $gray;
+
+            @include padding-left(2px);
+
+            overflow: hidden;
+            font-size: $font-12;
+
+            > span {
+                display: block;
+            }
+        }
+
+        &:after {
+            content: "";
+            height: 2px;
+            display: inline-block;
+            background: $lightgray;
+            top: 50%;
+            position: absolute;
+            right: 0px;
+            width: 100%;
+        }
+
+        &.current {
+            .step-no {
+                border-color: $red-color;
+                color: $red-color;
+
+                &:after {
+                    border-color: $red-color;
+                }
+            }
+        }
+
+        &.completed {
+            .step-no {
+                border-color: $red-color;
+                position: relative;
+                color: $white;
+
+                > span {
+                    position: relative;
+                    z-index: 3;
+                }
+
+                &:before {
+                    content: "";
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $red-color;
+                    border-radius: 50%;
+                    position: absolute;
+                    z-index: 1;
+                    border: 4px solid $white;
+                }
+
+                &:after {
+                    border-color: $red-color;
+                }
+            }
+
+            .step-desc {
+                color: $red-color;
+            }
+
+            &:after {
+                background: $red-color;
+            }
+        }
+    }
+}
+
+.shipment-form {
+    color: $medgray;
+
+    [class*='col-sm-'] {
+        @media (max-width: $screen-xs-max) {
+            @include padding-left(0);
+
+            @include padding-right(0);
+        }
+    }
+
+    .group-heading {
+        font-family: $font-helveticaLt;
+        font-size: $font-20;
+        text-transform: uppercase;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .form-group-wrapper {
+        padding: 25px 15px 10px;
+        border: 1px solid $lightgray;
+        font-family: $font-arial;
+    }
+
+    .form-group {
+        font-size: $font-14;
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        font-family: $font-arialbold;
+    }
+
+    input {
+        padding: 5px;
+        border: 1px solid $lightgray;
+    }
+
+    .form-select {
+        @include margin-left(0);
+
+        border-color: $lightgray;
+
+        > select {
+            padding: 7px 5px;
+            width: 100%;
+
+            &.not_chosen {
+                color: $lightgray;
+            }
+        }
+
+        .caret {
+            background: $red-color;
+
+            @include border-left(0, transparent);
+
+            &:after {
+                width: 15px;
+                height: 15px;
+                border: 0;
+                margin-top: 2px;
+                border-left: 2px solid $white;
+                border-bottom: 2px solid $white;
+            }
+        }
+    }
+
+    .asterisk {
+        @include margin-left(1px);
+
+        position: relative;
+        top: -4px;
+    }
+
+    .radio-container {
+        label.radio-group {
+            position: relative;
+            margin-top: 5px;
+            margin-bottom: 0;
+
+            @include padding-right(25px);
+
+            input[type="radio"] {
+                position: absolute;
+                width: 100%;
+                opacity: 0;
+                height: 100%;
+
+                &:checked {
+                    ~ span.radio-btn {
+                        background-position: bottom left;
+                    }
+                }
+            }
+
+            .radio-btn {
+                display: inline-block;
+                background-image: url(../images/shipment-detail/form-radio.png);
+                width: 23px;
+                height: 23px;
+                background-repeat: no-repeat;
+                background-position: bottom right;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .date-picker {
+        input.form-control {
+            border-radius: 0;
+            box-shadow: none;
+
+            @include border-right(0px, transparent);
+
+            &:focus {
+                border-color: $lightgray;
+            }
+        }
+
+        .input-group-addon {
+            background: none;
+            box-shadow: none;
+            border-radius: 0;
+            border: 1px solid #ccc;
+
+            @include border-left(0px, transparent);
+        }
+    }
+
+    .tooltip-icon {
+        border: 1px solid $red-color;
+        color: $red-color;
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 21px;
+        vertical-align: middle;
+
+        @include margin-left(8px);
+
+        font-family: $bkant;
+        cursor: pointer;
+        font-size: $font-20;
+        margin-top: -5px;
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+            background: $red-color;
+            color: $white;
+        }
+    }
+
+    input.credit-number-letter {
+        width: 100%;
+        padding: 7px 5px;
+    }
+
+    .next-wrapper {
+        text-align: $text-right;
+        margin: 20px 0 0;
+
+        .next-button, .add-button {
+            background: $red-color;
+            padding: 5px 50px;
+            color: $white;
+            display: inline-block;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    .Commodity-table {
+        display: table;
+        width: 100%;
+
+        @media (max-width: $screen-xs-max) {
+            table-layout: fixed;
+        }
+
+        > .heading-row {
+            display: table-row;
+            font-family: $font-arialbold;
+            font-weight: bold;
+            border-top: 1px solid $lightgray;
+            border-bottom: 1px solid $lightgray;
+
+            > div.table-cell {
+                border-top: 1px solid $lightgray;
+                background: transparent;
+
+                @include border-left(1px, $lightgray);
+            }
+
+            @media (max-width: $screen-xs-max) {
+                display: none;
+            }
+        }
+
+        > .table-row {
+            display: table-row;
+            font-family: $font-arial;
+
+            @media (max-width: $screen-xs-max) {
+                display: table;
+                width: 100%;
+                table-layout: fixed;
+                margin-top: 20px;
+            }
+
+            div.table-cell {
+                border-bottom: 1px solid #fff;
+            }
+        }
+
+        div.table-cell {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 10px;
+            border-bottom: 1px solid $lightgray;
+            background: $lightgray;
+
+            @include border-right(1px, $white);
+
+            &:last-child {
+                @include border-right(1px, $lightgray);
+            }
+
+            a {
+                @include margin-right(20px);
+
+                display: inline-block;
+                margin-top: 5px;
+                margin-bottom: 5px;
+
+                &:hover {
+                    color: $red-color;
+                }
+            }
+
+            input {
+                width: 100%;
+            }
+
+            @media (max-width: $screen-xs-max) {
+                display: table-row;
+                padding: 0;
+
+                &:first-child {
+                    color: $red-color;
+                }
+
+                &:before {
+                    content: attr(data-heading);
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 8px 10px;
+                    width: 30%;
+                    border-bottom: 1px solid $white;
+                }
+
+                > span {
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 8px 10px;
+                    width: 70%;
+
+                    @include border-left(1px, $white);
+
+                    border-bottom: 1px solid $white;
+                }
+
+                > .input-wrapper {
+                    display: table-cell;
+                    vertical-align: middle;
+
+                    @include border-left(1px, $white);
+
+                    border-bottom: 1px solid $white;
+                    padding: 8px 10px;
+
+                    > input {
+                        width: 80%;
+                    }
+                }
+            }
+
+            @media (max-width: $screen-xs-min - 1) {
+                &:before {
+                    width: 40%;
+                }
+
+                > span {
+                    width: 60%;
+                }
+            }
+        }
+    }
+}
+
+.datepicker {
+    table {
+        .day {
+            &.active {
+                background: $red-color !important;
+                border-color: $red-color !important;
+            }
+        }
+    }
+}
+
+form {
+    label.error {
+        color: $red-color;
+        font-size: $font-12;
+    }
+
+    input.error {
+        border-color: $red-color;
+    }
+
+    .selectList-Wrapper.selectList-error {
+        border-color: $red-color;
+    }
+
+    .date.datepicker-error {
+        > * {
+            border-color: $red-color;
+        }
+    }
+}
+
+.tooltip[role="tooltip"] {
+    .tooltip-inner {
+        color: $white;
+        background: rgba(50, 50, 50, 0.8);
+        box-shadow: 0px 0px 1px 0 $gray;
+        border-radius: 3px;
+    }
+
+    .tooltip-arrow {
+        border-top-color: rgba(50, 50, 50, 0.8);
+    }
+}

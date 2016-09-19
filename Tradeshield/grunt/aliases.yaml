@@ -1,0 +1,17 @@
+build:
+- 'clean:dist'
+- 'htmlhint:dev'
+- 'jshint:dev'
+- 'concurrent:dist'
+- 'autoprefixer:dist'
+- 'copy:dist'
+- 'concurrent:minify'
+
+server:
+- 'clean:server'
+- 'concurrent:server'
+- 'autoprefixer:dev'
+- 'fileindex'
+- 'copy:dev'
+- 'browserSync:dev'
+- 'watch'

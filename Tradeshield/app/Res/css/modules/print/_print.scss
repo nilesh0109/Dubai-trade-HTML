@@ -1,0 +1,38 @@
+@media only print {
+    .title-icons {
+        display: none !important;
+    }
+
+    .move-top {
+        display: none !important;
+    }
+
+    .inner-banner > *:not(.hero-container) {
+        display: none !important;
+    }
+
+    .pagination-nav {
+        display: none !important;
+    }
+
+    .map-container {
+        page-break-before: always;
+    }
+
+    a[href]:after {
+        content: none !important;
+    }
+
+    .tabContainer {
+        page-break-before: always;
+    }
+
+    .top-bar, .back-link > a, .back-link:before, .back-link {
+        display: none;
+    }
+
+    footer {
+        position: static;
+        display: none;
+    }
+}

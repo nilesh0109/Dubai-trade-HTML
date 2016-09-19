@@ -1,0 +1,112 @@
+ul.pagination {
+    > li {
+        display: inline-block;
+        vertical-align: middle;
+
+        > a {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            padding: 0;
+            background: $lightgray;
+            border: 2px solid $lightgray;
+            transition: all 0.15s ease-in-out;
+
+            &[aria-label="Previous"],
+            &[aria-label="Next"] {
+                border-radius: 50%;
+                width: 34px;
+                height: 34px;
+                background: transparent;
+
+                &:before {
+                    content: "";
+                    width: 12px;
+                    height: 12px;
+
+                    @include rotate(-45deg);
+
+                    display: inline-block;
+                    border-top: 3px solid $lightgray;
+
+                    @include border-left(3px, $lightgray);
+
+                    margin-top: 8px;
+
+                    @include margin-left(4px);
+                }
+
+                &:hover {
+                    background: $lightgray;
+                    border-color: $lightgray;
+
+                    &:before {
+                        border-color: $white;
+                    }
+                }
+            }
+
+            &[aria-label="Next"] {
+                &:before {
+                    border: 0;
+                    border-bottom: 3px solid $lightgray;
+
+                    @include border-right(3px, $lightgray);
+
+                    margin-top: 8px;
+
+                    @include margin-left(-4px);
+                }
+            }
+
+            &:hover {
+                color: #fff;
+                background: transparent;
+                border-color: $red-color;
+            }
+        }
+
+        + li {
+            @include margin-left(5px);
+        }
+
+        &.disabled {
+            > a, a:hover {
+                background: transparent;
+
+                &:before {
+                    border-color: $lightgray;
+                }
+            }
+        }
+
+        &.active {
+            > a, > a:hover {
+                width: 12px;
+                height: 12px;
+                color: #fff;
+                background: transparent;
+                border-color: $red-color;
+            }
+        }
+
+        &:nth-child(n+8) {
+            @media (max-width: $screen-xs-max) {
+                display: none;
+            }
+        }
+
+        &:nth-child(n+5) {
+            @media (max-width: $screen-xs-min - 1) {
+                display: none;
+            }
+        }
+
+        &:nth-last-child(-n+2) {
+            @media (max-width: $screen-xs-max) {
+                display: inline-block;
+            }
+        }
+    }
+}

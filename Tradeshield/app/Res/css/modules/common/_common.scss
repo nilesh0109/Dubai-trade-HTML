@@ -1,0 +1,161 @@
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    font-family: $font-arial;
+    line-height: normal;
+    color: $gray;
+    font-size: 16px;
+    min-height: 100%;
+}
+
+a {
+    color: $gray;
+    text-decoration: none !important;
+
+    &:hover {
+        color: $gray;
+    }
+
+    &:focus {
+        color: $gray;
+        outline: 0;
+    }
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    margin: 0;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.75;
+}
+
+iframe {
+    display: block;
+}
+
+.container {
+    max-width: 1210px;
+}
+
+.selectList-Wrapper {
+    @include margin-left(10px);
+
+    position: relative;
+    border: 1px solid $gray;
+}
+
+.selectList-Wrapper select {
+    width: 100%;
+    padding: 2px 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: transparent;
+    outline: 0;
+    position: relative;
+    z-index: 1;
+    border: 0;
+
+    &::-ms-expand {
+        display: none;
+    }
+
+    @include padding-right(36px);
+
+    option {
+        color: $black;
+
+        &[disabled] {
+            color: #ccc;
+        }
+    }
+}
+
+.selectList-Wrapper .caret {
+    width: auto;
+    border: 0;
+    margin: 0;
+    padding: 0 10px;
+
+    @include right(0);
+
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    @include border-left(1px, $gray);
+}
+
+.selectList-Wrapper .caret:after {
+    content: "";
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid $white;
+    border-bottom: 5px solid $white;
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    background-color: transparent;
+    transform: rotate(-45deg);
+}
+
+/*--- media quiries ---*/
+@media (max-width: $screen-xs-max) {
+    .container {
+        @include padding-left(15px);
+
+        @include padding-right(15px);
+    }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {}
+
+@media (min-width: $screen-lg-min) {
+    .container {
+        width: 1210px;
+        max-width: 96%;
+    }
+}
+
+.hidden-xs-min {
+    @media (max-width: $screen-xs-min - 1) {
+        display: none;
+    }
+}
+
+.visible-xs-min {
+    @media (max-width: $screen-xs-min - 1) {
+        display: inline-block;
+    }
+
+    @media (min-width: $screen-xs-min) {
+        display: none;
+    }
+}

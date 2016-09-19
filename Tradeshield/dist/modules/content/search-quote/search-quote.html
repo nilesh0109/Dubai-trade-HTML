@@ -1,0 +1,39 @@
+<div class='container'>
+	<h2 class='page-title text-uppercase'>SEARCH QUOTES</h2>
+	<div class='page-content'>
+		<form class='contact-form'>
+			<h3 class='group-heading red-text'>SEARCH QUOTE</h3>
+			<p class=' required'><sup class='red-text'>*</sup> Indicates a required field</p>
+			<div class='form-container clearfix'>
+				<div class='form-group reference'>
+					<label>Quote Reference Number<sup class='red-text'>*</sup></label>
+					<input type='text' class='reference-number' name='quote-reference-number' data-rule-required="true" 
+						data-msg-required="Please enter the ref no."/>
+				</div>
+				<div class='form-group name'>
+					<label>Last Name<sup class='red-text'>*</sup></label>
+					<input type='text' class='last-name' name='last-name' data-rule-required="true" 
+						data-msg-required="Please enter the last name"/>
+				</div>
+				<div class='form-group captcha-input'>
+					<label>Enter Code<sup class='red-text'>*</sup></label>
+					<input type='text' class='captcha-text' name='captcha-text' equalTo='#contact-captcha-hidden'  data-rule-required="true" data-msg-equalTo="Captcha is not matching " data-msg-required="Please enter the text shown in the next field" />
+					<em class='grey-text text-right image-text'>(Image text is Case sensitive)</em>
+				</div>
+				<div class='form-group captcha'>
+					
+					<input type="hidden" class="form-control" id="contact-captcha-hidden" name="contact-captcha" value="" disabled />
+					<div class="contact-captcha" id="contact-captcha"></div>
+					<a href='javascript:void(0)' class="reload-captcha  red-text" onclick="Captcha();">
+						<i class="fa fa-refresh"></i>Refresh Captcha
+					</a>
+					
+				</div>
+				<div class='form-group buttons clearfix'>
+					<input type="reset" class="form-control button pull-left"  name="reset-button" value="RESET"  />
+					<input type="submit" class="form-control button pull-right"  name="submit-button" value="SEARCH"  />
+					
+				</div>
+			</form>
+		</div>
+	</div>

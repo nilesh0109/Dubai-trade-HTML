@@ -1,0 +1,117 @@
+.contact-form {
+    margin-top: 40px;
+
+    .required {
+        font-size: $font-14;
+    }
+
+    .group-heading {
+        font-size: $font-20;
+    }
+
+    .form-container {
+        padding: 20px;
+        border: 1px solid $lightgray;
+        display: block;
+        max-width: 1000px;
+
+        .form-group {
+            width: 47%;
+            display: inline-block;
+            vertical-align: top;
+
+            @media (max-width: $screen-xs-max) {
+                width: 100%;
+            }
+
+            label {
+                font-size: $font-14;
+                display: block;
+                color: $darkgray;
+            }
+
+            > input {
+                width: 100%;
+                padding: 5px;
+                border: 1px solid $lightgray;
+            }
+
+            &:nth-child(2n) {
+                @include margin-left(5%);
+
+                @media (max-width: $screen-xs-max) {
+                    @include margin-left(0%);
+                }
+            }
+        }
+    }
+
+    .image-text {
+        display: block;
+        font-size: $font-14;
+    }
+
+    .contact-captcha {
+        margin-top: 20px;
+        width: 100%;
+        font-size: $font-20;
+        border: 1px solid $lightgray;
+        font-family: $CaptchaCode;
+        text-align: center;
+        color: $black;
+        font-style: italic;
+        line-height: 30px;
+
+        @media (max-width: $screen-xs-max) {
+            margin-top: 0px;
+        }
+    }
+
+    .reload-captcha {
+        display: block;
+        text-align: $text-right;
+        font-size: $font-14;
+        margin-top: 2px;
+        font-style: italic;
+
+        > i {
+            @include margin-right(10px);
+        }
+
+        &:hover {
+            color: $red-color;
+        }
+    }
+
+    .buttons {
+        input[type='submit'].button,
+        input[type='reset'].button {
+            width: 45%;
+            border-radius: 0;
+            background: $lightgray;
+            border: 1px solid $gray;
+            font-size: $font-12;
+            color: $red-color;
+            transition: all 0.15s ease-in-out;
+
+            &[type='submit'] {
+                background: $red-color;
+                color: $white;
+            }
+
+            &:focus {
+                outline: 0;
+            }
+        }
+    }
+}
+
+.contact-form .form-container .form-group {
+    label.error {
+        color: $red-color;
+    }
+
+    input.error {
+        border: 1px solid $red-color;
+    }
+}

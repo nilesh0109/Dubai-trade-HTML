@@ -1,0 +1,51 @@
+.about-us {
+    .page-content {
+        font-family: $font-helveticaLt;
+        color: $gray;
+    }
+
+    .about-heading {
+        font-size: $font-25;
+    }
+
+    p {
+        font-size: $font-16;
+        margin: 20px 0;
+    }
+
+    .about-us-list {
+        list-style-type: none;
+        font-size: $font-16;
+
+        li {
+            list-style-type: none;
+            margin-top: 10px;
+            line-height: 1.25;
+
+            &:before {
+                content: "";
+                width: 5px;
+                height: 5px;
+                background: #aaaaaa;
+                border: 0;
+
+                @extend .float-l;
+
+                margin-top: 7px;
+
+                @include margin-right(10px);
+            }
+
+            > span {
+                display: block;
+                overflow: hidden;
+            }
+
+            img {
+                @include margin-left(5px);
+            }
+
+            margin-top: 20px;
+        }
+    }
+}

@@ -1,0 +1,108 @@
+.tab-Container {
+    margin-top: 20px;
+
+    @media (max-width: $screen-xs-max) {
+        text-align: center;
+    }
+
+    .nav-tabs {
+        @extend .float-l;
+
+        @include margin-right(20px);
+
+        border: 0;
+
+        @media (max-width: $screen-xs-max) {
+            float: none;
+            border-spacing: 10px 0;
+            margin: 0px -10px;
+            text-align: center;
+            width: 100%;
+            width: calc(100% + 20px);
+            width: -webkit-calc(100% + 20px);
+            width: -moz-calc(100% + 20px);
+            width: -ms-calc(100% + 20px);
+            display: table;
+            border-collapse: separate;
+
+            &:before, &:after {
+                content: none;
+            }
+        }
+
+        > li {
+            float: none;
+            border: 0;
+            margin: 0;
+            border-radius: 4px;
+            transition: all 0.15s ease-in-out;
+
+            @media (max-width: $screen-xs-max) {
+                border: 1px solid $red-color;
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            + li {
+                margin-top: 5px;
+
+                @media (max-width: $screen-xs-max) {
+                    @include margin-left(10px);
+
+                    margin-top: 0px;
+                }
+            }
+
+            > a, a:hover, a:focus {
+                color: $red-color;
+                background: transparent;
+                border: 0;
+                border-radius: 0;
+                padding: 8px 0px;
+
+                @include padding-left(20px);
+
+                @include padding-right(30px);
+
+                @media (max-width: $screen-xs-max) {
+                    @include padding-left(5px);
+
+                    @include padding-right(5px);
+                }
+
+                &:before {
+                    content: "";
+                    border: 5px solid transparent;
+                    font-size: 0;
+
+                    @include border-left(5px, $red-color);
+
+                    vertical-align: middle;
+                    margin-top: -3px;
+                    display: inline-block;
+
+                    @include margin-right(5px);
+
+                    @media (max-width: $screen-xs-max) {
+                        content: none;
+                    }
+                }
+            }
+
+            &.active, &:hover {
+                background: $red-color;
+                border-color: $red-color;
+
+                > a, a:hover, a:focus {
+                    color: $white;
+
+                    &:before {
+                        @include border-left(5px, $white);
+                    }
+                }
+            }
+        }
+    }
+
+    .tab-content {}
+}
