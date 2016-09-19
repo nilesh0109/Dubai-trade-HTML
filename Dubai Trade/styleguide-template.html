@@ -1,0 +1,161 @@
+{{> theme}}
+{{> highlight}}
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="../Res/css/styles.css"/>
+<link rel="stylesheet" type="text/css" href="../Res/css/bootstrap-datetimepicker.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../Res/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="../Res/js/custom/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="../Res/js/custom/owl.carousel.js"></script>
+<script type="text/javascript" src="../Res/js/vendor/jquery.validate.js"></script>
+<script type="text/javascript" src="../Res/js/custom/captcha.js"></script>
+<script type="text/javascript" src="../Res/js/custom/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../Res/js/custom/bxslider.js"></script>
+<script type="text/javascript" src="../Res/js/vendor/moment-with-locales.js"></script>
+<script type="text/javascript" src="../Res/js/vendor/bootstrap-datetimepicker.js"></script>
+<style type="text/css">
+.section .result{
+    transform:translate(0,0);
+    -webkit-transform:translate(0,0);
+    -moz-transform:translate(0,0);
+    -ms-transform:translate(0,0);
+}
+</style>
+<script>
+   
+    $(function() {
+
+        // Show section in Styleguide
+        //.show();
+        showSection($('#styleguide-menu a').first().data('section'));
+        // Click on link with subheadings
+        $('#styleguide-menu .submenulink').click(function(event) {
+            $(this).parent().siblings().find('.on').each(function(){
+                $(this).removeClass('on').siblings('.submenu').slideUp().removeClass('on');
+            });
+            event.preventDefault();
+            var jqCurSubmenu = $('[data-submenu="' + $(this).data('section') + '"]');
+            var isCurSubmenuOn = jqCurSubmenu.hasClass('on');
+            if (isCurSubmenuOn) {
+                jqCurSubmenu.slideUp(function(){
+                   $('#styleguide-menu .on').removeClass('on'); 
+                });
+            }
+            else  { 
+                jqCurSubmenu.slideDown(function(){
+                    jqCurSubmenu.addClass('on');
+
+                });
+               $(this).addClass('on'); 
+            }
+            showSection($(this).data('section'));
+        });
+
+        // Click on link without subheadings
+        $('#styleguide-menu .sectionlink').click(function(event) {
+            event.preventDefault();
+            $(this).parent().siblings().find('.on').each(function(){
+                $(this).removeClass('on').siblings('.submenu').slideUp().removeClass('on');
+            });
+            $('#styleguide-menu .on').removeClass('on');
+            $(this).addClass('on');
+            showSection($(this).data('section'));
+        });
+ 
+        // Show/Hide sections
+        function showSection(section) {
+            $('#styleguide .section').hide();
+            var jqCurSections = $('#styleguide .section[data-section="' + section + '"]');
+            jqCurSections.show();
+           
+               if(jqCurSections.find('.resultantScript').length <= 0)
+               {
+                   var scripts = "";
+                   jqCurSections.find('script').each(function(){
+                       scripts += $(this).html();
+                   });
+                 
+                    var resultantScriptTag = document.createElement('script');
+                        resultantScriptTag.setAttribute("type", "text/javascript");
+                        resultantScriptTag.setAttribute("class","resultantScript");
+                        resultantScriptTag.innerHTML = 'function mergedScripts(){'+scripts+'}';
+                        jqCurSections.append(resultantScriptTag);    
+                    
+                    mergedScripts();
+                }
+            $('body,html').animate({
+                scrollTop:0
+            },500);
+        }
+       $(".submenu li > a").on("click",function(e){
+            e.preventDefault();
+            var $target = $($(this).attr('href'));
+            
+            $('body,html').animate({
+                scrollTop:$target.offset().top
+            },500);
+       });
+    }); 
+</script> 
+<div class="wrapper" style="margin-top:10px;padding-left:5px;padding-right:5px;padding-bottom:0px;">
+<header style="padding:20px 0;">
+	<img src="http://tacme.com/img/logo.png" alt="Tacme" class="logo">
+	<div class="header_callout" style="float:right;color: #555;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;">
+		<h3> Style Guide Dubai Trade</h3>
+	</div>
+</header>
+<div id="styleguide-menu" data-spy="affix" data-offset-top="120" style="top:10px;">
+	<ul>
+	{{#each menu}}
+		<li>
+			{{#if headings.0.name}}
+                <a class="submenulink" href="#" data-section="{{name}}">{{name}}</a>
+                <ul class="submenu" data-submenu="{{../name}}">
+                {{#each headings}}
+                    <li><a href="#{{id}}">{{name}}</a></li>
+                {{/each}}
+                </ul>
+			{{/if}}
+            {{#unless headings.0.name}}
+                <a class="sectionlink" href="#" data-section="{{name}}">{{name}}</a>
+            {{/unless}}
+		</li>
+	{{/each}}
+	</ul>
+</div>
+
+<div id="styleguide" style="float:right;">
+	{{#each sections}}
+		<div class="section" id="{{id}}" data-section="{{section}}" data-heading="{{heading}}">
+
+            <div class="comment">
+                <h1>{{section}}{{#if heading}}/{{heading}}{{/if}}</h1>
+                {{{comment}}}
+            </div>
+
+            {{#if code}}
+                <div class="result">
+                    {{{code}}}
+                </div>
+            {{/if}}
+
+            {{#if markup}}
+                <div class="markup hljs">
+<pre>
+{{{markup}}}
+</pre>
+                </div>
+            {{/if}}
+
+		</div>
+	{{/each}}
+</div>
+</div>
+
+<script type="text/javascript" src="../Res/js/global.js"></script>
+
+
+

@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dubai Trade</title>
+        @@include('/modules/includes-header.html')
+        @@include('/modules/scripts.html')
+    </head>
+  <body class="process-procedures">
+        <div class="wrapper">
+            <header class="header">
+                @@include('/modules/header/header.html')
+            </header>
+            <section class="inner-banner">
+                @@include('/modules/top-nav/top-nav.html')
+                @@include('/modules/inner-banner/inner-banner.html')
+            </section>
+            <section class="breadcrumb-container">
+                @@include('/modules/breadcrumb/breadcrumb.html')
+            </section>
+            <section class="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="main-content col-sm-12">
+
+<!--                        <iframe src="http://eservices.dubaitrade.ae/um/public/setupRegistrationTerms.action" width="100%" height="100%" frameborder="0" id="contentFrame" name="contentFrame" scrolling="auto" onload="resizeIframe();" style="height: 847px;"> This option will not work correctly. Unfortunately, your browser does not support inline frames</iframe>    -->
+                        </div>
+                       
+                    </div>
+                </div>
+                @@include('/modules/back-button/back-button.html')
+                @@include('/modules/sticky-pollbar/sticky-pollbar.html')
+            </section>
+            <footer class="footer">
+                @@include('/modules/footer/footer.html')
+            </footer>
+        </div>
+        @@include('/modules/includes-footer.html')
+    </body>
+</html>
+
+<script type="text/javascript">
+    
+function resizeIframe() {
+       try{
+            var ifrm = document.getElementById('contentFrame');
+            if(window.frames['contentFrame'] && window.frames['contentFrame'].document) {
+                window.frames['contentFrame'].window.scroll(0,0);
+                var body = window.frames['contentFrame'].document.body;
+                if(body) {
+                    var height = body.scrollHeight + 30;
+                                        if (height < 600) 
+                                            height = 600;
+                    ifrm.style.height = height + 'px';
+                }
+            }
+        }  catch (error) {}
+}
+</script>
+

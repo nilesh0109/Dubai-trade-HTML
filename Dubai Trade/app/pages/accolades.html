@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dubai Trade</title>
+        @@include('/modules/includes-header.html')
+        @@include('/modules/scripts.html')
+    </head>
+    <body class="accolades">
+        <div class="wrapper">
+            <header class="header">
+                @@include('/modules/header/header.html')
+            </header>
+            <section class="inner-banner">
+                @@include('/modules/top-nav/top-nav.html')
+                @@include('/modules/inner-banner/inner-banner.html')
+            </section>
+            <section class="breadcrumb-container">
+                @@include('/modules/breadcrumb/breadcrumb.html')
+            </section>
+            <section class="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="main-content col-sm-9">
+                            @@include('/modules/content/accolades/accolades.html')
+                            @@include('/modules/pagination/pagination.html')
+                        </div>
+                        <div class="sidebar col-sm-3">
+                            @@include('/modules/sidebar/sidebar.html')
+                        </div>
+                    </div>
+                </div>
+                @@include('/modules/back-button/back-button.html')
+                @@include('/modules/sticky-pollbar/sticky-pollbar.html')
+            </section>
+            <footer class="footer">
+                @@include('/modules/footer/footer.html')
+            </footer>
+        </div>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56890af56aa98f33" async="async"></script>
+
+        @@include('/modules/includes-footer.html')
+    </body>
+</html>

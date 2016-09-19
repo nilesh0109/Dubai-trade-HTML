@@ -1,0 +1,375 @@
+/* SG
+# list/stepwise
+List for showing steps
+
+```
+        <ul class='tab-links list clearfix'>
+            <li class='active' id='tab1'>
+                <a href='javascript:void(0)'>
+                    <span class='step-title'>Pre-Requisites</span>
+                    <span class='step-no'>1</span>
+                </a>
+            </li>
+            <li id='tab2'>
+                <a href='javascript:void(0)'>
+                    <span class='step-title'>Submit<br>
+                    Registration</span>
+                    <span class='step-no'>2</span>
+                </a>
+            </li>
+            <li id='tab3'>
+                <a href='javascript:void(0)' >
+                    <span class='step-title'>Activate
+                    Account</span>
+                    <span class='step-no'>3</span>
+                </a>
+            </li>
+            <li id='tab4'>
+                <a href='javascript:void(0)'>
+                    <span class='step-title'>Add Users
+                    (Optional)</span>
+                    <span class='step-no'>4</span>
+                </a>
+            </li>
+            <li id='tab5'>
+                <a href='javascript:void(0)'>
+                    <span class='step-title'>Access
+                    Services</span>
+                    <span class='step-no'>5</span>
+                </a>
+            </li>
+        </ul>
+    <div class='pages-container'>
+        <div class='page active' id='page1'>
+            <div class='page-wrapper clearfix'>
+                <h4 class='red-text title'>Pre-Requisites</h4>
+            </div>
+        </div>
+        <div class='page' id='page2'>
+            <div class='page-wrapper clearfix'>
+                <h4 class='red-text title'>Submit</h4>
+            </div>
+        </div>
+        <div class='page' id='page3'>
+            <div class='page-wrapper clearfix'>
+                <h4 class='red-text title'>Activate
+                    Account</h4>
+            </div>
+        </div>
+        <div class='page' id='page4'>
+            <div class='page-wrapper clearfix'>
+                <h4 class='red-text title'>Access
+                    Services</h4>
+            </div>
+        </div>
+        <div class='page' id='page5'>
+            <div class='page-wrapper clearfix'>
+                <h4 class='red-text title'>Add Users
+                    (Optional)</h4>
+            </div>
+        </div>
+        <div class='button-container'>
+            <a href='javascript:void(0)' class='button next'>Next</a>
+            <a href='javascript:void(0)' class='button disabled prev'>Previous</a>
+        </div>
+    </div>
+```
+*/
+
+.tab-links {
+    width: 100%;
+    font-size: $font-14;
+    margin-bottom: 10px;
+
+    > li {
+        @extend .float-l;
+
+        position: relative;
+        width: 18%;
+        height: 60px;
+
+        @include margin-right(2.5%);
+
+        background-color: #e6e6e6;
+
+        > a {
+            cursor: default;
+        }
+
+        @media (max-width: $screen-sm-max) {
+            @extend .float-l;
+
+            position: relative;
+            width: 30%;
+            height: 60px;
+
+            @include margin-top(2.5%);
+
+            @include margin-right(5%);
+
+            background-color: #e6e6e6;
+        }
+
+        @media (max-width: $screen-xs-min - 1) {
+            @extend .float-l;
+
+            position: relative;
+            width: 45%;
+            height: 60px;
+
+            @include margin-top(2.5%);
+
+            @include margin-right(10%);
+
+            background-color: #e6e6e6;
+        }
+
+        &:last-child {
+            @include margin-right(0);
+        }
+
+        .step-no {
+            position: absolute;
+            top: 50%;
+
+            @include right(-3px);
+
+            margin-top: -12px;
+            padding: 4px 8px;
+            border-radius: 50%;
+            color: #fff;
+            background-color: #656565;
+
+            @include margin-right(-6px);
+
+            z-index: 1;
+        }
+
+        &:not(:first-child) {
+            &:before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+
+                @include left(-15px);
+
+                width: 0;
+                height: 0;
+                border-top: 30px solid #e6e6e6;
+
+                @include border-right(0px, transparent);
+
+                border-bottom: 30px solid #e6e6e6;
+
+                @include border-left(15px, transparent);
+
+                vertical-align: middle;
+            }
+        }
+
+        &:after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+
+            @include right(-15px);
+
+            width: 0;
+            height: 0;
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+
+            @include border-left(15px, #e6e6e6);
+
+            vertical-align: middle;
+        }
+
+        &.active, &.activated {
+            background-color: #d0322c;
+
+            > a {
+                color: #fff;
+            }
+
+            .step-no {
+                color: #d0322c;
+                background: #fff;
+            }
+
+            &:after {
+                @include border-left(15px, #d0322c);
+            }
+
+            &:not(:first-child) {
+                &:before {
+                    border-top: 30px solid #d0322c;
+                    border-bottom: 30px solid #d0322c;
+                }
+            }
+        }
+
+        > a {
+            @include padding-top($space-0);
+
+            @include padding-bottom($space-0);
+
+            @include padding-left(4px);
+
+            @include padding-right(0px);
+
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            color: #656565;
+
+            > span {
+                font-weight: bold;
+
+                &.step-title {
+                    display: inline-block;
+                    width: 90%;
+                    vertical-align: middle;
+                    word-wrap: break-word;
+                }
+            }
+
+            &:after {
+                content: "";
+                width: 0px;
+                height: 100%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.pages-container {
+    position: relative;
+
+    .page {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        .page-wrapper {
+            padding: 30px 30px 70px;
+            border: 1px solid #ccc;
+
+            ul {
+                list-style-type: disc;
+
+                > li {
+                    list-style-type: disc;
+                }
+            }
+
+            ol {
+                list-style-type: none;
+                font-weight: bold;
+
+                > li {
+                    list-style-type: none;
+
+                    *:not(strong) {
+                        font-weight: normal;
+                    }
+
+                    p {
+                        margin: 15px 0;
+                    }
+
+                    > ul {
+                        @include margin-top(20px);
+
+                        @include margin-left(13px);
+
+                        li {
+                            + li {
+                                @include margin-top(10px);
+                            }
+                        }
+                    }
+
+                    + li {
+                        @include margin-top($space-20);
+                    }
+                }
+            }
+
+            ul {
+                padding-start: 20px;
+                -moz-padding-start: 20px;
+                -webkit-padding-start: 20px;
+            }
+        }
+    }
+
+    .button-container {
+        position: absolute;
+
+        @include right($space-20);
+
+        bottom: 25px;
+
+        .button {
+            @extend .float-r;
+
+            @include padding-top($space-5);
+
+            @include padding-bottom($space-5);
+
+            @include padding-left($space-25);
+
+            @include padding-right($space-25);
+
+            color: #fff;
+            background: #d0322c;
+
+            + .button {
+                @include margin-right($space-10);
+            }
+
+            &.disabled {
+                background-color: #656565;
+                opacity: 0.5;
+                cursor: default;
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+    .tab-links {
+        > li:nth-child(3n) {
+            @include margin-right($space-0);
+        }
+
+        > li:nth-child(3n+1):before {
+            content: none;
+        }
+
+        margin-bottom: 2.5%;
+    }
+}
+
+@media (max-width: $screen-xs-min - 1) {
+    .tab-links > li:nth-child(3n) {
+        @include margin-right(10%);
+    }
+
+    .tab-links > li:nth-child(3n+1):before {
+        content: "";
+    }
+
+    .tab-links > li:nth-child(2n) {
+        @include margin-right($space-0);
+    }
+
+    .tab-links > li:nth-child(2n+1):before {
+        content: none;
+    }
+}

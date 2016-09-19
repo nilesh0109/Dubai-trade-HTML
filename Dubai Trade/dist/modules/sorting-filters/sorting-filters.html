@@ -1,0 +1,45 @@
+<div class='sorting-filter-wrapper selectFilters clearfix'>
+	<form id="eventsFilter">
+		<div class='col-sm-6'>
+			<div class='filter-label'><strong>Filter by Category:</strong></div>
+			<div class="selectList-wrapper vis" id='main-category-wrapper' data-target="#sub-category-wrapper" data-src="../Res/js/select.html">
+				<select class='selectList not_chosen' id='main-category'  name='main-category'>
+					<option value="" disabled selected>Main Category</option>
+					<option value="Category2">Category 1</option>
+					<option value="Category1">Category 2</option>
+				</select>
+			</div>
+			<div class="selectList-wrapper" id='sub-category-wrapper'>
+				<select class='selectList not_chosen' disabled id='sub-category' name='sub-category'>
+					<option value="" disabled selected>sub Category</option>
+					<option value="subCategory1">subCategory1</option>
+					<option value="subCategory2">subCategory2</option>
+				</select>
+			</div>
+		</div>
+		<div class='col-sm-3'>
+			<div class='filter-label date-label'><strong>Sort by Date:</strong></div>
+			<div class="date-picker input-group date">
+				<input type="text" class="form-control" name="from-date" placeholder="18/12/2016">
+				<div class="input-group-addon">
+					<i class="fa fa-calendar fa-lg "></i>
+				</div>
+			</div>
+		</div>
+		<div class='col-sm-3 to-filter'>
+			<span class='to'>To</span>
+			<div class="date-picker input-group date">
+				<input type="text" class="form-control" name="to-date" placeholder="19/12/2016">
+				<div class="input-group-addon">
+					<i class="fa fa-calendar fa-lg"></i>
+				</div>
+			</div>
+		</div>
+		
+		<div class='col-xs-12'>
+			<button type='submit' class='submit-button'>SUBMIT</button>
+			<button type='reset' class='cancel-button'>CANCEL</button>
+		</div>
+		
+	</form>
+</div>

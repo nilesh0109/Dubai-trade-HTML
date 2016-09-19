@@ -1,0 +1,390 @@
+/* SG
+# Tabs/Textual Heading
+
+For text based tab heading , use the class `tabcontainer` on the encompassing div
+
+```
+ <div class="tabContainer">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="text-center active">
+            <a href="#textTabContent1" aria-controls="textTabContent1" role="tab" data-toggle="tab">
+                <span class="hidden-xs">eServices by Community</span>
+                <span class="visible-xs">Community</span></a>
+            
+        </li>
+        <li role="presentation" class="text-center">
+            <a href="#textTabContent2" aria-controls="textTabContent2" role="tab" data-toggle="tab">
+                <span class="hidden-xs">eServices by Service provider</span>
+                <span class="visible-xs">Service provider</span></a>
+            
+        </li>
+        <li role="presentation" class="text-center">
+            <a href="#textTabContent3" aria-controls="textTabContent3" role="tab" data-toggle="tab">
+                <span class="hidden-xs">eServices by Activity</span>
+                <span class="visible-xs">Activity</span></a>
+            
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="textTabContent1">
+            <p> tab 1 Content </p>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="textTabContent2">
+            <p> tab 2 Content </p>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="textTabContent3">
+            <p> tab 3 Content </p>
+        </div>
+    </div>
+</div>
+
+```
+*/
+
+/* SG
+# Tabs/Image Heading 1
+
+For Image based tab heading , use the class `home-tab-controller` on the encompassing div
+```
+ <div class="home-tab-controller">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="text-center">
+            <a href="#tabContent1" aria-controls="tabContent1" role="tab" data-toggle="tab">
+                All Category
+            </a>
+        </li>
+        <li role="presentation" class="text-center active">
+            <a href="#tabContent2" aria-controls="tabContent1" role="tab" data-toggle="tab">
+                <img src="../Res/images/home/dubai-customs.png" alt="" title="" />
+            </a>
+        </li>
+        <li role="presentation" class="text-center">
+            <a href="#tabContent3" aria-controls="tabContent2" role="tab" data-toggle="tab">
+                <img src="../Res/images/home/dubai-trade.png" alt="" title="" />
+            </a>
+        </li>
+        <li role="presentation" class="text-center">
+            <a href="#tabContent4" aria-controls="tabContent3" role="tab" data-toggle="tab">
+                <img src="../Res/images/home/jafza.png" alt="" title="" />
+            </a>
+            
+        </li>
+        <li role="presentation" class="text-center">
+            <a href="#tabContent5" aria-controls="tabContent3" role="tab" data-toggle="tab">
+                <img src="../Res/images/home/dp-world.png" alt="" title="" />
+            </a>
+            
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane" id="tabContent1">
+            <p> tab 1 Content </p>
+        </div>
+        <div role="tabpanel" class="tab-pane active" id="tabContent2">
+            <p> tab 2 Content </p>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tabContent3">
+            <p> tab 3 Content </p>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tabContent4">
+            <p> tab 4 Content </p>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tabContent5">
+            <p> tab 5 Content </p>
+        </div>
+    </div>
+</div>
+
+```
+
+*/
+
+/* SG
+# Tabs/Image Heading 2
+
+```
+<div class="home-tab-controller">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="text-center">
+            <a href="#tabContent21" aria-controls="tabContent21" role="tab" data-toggle="tab">
+                All Category
+            </a>
+        </li>
+        <li role="presentation" class="text-center active">
+            <a href="#tabContent22" aria-controls="tabContent22" role="tab" data-toggle="tab">
+                <img src="../Res/images/home/dubai-customs.png" alt="" title="" />
+            </a>
+        </li>
+        <li role="presentation" class="text-center">
+            <a href="#tabContent23" aria-controls="tabContent23" role="tab" data-toggle="tab">
+                <img src="../Res/images/home/dubai-trade.png" alt="" title="" />
+            </a>
+        </li>
+        <li role="presentation" class="text-center">
+            <a href="#tabContent24" aria-controls="tabContent24" role="tab" data-toggle="tab">
+                <img src="../Res/images/home/jafza.png" alt="" title="" />
+            </a>
+            
+        </li>
+        <li role="presentation" class="text-center">
+            <a href="#tabContent25" aria-controls="tabContent25" role="tab" data-toggle="tab">
+                <img src="../Res/images/home/dp-world.png" alt="" title="" />
+            </a>
+            
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active  text-center" id="tabContent21">
+                <ul class="bxslider">
+                  <li>
+                    <p>
+                      Dubai Trade is the premier trade facilitation entity that offers integrated electronic services from various trade and
+                    logistics service providers 1</p>
+                  </li>
+                  <li>
+                    <p>
+                      Dubai Trade is the premier trade facilitation entity that offers integrated electronic services from various trade and
+                    logistics service providers - 2</p>
+                  </li>
+                  <li>
+                    <p>
+                      Dubai Trade is the premier trade facilitation entity that offers integrated electronic services from various trade and
+                    logistics service providers - 3</p>
+                  </li>
+                  <li>
+                    <p>
+                      Dubai Trade is the premier trade facilitation entity that offers integrated electronic services from various trade and
+                    logistics service providers - 4</p>
+                  </li>
+                </ul>
+        </div>
+        <div role="tabpanel" class="tab-pane text-center" id="tabContent22">
+                            <ul class="bxslider">
+                  <li>
+                    <p>
+                      Dubai Trade is the premier trade facilitation entity that offers integrated electronic services from various trade and
+                    logistics service providers 1</p>
+                  </li>
+                  <li>
+                    <p>
+                      Dubai Trade is the premier trade facilitation entity that offers integrated electronic services from various trade and
+                    logistics service providers - 2</p>
+                  </li>
+
+                </ul>
+        </div>
+        <div role="tabpanel" class="tab-pane text-center" id="tabContent23">
+                                        <ul class="bxslider">
+                  <li>
+                    <p>
+                      Dubai Trade is the premier trade facilitation entity that offers integrated electronic services from various trade and
+                    logistics service providers 1</p>
+                  </li>
+
+
+                </ul>
+        </div>
+        <div role="tabpanel" class="tab-pane text-center" id="tabContent24">
+                            <ul class="bxslider">
+                  <li>
+                    <p>
+                      Dubai Trade is the premier trade facilitation entity that offers integrated electronic services from various trade and
+                    logistics service providers 1</p>
+                  </li>
+                  <li>
+                    <p>
+                      Dubai Trade is the premier trade facilitation entity that offers integrated electronic services from various trade and
+                    logistics service providers - 2</p>
+                  </li>
+                  <li>
+                    <p>
+                      Dubai Trade is the premier trade facilitation entity that offers integrated electronic services from various trade and
+                    logistics service providers - 3</p>
+                  </li>
+
+                </ul>
+        </div>
+        <div role="tabpanel" class="tab-pane text-center" id="tabContent25">
+                <ul class="bxslider">
+                  <li>
+                    <p>
+                      Dubai Trade is the premier trade facilitation entity that offers integrated electronic services from various trade and
+                    logistics service providers 1</p>
+                  </li>
+                  <li>
+                    <p>
+                      Dubai Trade is the premier trade facilitation entity that offers integrated electronic services from various trade and
+                    logistics service providers - 2</p>
+                  </li>
+                  <li>
+                    <p>
+                      Dubai Trade is the premier trade facilitation entity that offers integrated electronic services from various trade and
+                    logistics service providers - 3</p>
+                  </li>
+                 <li>
+                    <p>
+                      Dubai Trade is the premier trade facilitation entity that offers integrated electronic services from various trade and
+                    logistics service providers - 4</p>
+                  </li>
+                </ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $('.bxslider:visible').each(function(){
+        $(this).bxSlider({
+            mode: 'horizontal',
+            captions: false
+        });
+    });
+</script>
+
+```
+*/
+
+.tabContainer {
+    border: 1px solid #ddd;
+
+    .nav-tabs {
+        display: table;
+        width: 100%;
+        border-bottom: 0;
+        border-collapse: separate;
+        border-spacing: 0;
+        table-layout: fixed;
+
+        li {
+            width: 33.33%;
+            display: table-cell;
+            vertical-align: middle;
+            float: none;
+
+            @include border-left(1px, #ddd);
+
+            @include padding($space-0);
+
+            > a {
+                border-radius: 0;
+                text-align: center;
+                border: 0;
+                padding: 10px;
+                background: none;
+                width: 100%;
+
+                /*---to overwrite teh bootstrap's default style ------- */
+                margin-right: 0px;
+
+                @include margin-right(2px);
+
+                &:hover, &:focus {
+                    border: 0;
+                    background: none;
+                }
+
+                @media (max-width: $screen-xs-min - 1) {
+                    padding: 10px 4px;
+                }
+            }
+
+            @media (max-width: $screen-xs-max) {
+                text-align: $text-left;
+            }
+
+            &:hover {
+                background-color: #eeeeee;
+            }
+
+            &.active {
+                background-color: $white;
+
+                > a {
+                    color: $red-color;
+                }
+
+                &:after {
+                    content: none;
+                }
+            }
+
+            &:not(.active) {
+                background-color: $off-white3;
+
+                > a {
+                    border-radius: 0;
+                    color: $black;
+                }
+            }
+
+            &:first-child {
+                @include border-left(0px, transparent);
+
+                &:after {
+                    left: -1px;
+                    width: calc(100% + 1px);
+                    width: -webkit-calc(100% + 1px);
+                    width: -moz-calc(100% + 1px);
+                    width: -ms-calc(100% + 1px);
+                }
+            }
+
+            &:last-child {
+                width: 34%;
+
+                > a {
+                    @include margin-right(0px);
+                }
+
+                @media (max-width: $screen-xs-max) {
+                    @extend float-r;
+                }
+            }
+
+            &:after {
+                content: "";
+                background: #ddd;
+                display: block;
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+
+    .tab-content {
+        border-top: 0;
+        margin-bottom: 30px;
+
+        .tab-pane {
+            @include padding-top($space-0);
+
+            @include padding-bottom($space-0);
+
+            @include padding-left($space-20);
+
+            @include padding-right($space-20);
+
+            h6.heading {
+                color: $red-color;
+                font-size: $font-16;
+            }
+
+            .ordered-list {
+                > li {
+                    @media (max-width: $screen-xs-min - 1) {
+                        width: 100%;
+                        float: none;
+
+                        @include margin-left($space-0);
+                    }
+                }
+            }
+
+            iframe {
+                padding: 20px 0;
+            }
+        }
+    }
+}

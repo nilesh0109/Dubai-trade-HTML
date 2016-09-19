@@ -1,0 +1,128 @@
+<h2 class='title text-uppercase '><strong>DISCUSSION BOARD</strong></h2>
+<div class='page-content'>
+	<p>
+		This page shows all the discussion boards in this website. Click the name of the discussion board to view its contents.
+		To create a new board, click create discussion board.
+	</p>
+	<div class='clearfix'>
+		<a href='discussion-board.html' class='discussion-detail-btn'><strong>Go back to Discussion Board</strong></a>
+	</div>
+
+<div id="session_box_container"></div>
+<script type="text/javascript">
+    cos = window.cos || {};
+    cos.pageWidgets = cos.pageWidgets || [];
+
+    cos.pageWidgets.push({name: "wsdk.session", 
+        version: "1.5", 
+        elementID: "session_box_container", 
+        attributes:{"site_id":"DubaiTrade","view_type":"short"}});
+        setTimeout( 
+                    function(){if ((typeof(wsdk) == 'undefined') || (typeof(wsdk.session) == 'undefined')) {document.getElementById('session_box_container').innerHTML = "<div style='font-family: Tahoma, Verdana, Geneva, sans-serif;font-size: 12px;color: #333333;border: 1px solid #dbdfe1;padding-left: 5px;padding-top: 4px;height: 22px;'>Login Bar is unavailable right now. Please contact the site administrator.</div>";}}
+                   ,30000);
+
+    cos.pageScripts = cos.pageScripts || [];
+    cos.pageScripts.push('wsdk.session');
+
+    (function()
+    {
+        var oldOnloadHandler = window.onload || function()
+        {
+        };
+        if (!oldOnloadHandler.alreadyProcessed)
+        {
+            window.onload = function()
+            {
+                var script = document.createElement('script');
+                script.id = 'session_box_script';
+                script.src = 'http://jvdtdwc1.dubaiworld.ae:9003/cg/wsdk/widget/'
+                        + cos.pageScripts.join(':') + '.js?site_id=DubaiTrade';
+                script.type = 'text/javascript';
+                script.charset = 'utf-8';
+                document.getElementsByTagName("head").item(0).appendChild(script);
+                oldOnloadHandler.apply(this, arguments);
+        		$('#session_box_script').load(function(){ 
+					if($('#session_box_container .wsdk-session-bar > .wsdk-session-bar-user').length > 0 )
+					{
+						$('#discussion-board-form').show();	
+					}
+					else{
+						discussionForm();
+					}
+
+					$('#session_box_container').on("click",'.wsdk-session-bar > a',function(){
+						discussionForm();
+					});
+
+					$('#session_box_container').on("click",'.wsdk-session-bar-user-actions > a:nth-child(2)',function(){
+						$('#discussion-board-form').hide();
+					});
+				
+				});
+            };
+            window.onload.alreadyProcessed = true;
+        }
+
+    var discussionForm = function(){
+
+					var timer = setInterval(function(){
+							console.log('timer running');
+							if($('#session_box_container .wsdk-session-bar > .wsdk-session-bar-user').length > 0)
+							{ console.log('show in interval');
+								clearInterval(timer);
+								$('#discussion-board-form').show();	
+							}
+						},100);
+
+    	}
+    })();
+</script>
+
+
+<link id="cos_css" type="text/css" rel="stylesheet" href="http://jvdtdwc1.dubaiworld.ae:9003/cg/wsdk/skin/wsdk.session.css?site_id=DubaiTrade&gateway=true" />
+
+
+	<form id='discussion-board-form' class='form-validate'>
+		<div class='form-group row'>
+			<label class='col-sm-2'>Subject<span class='regMark'>&#42;</span></label>
+			<div class='col-sm-10'>
+				<input type='text' placeholder="Subject" name='subject-input' id="subject-input" data-rule-required="true" data-msg-required="Please enter the subject" />
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label class='col-sm-2'>Description<span class='regMark'>&#42;</span></label>
+			<div class='col-sm-10'>
+				<textarea placeholder="Description" type='text' name='description-input' id="description-input" data-rule-required="true" data-msg-required="Please enter the description"></textarea>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="form-group col-sm-2" >
+			</div>
+			<div class='col-sm-10 captcha-conatiner'>
+				<label class="reload-captcha" onclick="Captcha();"><span class="reload"></span></label>
+				<input type="hidden" class="form-control" id="contact-captcha-hidden" name="contact-captcha" value="" disabled />
+				<div class="contact-captcha" id="contact-captcha">
+				</div>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="form-group col-sm-2" >
+				<label for="captcha">Please type the text you see<span class='regMark'>&#42;</span></label>
+			</div>
+			<div class='col-sm-10 captcha-conatiner'>
+				<input type="text" class="form-control" id="input-captcha" name="input-captcha" equalTo='#contact-captcha-hidden' data-rule-required="true" data-msg-equalTo="Captcha is not matching " data-msg-required="Please enter above captcha" >
+			</div>
+		</div>
+		<div class='form-group'>
+			<div class='col-sm-10 col-sm-offset-2'>
+				<button type='submit'>SUBMIT</button>
+				<button type='reset'>RESET</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+
+
+</script>

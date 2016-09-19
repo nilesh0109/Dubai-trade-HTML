@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dubai Trade</title>
+        @@include('/modules/includes-header.html')
+        @@include('/modules/scripts.html')
+    </head>
+    <body class="classified-detail">
+        <div class="wrapper">
+            <header class="header">
+                @@include('/modules/header/header.html')
+            </header>
+            <section class="inner-banner">
+                @@include('/modules/top-nav/top-nav.html')
+                @@include('/modules/inner-banner/inner-banner.html')
+            </section>
+            <section class="breadcrumb-container">
+                @@include('/modules/breadcrumb/breadcrumb.html')
+            </section>
+            <section class="content">
+                <div class="container">
+                    @@include('/modules/content/classified-detail/classified-detail.html')
+                </div>
+                @@include('/modules/back-button/back-button.html')
+                @@include('/modules/sticky-pollbar/sticky-pollbar.html')
+            </section>
+            <footer class="footer">
+                @@include('/modules/footer/footer.html')
+            </footer>
+        </div>
+        @@include('/modules/includes-footer.html')
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<div class='row'>
+	<h2 class='col-sm-6 title text-uppercase mob-left'><strong>surveys</strong></h2>
+	
+	<div class="mob-align-left text-right col-sm-6">
+		<div class="title-icons">
+			<a class="share" href='javascript:void(0)'></a><span class="pipe"></span>
+			<a class="print" href='javascript:void(0)'></a>
+			<div class="addthis_sharing_toolbox" data-url="www.google.com" data-title="Sharing Dubai Trade" tabindex='-1'></div>
+		</div>
+	</div>
+</div>
+<form class='form-validate' id='survey-form'>
+	<div class='survey-row'>
+		<p class='col-xs-12'>
+			please provide your name:
+		</p>
+		<div class='col-xs-2 title-container'>
+			<label for="title"><em>Title</em></label>
+			<input type='text' id='title' name="title" data-rule-required="true" data-msg-required="Please enter your title">
+		</div>
+		<div class='col-xs-5 col-sm-4 fname-container'>
+			<label for="f_name"><em>First Name</em></label>
+			<input type='text' id='f_name' name="f_name" data-rule-required="true" data-msg-required="Please enter your first name">
+		</div>
+		<div class="col-xs-5 col-sm-4 lname-container">
+			<label for="l_name"><em>Last Name</em></label>
+			<input type='text' id='l_name' name="l_name" data-rule-required="true" data-msg-required="Please enter your last name">
+		</div>
+		<div class='col-xs-12 border-line'></div>
+	</div>
+	<div class='survey-row'>
+		<div class='col-xs-12 email-container'>
+			<label for="email">please provide your email address:</label>
+			<input type='text' id='email' name="email-address" data-rule-required="true" data-rule-email="true" data-msg-required="Please enter your email address" data-msg-email="Please enter a valid email address">
+		</div>
+		<div class='col-xs-12 border-line'></div>
+	</div>
+	<div class='survey-row'>
+		<div class='col-xs-12 radio-wrapper'>
+			<label for="radio">What do you think about this site</label>
+			<br>
+			<div class='radio-container'>
+				<input type="radio" class='radio-button' name="radioButton" value="option1" id='radio1-option1' data-rule-required="true" data-msg-required="Please rate us">
+				<label for='radio1-option1'>
+					<span class="radio-btn"></span>
+					<span>Excellant</span>
+				</label><br>
+				<input type="radio" class='radio-button' name="radioButton" value="option2" id='radio1-option2' data-rule-required="true" data-msg-required="Please rate us"/>
+				<label for='radio1-option2'>
+					<span class="radio-btn"></span>
+					<span>Good</span>
+				</label><br>
+				<input type="radio" class='radio-button' name="radioButton" value="option3" id='radio1-option3' data-rule-required="true" data-msg-required="Please rate us"/>
+				<label for='radio1-option3'>
+					<span class="radio-btn"></span>
+					<span>Bad</span>
+				</label>
+			</div>
+		</div>
+		<div class='col-xs-12 border-line'></div>
+	</div>
+	<div class='survey-row'>
+		<div class='col-xs-12 checkbox-wrapper'>
+			<label for="checkBox-container">What do you think about this site</label>
+			<br>
+			<div class='checkBox-container'>
+				<input type="checkbox" class='checkbox-one' name="checkbox-one" id='checkbox1-option1' value="option1" data-rule-required="true" data-msg-required="Please rate us">
+				<label for='checkbox1-option1'>
+					<span>Excellant</span>
+				</label><br>
+				<input type="checkbox" class='checkbox-one' name="checkbox-one" id='checkbox1-option2' value="option2" data-rule-required="true" data-msg-required="Please rate us">
+				<label for='checkbox1-option2'>
+					<span>Good</span>
+				</label><br>
+				<input type="checkbox" class='checkbox-one' name="checkbox-one" id='checkbox1-option3' value="option3" data-rule-required="true" data-msg-required="Please rate us">
+				<label for='checkbox1-option3'>
+					<span>Bad</span>
+				</label>
+			</div>
+		</div>
+		<div class='col-xs-12 border-line'></div>
+	</div>
+	<div class='survey-row'>
+		<div class='col-xs-12 comments-container'>
+			<label for="comments">Additional comments</label>
+			<textarea id="comment" data-rule-required="true" data-msg-required="Please comment"></textarea>
+		</div>
+		<div class='col-xs-12 border-line'></div>
+	</div>
+	<div class='survey-row'>
+		<div class='col-xs-12 email-container'>
+			<label for="add-comments">Additional Comments :</label>
+			<input type='text' id='add-comments' name="add-comments" data-rule-required="true" data-msg-required="Please enter additional Comments">
+		</div>
+		<div class='col-xs-12 border-line'></div>
+	</div>
+	<div class='survey-row'>
+		<div class='col-xs-12'>
+			<button type="submit" class='button red-btn'>Finish Survey</button>
+		</div>
+	</div>
+</form>

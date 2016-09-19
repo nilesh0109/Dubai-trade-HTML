@@ -1,0 +1,258 @@
+/* SG
+# Gallery
+
+Use the following markup for gallery items (video/images)
+
+`data-src` is the url of the original item which would open in the lighbox popup on click of the gallery item. 
+```
+<ul class="gallery-container clearfix">
+ <li class="gallery-element">
+        <a href="javascript:void(0)" data-type="video" data-src="http://www.youtube.com/v/mO4zqCmyuC8">
+            <figure class="poster-image vertical-align-parent">
+                <img class="poster" src="http://img.youtube.com/vi/mO4zqCmyuC8/0.jpg">
+                <div class="overlay"></div>
+                <img class="play-icon vertical-align-element" src="../Res/images/video/youtube-play.png">
+            </figure>
+            <div class="textWrapper">
+                <h5 class="heading red-text"><strong>Dubai TV Covering 2015 RAME</strong></h5>
+                <p class="desc">
+                    Mahmood Al Bastaki talks to Dubai TV at the 2015 RAME Intercontinental Festival City- Dubai
+                </p>
+                <span class="timestamp"><em>Posted : April 2015</em></span>
+            </div>
+        </a>
+ </li>
+  <li class="gallery-element">
+        <a href="javascript:void(0)" data-type="image" data-src="../Res/images/video/youtube-video.jpg">
+            <figure class="poster-image vertical-align-parent">
+                <img class="poster" src="http://img.youtube.com/vi/mO4zqCmyuC8/0.jpg">
+            </figure>
+            <div class="textWrapper">
+                <h5 class="heading red-text"><strong>Dubai TV Covering 2015 RAME</strong></h5>
+                <p class="desc">
+                    Mahmood Al Bastaki talks to Dubai TV at the 2015 RAME Intercontinental Festival City- Dubai
+                </p>
+                <span class="timestamp"><em>Posted : April 2015</em></span>
+            </div>
+        </a>
+ </li>
+ </ul>
+ <div class="gallery-popup vertical-align-parent">
+    <div class='gallery-content text-center vertical-align-element'>
+        <a class='close-btn' href='javascript:void(0)'>
+            
+        </a>
+        <img class='loader vertical-align-element' src='../Res/images/icons/ajax-loader2.gif' />
+        <div class='gallery-body'>
+            <img class='img-responsive' src='../Res/images/video/youtube-video.jpg'>
+        </div>
+    </div>
+</div>
+
+```
+*/
+
+/* SG
+
+# Popup
+
+For any modal popup , get the content from the div and use the following script functions .
+
+`DT.modalPopup.createPopup` : to create the popup
+It take following four parameters: 
+    `1.` jquery wrapped object of the div from where we need to get the data(URL of the iframe SRC in case of iframe content). 
+    `2.` class name to be attached to the popup outermost div
+    `3.` (boolean parameter)do we need to open the popup content in an iframe .
+    `4.` (optional paramter) path to the ajax loader that needs to be shown while iframe content loads up .
+
+`DT.modalPopup.showPopup`: to show the popup
+It takes the reference of the created popup as parameter .
+
+`DT.modalPopup.hidePopup` : to hide the popup
+It takes the reference of the created popup as parameter .
+
+```
+
+<a href="javascript:void(0)" class="red-btn favorite-btn"> open favorites popup</a>
+<div class='favorite-alert-box'>
+    <form class='remove-favorite-form' action="">
+        <div class='msg'>Do you want to remove <span class="service-name"> JAFZA </span> from Favorites </div>
+        <button type="submit">SUBMIT</button>
+        <button type="reset">CANCEL</button>
+    </form>
+</div>
+
+<script type="text/javascript">
+    var dontOpenInIframe = false;
+    if(typeof DT !== undefined)
+    { 
+        var edit_favorites_popup = DT.modalPopup.createPopup($('.favorite-alert-box'), 'favorite-alert', dontOpenInIframe);
+    }
+    
+    $('.favorite-btn').on("click",function(){
+        DT.modalPopup.showPopup(edit_favorites_popup);  
+    });
+
+    $('.remove-favorite-form').on("reset",function(){
+       DT.modalPopup.hidePopup(edit_favorites_popup); 
+    });
+
+</script>
+
+```
+
+*/
+
+.gallery-container {
+    list-stype-type: none;
+
+    .gallery-element {
+        display: block;
+
+        @extend .float-l;
+
+        width: 30%;
+
+        @include margin-right(5%);
+
+        @media (max-width: $screen-xs-max) {
+            width: 100%;
+            margin: 5% 0;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        &:nth-of-type(3n) {
+            @include margin-right(0%);
+
+            @media (max-width: $screen-xs-max) {
+                @include margin-right(auto);
+            }
+        }
+
+        &:nth-of-type(n+4) {
+            margin-top: 5%;
+        }
+
+        &:nth-of-type(n+2) {
+            @media (max-width: $screen-xs-max) {
+                margin-top: 5%;
+            }
+        }
+
+        &:last-child {
+            @media (max-width: $screen-xs-max) {
+                border-bottom: 0;
+            }
+        }
+
+        > a {
+            display: block;
+
+            > figure {
+                width: 100%;
+
+                .poster {
+                    width: 100%;
+                }
+            }
+
+            .overlay {
+                position: absolute;
+                top: 5px;
+                bottom: 5px;
+
+                @include right($space-5);
+
+                @include left($space-5);
+
+                background: #fff;
+                opacity: 0.7;
+                display: none;
+            }
+
+            &:hover {
+                .overlay {
+                    display: block;
+                }
+            }
+        }
+
+        .textWrapper {
+            @include padding-top($space-20);
+
+            @include padding-bottom($space-20);
+
+            h5.heading {
+                line-height: 1.5;
+
+                strong {
+                    text-decoration: underline;
+                }
+            }
+
+            .desc {
+                @include margin-top($space-20);
+
+                @include margin-bottom($space-20);
+            }
+        }
+    }
+
+    .line-separater {
+        @extend .float-l;
+
+        @media (max-width: $screen-xs-max) {
+            display: none;
+        }
+    }
+}
+
+.gallery-popup {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.25s ease-in-out;
+    background: rgba(10, 10, 10, 0.8);
+    opacity: 0.7;
+    top: 0;
+    z-index: 1000;
+
+    &.active {
+        opacity: 1;
+        display: block;
+    }
+
+    .close-btn {
+        color: $white;
+        position: absolute;
+
+        @include left(100%);
+
+        bottom: 100%;
+        display: block;
+        line-height: 14px;
+
+        &:before {
+            content: "x";
+            font-size: $font-24;
+        }
+    }
+
+    .gallery-body {
+        position: relative;
+    }
+}
+
+body.gallery-overlay-open {
+    overflow: hidden;
+
+    .top-navigation {
+        z-index: 0;
+    }
+
+    .mobile-menu {
+        z-index: 0;
+    }
+}

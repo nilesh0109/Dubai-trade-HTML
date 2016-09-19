@@ -1,0 +1,26 @@
+{
+	"sgComment": "SG",
+	"srcFolder": "app\\Res\\css\\modules",
+	"outputFile": "app\\pages\\styleguide.html",
+	"templateFile": "styleguide-template.html",
+	"themeFile": "C:\\Users\\nvijayrania\\AppData\\Roaming\\npm\\node_modules\\markdown-styleguide-generator\\template\\theme.css",
+	"highlightFolder": "C:\\Users\\nvijayrania\\AppData\\Roaming\\npm\\node_modules\\markdown-styleguide-generator\\node_modules\\highlight.js\\styles",
+	"highlightStyle": "github",
+	"excludeDirs": [
+		"target",
+		"node_modules"
+	],
+	"fileExtensions": {
+		"scss": true,
+		"sass": true,
+		"css": true,
+		"less": true
+	},
+	"walkerOptions": {
+		"followLinks": false
+	},
+	"customVars": {
+		"sampleVar": "Hello from customVars!"
+	},
+	"jqFile": "C:\\Users\\nvijayrania\\AppData\\Roaming\\npm\\node_modules\\markdown-styleguide-generator\\template\\jquery.js"
+}

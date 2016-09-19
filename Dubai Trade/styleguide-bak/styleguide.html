@@ -1,0 +1,2042 @@
+<style>
+#styleguide {
+    float: left;
+    width: 80%;
+}
+
+#styleguide .section {
+    display: none;
+    margin-bottom: 2em;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.43);
+    -moz-box-shadow:    2px 2px 5px 0px rgba(50, 50, 50, 0.43);
+    box-shadow:         2px 2px 5px 0px rgba(50, 50, 50, 0.43);
+}
+
+#styleguide .result, 
+#styleguide .comment {
+    padding: 1em;
+    border: 1px solid #ddd;
+}
+
+#styleguide .result {
+    border-top: none;
+}
+
+#styleguide .comment {
+    background-color: rgb(245, 245, 245);
+}
+
+#styleguide .section .comment code {
+    color: #3fbead;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 13px;
+}
+
+#styleguide .markup {
+    border: 1px solid #ddd;
+    border-top: none;    
+}
+
+#styleguide code,
+#styleguide pre {
+    border: none;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 13px;
+    line-height: 20px;
+    direction: ltr;
+    text-align: left;
+    white-space: pre-wrap;
+    word-spacing: normal;
+    margin: 0;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+
+/* menu */
+#styleguide-menu {
+    width: calc(20% - 1em - 2px);
+    float: left;
+    margin-right: 1em;
+    padding: 1em 0;
+
+    border: 1px solid #ddd;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.43);
+    -moz-box-shadow:    2px 2px 5px 0px rgba(50, 50, 50, 0.43);
+    box-shadow:         2px 2px 5px 0px rgba(50, 50, 50, 0.43);
+}
+
+#styleguide-menu .submenu {
+    display: none;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#styleguide-menu .submenu.on{
+    display: block;
+}
+
+#styleguide-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#styleguide-menu li {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+#styleguide-menu a {
+    display: block;
+    width: calc(100% - 2em + 2px);
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+
+}
+
+#styleguide-menu ul ul a {
+    padding: 0.3em 1em 0.3em 2em;
+    width: calc(100% - 3em + 2px);
+}
+
+#styleguide-menu a:visited,
+#styleguide-menu a:hover,
+#styleguide-menu a:active {
+    display: block;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+#styleguide-menu a:hover {
+    background-color: rgba(250, 255, 70, 0.3);
+}
+
+#styleguide-menu a.on {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+</style><style>
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+#styleguide .hljs pre, .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-comment,
+.diff .hljs-header {
+  color: #998;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #008080;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-doctag,
+.tex .hljs-formula {
+  color: #d14;
+}
+
+.hljs-title,
+.hljs-id,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold;
+}
+
+.hljs-list .hljs-keyword,
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-class .hljs-title,
+.hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rule .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal;
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body,
+.hljs-name {
+  color: #008080;
+}
+
+.hljs-regexp {
+  color: #009926;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.clojure .hljs-keyword,
+.scheme .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073;
+}
+
+.hljs-built_in {
+  color: #0086b3;
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.diff .hljs-change {
+  background: #0086b3;
+}
+
+.hljs-chunk {
+  color: #aaa;
+}
+
+</style>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="../dist/Res/css/styles.css"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="../app/Res/js/vendor/bootstrap.min.js" type="text/javascript"></script>
+
+<script>
+  
+    $(function() {
+
+        // Show section in Styleguide
+        $('#styleguide .section[data-section="' + $('#styleguide-menu a').first().data('section') + '"]').show();
+
+        // Click on link with subheadings
+        $('#styleguide-menu .submenulink').click(function(event) {
+            event.preventDefault();
+            var jqCurSubmenu = $('[data-submenu="' + $(this).data('section') + '"]');
+            var isCurSubmenuOn = jqCurSubmenu.hasClass('on');
+            $('#styleguide-menu .on').removeClass('on');
+            if (!isCurSubmenuOn) {
+                jqCurSubmenu.addClass('on');
+                $(this).addClass('on');
+            }
+            showSection($(this).data('section'));
+        });
+
+        // Click on link without subheadings
+        $('#styleguide-menu .sectionlink').click(function(event) {
+            event.preventDefault();
+            $('#styleguide-menu .on').removeClass('on');
+            $(this).addClass('on');
+            showSection($(this).data('section'));
+        });
+
+        // Show/Hide sections
+        function showSection(section) {
+            $('#styleguide .section').hide();
+            var jqCurSections = $('#styleguide .section[data-section="' + section + '"]');
+            jqCurSections.show();
+        }
+    });
+</script>
+<div class="wrapper" style="margin-top:10px;padding-left:5px;padding-right:5px;">
+<header style="padding:20px 0;">
+	<img src="http://tacme.com/img/logo.png" alt="Tacme" class="logo">
+	<div class="header_callout" style="float:right;color: #555;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;">
+		<h3> Style Guide Dubai Trade</h3>
+	</div>
+</header>
+<div id="styleguide-menu" data-spy="affix">
+	<ul>
+		<li>
+                <a class="submenulink" href="#" data-section="Common">Common</a>
+                <ul class="submenu" data-submenu="Common">
+                    <li><a href="#Common-Range_slider">Range slider</a></li>
+                    <li><a href="#Common-Red_Text">Red Text</a></li>
+                    <li><a href="#Common-Red-btn">Red-btn</a></li>
+                    <li><a href="#Common-back">back</a></li>
+                    <li><a href="#Common-btn-orange">btn-orange</a></li>
+                    <li><a href="#Common-centered">centered</a></li>
+                    <li><a href="#Common-download-btn">download-btn</a></li>
+                    <li><a href="#Common-dropdown">dropdown</a></li>
+                    <li><a href="#Common-vertically_centered">vertically centered</a></li>
+                </ul>
+		</li>
+		<li>
+                <a class="submenulink" href="#" data-section="Floating-images">Floating-images</a>
+                <ul class="submenu" data-submenu="Floating-images">
+                    <li><a href="#Floating-images-left">left</a></li>
+                    <li><a href="#Floating-images-right">right</a></li>
+                </ul>
+		</li>
+		<li>
+                <a class="sectionlink" href="#" data-section="Gallery">Gallery</a>
+		</li>
+		<li>
+                <a class="submenulink" href="#" data-section="Mobile Aliged">Mobile Aliged</a>
+                <ul class="submenu" data-submenu="Mobile Aliged">
+                    <li><a href="#Mobile_Aliged-center">center</a></li>
+                    <li><a href="#Mobile_Aliged-left">left</a></li>
+                    <li><a href="#Mobile_Aliged-right">right</a></li>
+                </ul>
+		</li>
+		<li>
+                <a class="sectionlink" href="#" data-section="Tabs">Tabs</a>
+		</li>
+		<li>
+                <a class="submenulink" href="#" data-section="Timeline">Timeline</a>
+                <ul class="submenu" data-submenu="Timeline">
+                    <li><a href="#Timeline-Left">Left</a></li>
+                    <li><a href="#Timeline-Right">Right</a></li>
+                    <li><a href="#Timeline-no-load-more">no-load-more</a></li>
+                </ul>
+		</li>
+		<li>
+                <a class="submenulink" href="#" data-section="Typography">Typography</a>
+                <ul class="submenu" data-submenu="Typography">
+                    <li><a href="#Typography-heading-h2">heading-h2</a></li>
+                    <li><a href="#Typography-heading-h4">heading-h4</a></li>
+                    <li><a href="#Typography-heading-h5">heading-h5</a></li>
+                    <li><a href="#Typography-title-h2">title-h2</a></li>
+                    <li><a href="#Typography-title-h3">title-h3</a></li>
+                    <li><a href="#Typography-title-h4">title-h4</a></li>
+                    <li><a href="#Typography-title-h6">title-h6</a></li>
+                </ul>
+		</li>
+		<li>
+                <a class="submenulink" href="#" data-section="form">form</a>
+                <ul class="submenu" data-submenu="form">
+                    <li><a href="#form-checkbox">checkbox</a></li>
+                    <li><a href="#form-input">input</a></li>
+                    <li><a href="#form-radio">radio</a></li>
+                    <li><a href="#form-textarea">textarea</a></li>
+                </ul>
+		</li>
+		<li>
+                <a class="submenulink" href="#" data-section="list">list</a>
+                <ul class="submenu" data-submenu="list">
+                    <li><a href="#list-highlighted-ordered-list">highlighted-ordered-list</a></li>
+                    <li><a href="#list-stepwise">stepwise</a></li>
+                    <li><a href="#list-underlined">underlined</a></li>
+                    <li><a href="#list-unordered">unordered</a></li>
+                </ul>
+		</li>
+		<li>
+                <a class="sectionlink" href="#" data-section="listing">listing</a>
+		</li>
+		<li>
+                <a class="sectionlink" href="#" data-section="pagination">pagination</a>
+		</li>
+		<li>
+                <a class="sectionlink" href="#" data-section="sharing-icons">sharing-icons</a>
+		</li>
+		<li>
+                <a class="sectionlink" href="#" data-section="sidebar">sidebar</a>
+		</li>
+		<li>
+                <a class="sectionlink" href="#" data-section="social">social</a>
+		</li>
+		<li>
+                <a class="sectionlink" href="#" data-section="sticky buttons">sticky buttons</a>
+		</li>
+	</ul>
+</div>
+
+<div id="styleguide" style="float:right;">
+		<div class="section" id="Common-Range_slider" data-section="Common" data-heading="Range slider">
+
+            <div class="comment">
+                <h1>Common/Range slider</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div class="font-sizing-wrap">
+                    <div class="font-range">
+                        <a class="decrease-font font" href="javascript:void(0);">A-</a>
+                        <div id="defaultSlider" class="range-selector"></div>
+                        <a class="increase-font font" href="javascript:void(0);">A+</a>
+                    </div>
+                </div>
+                <div class="content">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;<span class="hljs-operator">div</span> class=<span class="hljs-string">"font-sizing-wrap"</span>&gt;
+                    &lt;<span class="hljs-operator">div</span> class=<span class="hljs-string">"font-range"</span>&gt;
+                        &lt;<span class="hljs-operator">a</span> class=<span class="hljs-string">"decrease-font font"</span> href=<span class="hljs-string">"javascript:void(0);"</span>&gt;A-&lt;/<span class="hljs-operator">a</span>&gt;
+                        &lt;<span class="hljs-operator">div</span> id=<span class="hljs-string">"defaultSlider"</span> class=<span class="hljs-string">"range-selector"</span>&gt;&lt;/<span class="hljs-operator">div</span>&gt;
+                        &lt;<span class="hljs-operator">a</span> class=<span class="hljs-string">"increase-font font"</span> href=<span class="hljs-string">"javascript:void(0);"</span>&gt;A+&lt;/<span class="hljs-operator">a</span>&gt;
+                    &lt;/<span class="hljs-operator">div</span>&gt;
+                &lt;/<span class="hljs-operator">div</span>&gt;
+                &lt;<span class="hljs-operator">div</span> class=<span class="hljs-string">"content"</span>&gt;
+Lorem Ipsum is simply dummy <span class="hljs-keyword">text</span> <span class="hljs-operator">of</span> <span class="hljs-operator">the</span> printing <span class="hljs-operator">and</span> typesetting industry. Lorem Ipsum has been <span class="hljs-operator">the</span> industry&amp;apos;s standard dummy <span class="hljs-keyword">text</span> ever since <span class="hljs-operator">the</span> <span class="hljs-number">1500</span>s, when <span class="hljs-operator">an</span> unknown printer took <span class="hljs-operator">a</span> galley <span class="hljs-operator">of</span> type <span class="hljs-operator">and</span> scrambled <span class="hljs-keyword">it</span> <span class="hljs-built_in">to</span> make <span class="hljs-operator">a</span> type specimen book. It has survived <span class="hljs-operator">not</span> only <span class="hljs-constant">five</span> centuries, but also <span class="hljs-operator">the</span> leap <span class="hljs-keyword">into</span> electronic typesetting, remaining essentially unchanged. It was popularised <span class="hljs-operator">in</span> <span class="hljs-operator">the</span> <span class="hljs-number">1960</span>s <span class="hljs-operator">with</span> <span class="hljs-operator">the</span> release <span class="hljs-operator">of</span> Letraset sheets containing Lorem Ipsum passages, <span class="hljs-operator">and</span> more recently <span class="hljs-operator">with</span> desktop publishing software like Aldus PageMaker including versions <span class="hljs-operator">of</span> Lorem Ipsum.
+                &lt;/<span class="hljs-operator">div</span>&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Common-Red_Text" data-section="Common" data-heading="Red Text">
+
+            <div class="comment">
+                <h1>Common/Red Text</h1>
+                <p>You can just use the appropriate classnames for the following colored text. </p>
+            </div>
+
+                <div class="result">
+                    <span class="red-text"> highlighed text </span>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;span <span class="hljs-type">class</span>=<span class="hljs-string">"red-text"</span>&gt; highlighed <span class="hljs-type">text</span> &lt;/span&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Common-Red-btn" data-section="Common" data-heading="Red-btn">
+
+            <div class="comment">
+                <h1>Common/Red-btn</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div class="red-button-wrapper"><a href="javascript:void(0)" class="red-btn">Click Here</a></div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"red-button-wrapper"</span>&gt;&lt;a href=<span class="hljs-string">"javascript:void(0)"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"red-btn"</span>&gt;Click Here&lt;<span class="hljs-regexp">/a&gt;&lt;/</span><span class="hljs-keyword">div</span>&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Common-back" data-section="Common" data-heading="back">
+
+            <div class="comment">
+                <h1>Common/back</h1>
+                
+            </div>
+
+                <div class="result">
+                    <a href="javascript:void(0)" class="back-btn">back</a>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;a href=<span class="hljs-string">"javascript:void(0)"</span> <span class="hljs-type">class</span>=<span class="hljs-string">"back-btn"</span>&gt;<span class="hljs-keyword">back</span>&lt;/a&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Common-btn-orange" data-section="Common" data-heading="btn-orange">
+
+            <div class="comment">
+                <h1>Common/btn-orange</h1>
+                
+            </div>
+
+                <div class="result">
+                    <a href="javascript:void(0)" class="btn-orange">Register</a>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn-orange"</span>&gt;</span>Register<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Common-centered" data-section="Common" data-heading="centered">
+
+            <div class="comment">
+                <h1>Common/centered</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div class="vertical-align-parent" style="height:200px;">
+<div class="vertical-align-element">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard
+dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+Lorem Ipsum.
+</div>
+</div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;div class="vertical-align-parent" style="height:<span class="hljs-number">200</span>px;"&gt;
+&lt;div class="vertical-align-element"&gt;
+Lo<span class="hljs-comment">rem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;apos;s standard</span>
+dummy text ever since the <span class="hljs-number">1500</span>s, when an unknown printer took a galley of <span class="hljs-built_in">type</span> and scrambled it to make a <span class="hljs-built_in">type</span> specimen book. It has survived <span class="hljs-flow">not</span> only
+five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised <span class="hljs-flow">in</span> the <span class="hljs-number">1960</span>s with the release of
+Letraset sheets containing Lo<span class="hljs-comment">rem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of</span>
+Lo<span class="hljs-comment">rem Ipsum.</span>
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Common-download-btn" data-section="Common" data-heading="download-btn">
+
+            <div class="comment">
+                <h1>Common/download-btn</h1>
+                
+            </div>
+
+                <div class="result">
+                    <a href="javascript:void(0)" class="download-link red-text">
+                    <img src="Res/images/icon-download.png">
+                    <strong class="text">Download the Vessel Schedule flyer</strong>
+                </a>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;<span class="hljs-tag">a</span> href=<span class="hljs-string">"javascript:void(0)"</span> class=<span class="hljs-string">"download-link red-text"</span>&gt;
+                    &lt;<span class="hljs-tag">img</span> src=<span class="hljs-string">"Res/images/icon-download.png"</span>&gt;
+                    &lt;<span class="hljs-tag">strong</span> class=<span class="hljs-string">"text"</span>&gt;Download the Vessel Schedule flyer&lt;/strong&gt;
+                &lt;/a&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Common-dropdown" data-section="Common" data-heading="dropdown">
+
+            <div class="comment">
+                <h1>Common/dropdown</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div class="selectList-wrapper" style="display:inline-block;">
+            <select class="selectList not_chosen">
+                <option value="" disabled selected>Main Category</option>
+                <option value="Category2">Category 1</option>
+                <option value="Category1">Category 2</option>
+            </select>
+        </div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"selectList-wrapper"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"display:inline-block;"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"selectList not_chosen"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">disabled</span> <span class="hljs-attribute">selected</span>&gt;</span>Main Category<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Category2"</span>&gt;</span>Category 1<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Category1"</span>&gt;</span>Category 2<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Common-vertically_centered" data-section="Common" data-heading="vertically centered">
+
+            <div class="comment">
+                <h1>Common/vertically centered</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div class="vertical-align-parent" style="height:200px;">
+<div class="vertical-center-element">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard
+dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+Lorem Ipsum.
+</div>
+</div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;div class="vertical-align-parent" style="height:<span class="hljs-number">200</span>px;"&gt;
+&lt;div class="vertical-center-element"&gt;
+Lo<span class="hljs-comment">rem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;apos;s standard</span>
+dummy text ever since the <span class="hljs-number">1500</span>s, when an unknown printer took a galley of <span class="hljs-built_in">type</span> and scrambled it to make a <span class="hljs-built_in">type</span> specimen book. It has survived <span class="hljs-flow">not</span> only
+five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised <span class="hljs-flow">in</span> the <span class="hljs-number">1960</span>s with the release of
+Letraset sheets containing Lo<span class="hljs-comment">rem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of</span>
+Lo<span class="hljs-comment">rem Ipsum.</span>
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Floating-images-left" data-section="Floating-images" data-heading="left">
+
+            <div class="comment">
+                <h1>Floating-images/left</h1>
+                <p>For floating the image on left side on detail pages , please use the below markup .</p>
+            </div>
+
+                <div class="result">
+                    <div class="clearfix">
+<figure class="img-container">
+<img src="http://dummyimage.com/600x400/000/fff">
+</figure>
+<div class="textWrapper">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard
+dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+Lorem Ipsum.</div>
+</div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;div class="clearfix"&gt;
+&lt;figure class="img-container"&gt;
+&lt;img src="http://dummyimage.com/<span class="hljs-number">600</span>x400/<span class="hljs-number">000</span>/fff"&gt;
+&lt;/figure&gt;
+&lt;div class="textWrapper"&gt;Lo<span class="hljs-comment">rem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;apos;s standard</span>
+dummy text ever since the <span class="hljs-number">1500</span>s, when an unknown printer took a galley of <span class="hljs-built_in">type</span> and scrambled it to make a <span class="hljs-built_in">type</span> specimen book. It has survived <span class="hljs-flow">not</span> only
+five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised <span class="hljs-flow">in</span> the <span class="hljs-number">1960</span>s with the release of
+Letraset sheets containing Lo<span class="hljs-comment">rem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of</span>
+Lo<span class="hljs-comment">rem Ipsum.&lt;/div&gt;</span>
+&lt;/div&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Floating-images-right" data-section="Floating-images" data-heading="right">
+
+            <div class="comment">
+                <h1>Floating-images/right</h1>
+                <p>For floating the image on left side on detail pages , please use the below markup .</p>
+            </div>
+
+                <div class="result">
+                    <div class="clearfix">
+<figure class="img-container-right">
+<img src="http://dummyimage.com/600x400/000/fff">
+</figure>
+<div class="textWrapper">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard
+dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+Lorem Ipsum.</div>
+</div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;div class="clearfix"&gt;
+&lt;figure class="img-container-right"&gt;
+&lt;img src="http://dummyimage.com/<span class="hljs-number">600</span>x400/<span class="hljs-number">000</span>/fff"&gt;
+&lt;/figure&gt;
+&lt;div class="textWrapper"&gt;Lo<span class="hljs-comment">rem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;apos;s standard</span>
+dummy text ever since the <span class="hljs-number">1500</span>s, when an unknown printer took a galley of <span class="hljs-built_in">type</span> and scrambled it to make a <span class="hljs-built_in">type</span> specimen book. It has survived <span class="hljs-flow">not</span> only
+five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised <span class="hljs-flow">in</span> the <span class="hljs-number">1960</span>s with the release of
+Letraset sheets containing Lo<span class="hljs-comment">rem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of</span>
+Lo<span class="hljs-comment">rem Ipsum.&lt;/div&gt;</span>
+&lt;/div&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Gallery-" data-section="Gallery" data-heading="">
+
+            <div class="comment">
+                <h1>Gallery</h1>
+                <p>Use the following styles for gallery items (video/images)
+data-src is the url of the original item which would open in teh lighbox popup on click of the gallery item. </p>
+            </div>
+
+                <div class="result">
+                    <ul class="gallery-container clearfix">
+ <li class="gallery-element">
+        <a href="javascript:void(0)" data-type="video" data-src="http://www.youtube.com/v/mO4zqCmyuC8">
+            <figure class="poster-image vertical-align-parent">
+                <img class="poster" src="http://img.youtube.com/vi/mO4zqCmyuC8/0.jpg">
+                <div class="overlay"></div>
+                <img class="play-icon vertical-align-element" src="Res/images/youtube-play.png">
+            </figure>
+            <div class="textWrapper">
+                <h5 class="heading red-text"><strong>Dubai TV Covering 2015 RAME</strong></h5>
+                <p class="desc">
+                    Mahmood Al Bastaki talks to Dubai TV at the 2015 RAME Intercontinental Festival City- Dubai
+                </p>
+                <span class="timestamp"><em>Posted : April 2015</em></span>
+            </div>
+        </a>
+ </li>
+  <li class="gallery-element">
+        <a href="javascript:void(0)" data-type="image" data-src="Res/images/youtube-video.jpg">
+            <figure class="poster-image vertical-align-parent">
+                <img class="poster" src="http://img.youtube.com/vi/mO4zqCmyuC8/0.jpg">
+            </figure>
+            <div class="textWrapper">
+                <h5 class="heading red-text"><strong>Dubai TV Covering 2015 RAME</strong></h5>
+                <p class="desc">
+                    Mahmood Al Bastaki talks to Dubai TV at the 2015 RAME Intercontinental Festival City- Dubai
+                </p>
+                <span class="timestamp"><em>Posted : April 2015</em></span>
+            </div>
+        </a>
+ </li>
+ </ul>
+ <div class="gallery-popup vertical-align-parent">
+    <div class="gallery-content text-center vertical-align-element">
+        <a class="close-btn" href="javascript:void(0)">
+
+        </a>
+        <img class="loader vertical-align-element" src="Res/images/ajax-loader2.gif">
+        <div class="gallery-body">
+            <img class="img-responsive" src="Res/images/youtube-video.jpg">
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gallery-container clearfix"</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gallery-element"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">data-type</span>=<span class="hljs-value">"video"</span> <span class="hljs-attribute">data-src</span>=<span class="hljs-value">"http://www.youtube.com/v/mO4zqCmyuC8"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">figure</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"poster-image vertical-align-parent"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"poster"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://img.youtube.com/vi/mO4zqCmyuC8/0.jpg"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"overlay"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"play-icon vertical-align-element"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"Res/images/youtube-play.png"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">figure</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"textWrapper"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading red-text"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Dubai TV Covering 2015 RAME<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"desc"</span>&gt;</span>
+                    Mahmood Al Bastaki talks to Dubai TV at the 2015 RAME Intercontinental Festival City- Dubai
+                <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timestamp"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>Posted : April 2015<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gallery-element"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">data-type</span>=<span class="hljs-value">"image"</span> <span class="hljs-attribute">data-src</span>=<span class="hljs-value">"Res/images/youtube-video.jpg"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">figure</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"poster-image vertical-align-parent"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"poster"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://img.youtube.com/vi/mO4zqCmyuC8/0.jpg"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">figure</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"textWrapper"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"heading red-text"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Dubai TV Covering 2015 RAME<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"desc"</span>&gt;</span>
+                    Mahmood Al Bastaki talks to Dubai TV at the 2015 RAME Intercontinental Festival City- Dubai
+                <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timestamp"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>Posted : April 2015<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gallery-popup vertical-align-parent"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gallery-content text-center vertical-align-element"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"close-btn"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"loader vertical-align-element"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"Res/images/ajax-loader2.gif"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gallery-body"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-responsive"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"Res/images/youtube-video.jpg"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Mobile_Aliged-center" data-section="Mobile Aliged" data-heading="center">
+
+            <div class="comment">
+                <h1>Mobile Aliged/center</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div class="mob-align-center">CENTER ON MOBILE</div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"mob-align-center"</span>&gt;CENTER ON MOBILE&lt;/<span class="hljs-keyword">div</span>&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Mobile_Aliged-left" data-section="Mobile Aliged" data-heading="left">
+
+            <div class="comment">
+                <h1>Mobile Aliged/left</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div class="mob-align-left">LEFT ON MOBILE</div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"mob-align-left"</span>&gt;LEFT ON MOBILE&lt;/<span class="hljs-keyword">div</span>&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Mobile_Aliged-right" data-section="Mobile Aliged" data-heading="right">
+
+            <div class="comment">
+                <h1>Mobile Aliged/right</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div class="mob-align-right">RIGHT ON MOBILE</div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"mob-align-right"</span>&gt;RIGHT ON MOBILE&lt;/<span class="hljs-keyword">div</span>&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Tabs-" data-section="Tabs" data-heading="">
+
+            <div class="comment">
+                <h1>Tabs</h1>
+                <p>This section is for the Tabs styling for the eservices page</p>
+            </div>
+
+                <div class="result">
+                    <div class="tabContainer">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="text-center active">
+            <a href="#tabContent1" aria-controls="tabContent1" role="tab" data-toggle="tab">
+                <span class="hidden-xs">eServices by Community</span>
+                <span class="visible-xs">Community</span></a>
+
+        </li>
+        <li role="presentation" class="text-center">
+            <a href="#tabContent2" aria-controls="tabContent2" role="tab" data-toggle="tab">
+                <span class="hidden-xs">eServices by Service provider</span>
+                <span class="visible-xs">Service provider</span></a>
+
+        </li>
+        <li role="presentation" class="text-center">
+            <a href="#tabContent3" aria-controls="tabContent3" role="tab" data-toggle="tab">
+                <span class="hidden-xs">eServices by Activity</span>
+                <span class="visible-xs">Activity</span></a>
+
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="tabContent1">
+            tab 1
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tabContent2">
+            tab 2
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tabContent3">
+            tab 3
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tabContainer"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nav nav-tabs"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"tablist"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"presentation"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-center active"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#tabContent1"</span> <span class="hljs-attribute">aria-controls</span>=<span class="hljs-value">"tabContent1"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"tab"</span> <span class="hljs-attribute">data-toggle</span>=<span class="hljs-value">"tab"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hidden-xs"</span>&gt;</span>eServices by Community<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"visible-xs"</span>&gt;</span>Community<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"presentation"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-center"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#tabContent2"</span> <span class="hljs-attribute">aria-controls</span>=<span class="hljs-value">"tabContent2"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"tab"</span> <span class="hljs-attribute">data-toggle</span>=<span class="hljs-value">"tab"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hidden-xs"</span>&gt;</span>eServices by Service provider<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"visible-xs"</span>&gt;</span>Service provider<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"presentation"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-center"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#tabContent3"</span> <span class="hljs-attribute">aria-controls</span>=<span class="hljs-value">"tabContent3"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"tab"</span> <span class="hljs-attribute">data-toggle</span>=<span class="hljs-value">"tab"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hidden-xs"</span>&gt;</span>eServices by Activity<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"visible-xs"</span>&gt;</span>Activity<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-content"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"tabpanel"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-pane active"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"tabContent1"</span>&gt;</span>
+            tab 1
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"tabpanel"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-pane"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"tabContent2"</span>&gt;</span>
+            tab 2
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"tabpanel"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-pane"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"tabContent3"</span>&gt;</span>
+            tab 3
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Timeline-Left" data-section="Timeline" data-heading="Left">
+
+            <div class="comment">
+                <h1>Timeline/Left</h1>
+                <p>This section is for the timeline of dubai trade evolution.</p>
+            </div>
+
+                <div class="result">
+                    <div class="timeline-container">
+    <h3 class="timeline-title text-center">
+        <span>1995-1999</span>
+    </h3>
+    <div class="milestone-wrapper align-left">
+        <div class="milestone">
+            <h6 class="head">1995-1999</h6>
+            <ul class="timeline-list">
+                <li>Manifest submission throrough EDI Started (MDS)</li>
+                <li>Mirsal System is implemented by cutoms</li>
+            </ul>
+            <figure class="timeline-logos">
+                <img class="img-responsive" src="Res/images/logo1.png">
+            </figure>
+        </div>
+    </div>
+    <div class="load-more text-center">
+        <a href="javascript:void(0)" class="load-more-btn"><i class="fa fa-plus-circle">  </i>Load More</a>
+    </div>
+</div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timeline-container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timeline-title text-center"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>1995-1999<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"milestone-wrapper align-left"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"milestone"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h6</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"head"</span>&gt;</span>1995-1999<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timeline-list"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Manifest submission throrough EDI Started (MDS)<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Mirsal System is implemented by cutoms<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">figure</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timeline-logos"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-responsive"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"Res/images/logo1.png"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">figure</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"load-more text-center"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"load-more-btn"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-plus-circle"</span>&gt;</span>  <span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>Load More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Timeline-Right" data-section="Timeline" data-heading="Right">
+
+            <div class="comment">
+                <h1>Timeline/Right</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div class="timeline-container">
+    <h3 class="timeline-title text-center">
+        <span>1995-1999</span>
+    </h3>
+    <div class="milestone-wrapper align-right">
+        <div class="milestone">
+            <h6 class="head">2000-2002</h6>
+            <ul class="timeline-list">
+                <li>E-Mirsal launched</li>
+                <li>MyJAFZA, Online portal for free zone is launched</li>
+                <li>MyDPA, Online portal is launched</li>
+            </ul>
+            <figure class="timeline-logos">
+                <img class="img-responsive" src="Res/images/logo2.png">
+            </figure>
+        </div>
+    </div>
+   <div class="load-more text-center">
+        <a href="javascript:void(0)" class="load-more-btn"><i class="fa fa-plus-circle">  </i>Load More</a>
+    </div>
+</div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timeline-container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timeline-title text-center"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>1995-1999<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"milestone-wrapper align-right"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"milestone"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h6</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"head"</span>&gt;</span>2000-2002<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timeline-list"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>E-Mirsal launched<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>MyJAFZA, Online portal for free zone is launched<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>MyDPA, Online portal is launched<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">figure</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timeline-logos"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-responsive"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"Res/images/logo2.png"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">figure</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"load-more text-center"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"load-more-btn"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-plus-circle"</span>&gt;</span>  <span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>Load More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Timeline-no-load-more" data-section="Timeline" data-heading="no-load-more">
+
+            <div class="comment">
+                <h1>Timeline/no-load-more</h1>
+                <p>If all the milestone are loaded and no more children are left for lazy loading , add the class <code>has-no-more-children</code> on <code>timeline-container</code> </p>
+            </div>
+
+                <div class="result">
+                    <div class="timeline-container has-no-more-children">
+    <h3 class="timeline-title text-center">
+        <span>1995-1999</span>
+    </h3>
+    <div class="milestone-wrapper align-left">
+        <div class="milestone">
+            <h6 class="head">1995-1999</h6>
+            <ul class="timeline-list">
+                <li>Manifest submission throrough EDI Started (MDS)</li>
+                <li>Mirsal System is implemented by cutoms</li>
+            </ul>
+            <figure class="timeline-logos">
+                <img class="img-responsive" src="Res/images/logo1.png">
+            </figure>
+        </div>
+    </div>
+
+    <h3 class="timeline-title text-center">
+        <span>2000-2002</span>
+    </h3>
+    <div class="milestone-wrapper align-right">
+        <div class="milestone">
+            <h6 class="head">2000-2002</h6>
+            <ul class="timeline-list">
+                <li>E-Mirsal launched</li>
+                <li>MyJAFZA, Online portal for free zone is launched</li>
+                <li>MyDPA, Online portal is launched</li>
+            </ul>
+            <figure class="timeline-logos">
+                <img class="img-responsive" src="Res/images/logo2.png">
+            </figure>
+        </div>
+    </div>
+   <div class="load-more text-center">
+        <a href="javascript:void(0)" class="load-more-btn"><i class="fa fa-plus-circle">  </i>Load More</a>
+    </div>
+</div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timeline-container has-no-more-children"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timeline-title text-center"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>1995-1999<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"milestone-wrapper align-left"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"milestone"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h6</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"head"</span>&gt;</span>1995-1999<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timeline-list"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Manifest submission throrough EDI Started (MDS)<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Mirsal System is implemented by cutoms<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">figure</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timeline-logos"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-responsive"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"Res/images/logo1.png"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">figure</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timeline-title text-center"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>2000-2002<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"milestone-wrapper align-right"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"milestone"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h6</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"head"</span>&gt;</span>2000-2002<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timeline-list"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>E-Mirsal launched<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>MyJAFZA, Online portal for free zone is launched<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>MyDPA, Online portal is launched<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">figure</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"timeline-logos"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"img-responsive"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"Res/images/logo2.png"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">figure</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"load-more text-center"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"load-more-btn"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-plus-circle"</span>&gt;</span>  <span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>Load More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Typography-heading-h2" data-section="Typography" data-heading="heading-h2">
+
+            <div class="comment">
+                <h1>Typography/heading-h2</h1>
+                <p>For the different sized Headings inside the innerpages you can use the below markup. </p>
+            </div>
+
+                <div class="result">
+                    <h2 class="heading"> section title </h2>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;<span class="hljs-tag">h2</span> class=<span class="hljs-string">"heading"</span>&gt; <span class="hljs-tag">section</span> title &lt;/h2&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Typography-heading-h4" data-section="Typography" data-heading="heading-h4">
+
+            <div class="comment">
+                <h1>Typography/heading-h4</h1>
+                
+            </div>
+
+                <div class="result">
+                    <h4 class="heading"> section title </h4>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;<span class="hljs-tag">h4</span> class=<span class="hljs-string">"heading"</span>&gt; <span class="hljs-tag">section</span> title &lt;/h4&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Typography-heading-h5" data-section="Typography" data-heading="heading-h5">
+
+            <div class="comment">
+                <h1>Typography/heading-h5</h1>
+                
+            </div>
+
+                <div class="result">
+                    <h5 class="heading"> section title </h5>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;<span class="hljs-tag">h5</span> class=<span class="hljs-string">"heading"</span>&gt; <span class="hljs-tag">section</span> title &lt;/h5&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Typography-title-h2" data-section="Typography" data-heading="title-h2">
+
+            <div class="comment">
+                <h1>Typography/title-h2</h1>
+                <p>For the different sized Title across the websites you can use the below markup. </p>
+            </div>
+
+                <div class="result">
+                    <h2 class="title"> page title </h2>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title"</span>&gt;</span> page title <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Typography-title-h3" data-section="Typography" data-heading="title-h3">
+
+            <div class="comment">
+                <h1>Typography/title-h3</h1>
+                
+            </div>
+
+                <div class="result">
+                    <h3 class="title"> page title </h3>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title"</span>&gt;</span> page title <span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Typography-title-h4" data-section="Typography" data-heading="title-h4">
+
+            <div class="comment">
+                <h1>Typography/title-h4</h1>
+                
+            </div>
+
+                <div class="result">
+                    <h4 class="title"> page title </h4>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title"</span>&gt;</span> page title <span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="Typography-title-h6" data-section="Typography" data-heading="title-h6">
+
+            <div class="comment">
+                <h1>Typography/title-h6</h1>
+                
+            </div>
+
+                <div class="result">
+                    <h6 class="title"> page title </h6>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">h6</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title"</span>&gt;</span> page title <span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="form-checkbox" data-section="form" data-heading="checkbox">
+
+            <div class="comment">
+                <h1>form/checkbox</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div class="row">
+        <div class="col-xs-12 checkbox-wrapper">
+            <label for="checkBox-container">What do you think about this site</label>
+            <br>
+            <div class="checkBox-container">
+                <input type="checkbox" class="checkbox-one" name="checkbox-one" id="checkbox1-option1" value="option1" data-rule-required="true" data-msg-required="Please rate us">
+                <label for="checkbox1-option1">
+                    <span>Excellant</span>
+                </label><br>
+                <input type="checkbox" class="checkbox-one" name="checkbox-one" id="checkbox1-option2" value="option2" data-rule-required="true" data-msg-required="Please rate us">
+                <label for="checkbox1-option2">
+                    <span>Good</span>
+                </label><br>
+                <input type="checkbox" class="checkbox-one" name="checkbox-one" id="checkbox1-option3" value="option3" data-rule-required="true" data-msg-required="Please rate us">
+                <label for="checkbox1-option3">
+                    <span>Bad</span>
+                </label>
+            </div>
+        </div>
+    </div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"row"</span>&gt;
+        &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"col-xs-12 checkbox-wrapper"</span>&gt;
+            &lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"checkBox-container"</span>&gt;What <span class="hljs-keyword">do</span> you think <span class="hljs-keyword">about</span> this site&lt;/<span class="hljs-keyword">label</span>&gt;
+            &lt;<span class="hljs-keyword">br</span>&gt;
+            &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"checkBox-container"</span>&gt;
+                &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"checkbox-one"</span> name=<span class="hljs-string">"checkbox-one"</span> id=<span class="hljs-string">"checkbox1-option1"</span> value=<span class="hljs-string">"option1"</span> data-rule-required=<span class="hljs-string">"true"</span> data-msg-required=<span class="hljs-string">"Please rate us"</span>&gt;
+                &lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"checkbox1-option1"</span>&gt;
+                    &lt;span&gt;Excellant&lt;/span&gt;
+                &lt;/<span class="hljs-keyword">label</span>&gt;&lt;<span class="hljs-keyword">br</span>&gt;
+                &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"checkbox-one"</span> name=<span class="hljs-string">"checkbox-one"</span> id=<span class="hljs-string">"checkbox1-option2"</span> value=<span class="hljs-string">"option2"</span> data-rule-required=<span class="hljs-string">"true"</span> data-msg-required=<span class="hljs-string">"Please rate us"</span>&gt;
+                &lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"checkbox1-option2"</span>&gt;
+                    &lt;span&gt;Good&lt;/span&gt;
+                &lt;/<span class="hljs-keyword">label</span>&gt;&lt;<span class="hljs-keyword">br</span>&gt;
+                &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"checkbox-one"</span> name=<span class="hljs-string">"checkbox-one"</span> id=<span class="hljs-string">"checkbox1-option3"</span> value=<span class="hljs-string">"option3"</span> data-rule-required=<span class="hljs-string">"true"</span> data-msg-required=<span class="hljs-string">"Please rate us"</span>&gt;
+                &lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"checkbox1-option3"</span>&gt;
+                    &lt;span&gt;Bad&lt;/span&gt;
+                &lt;/<span class="hljs-keyword">label</span>&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="form-input" data-section="form" data-heading="input">
+
+            <div class="comment">
+                <h1>form/input</h1>
+                
+            </div>
+
+                <div class="result">
+                    <form class="form-validate">
+    <div class="row">
+        <div class="form-group ">
+            <label for="first_name">First name<span class="regMark">*</span></label>
+            <input type="text" class="form-control" id="first-name" name="first-name" data-rule-required="true" data-msg-required="Please enter your first name" autocomplete="off">
+        </div>
+    </div>
+</form>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;form <span class="hljs-type">class</span>=<span class="hljs-string">"form-validate"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"row"</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"form-group "</span>&gt;
+            &lt;label <span class="hljs-keyword">for</span>=<span class="hljs-string">"first_name"</span>&gt;First <span class="hljs-property">name</span>&lt;span <span class="hljs-type">class</span>=<span class="hljs-string">"regMark"</span>&gt;*&lt;/span&gt;&lt;/label&gt;
+            &lt;input type=<span class="hljs-string">"text"</span> <span class="hljs-type">class</span>=<span class="hljs-string">"form-control"</span> <span class="hljs-property">id</span>=<span class="hljs-string">"first-name"</span> <span class="hljs-property">name</span>=<span class="hljs-string">"first-name"</span> data-rule-required=<span class="hljs-string">"true"</span> data-msg-required=<span class="hljs-string">"Please enter your first name"</span> autocomplete=<span class="hljs-string">"off"</span>&gt;
+        &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/form&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="form-radio" data-section="form" data-heading="radio">
+
+            <div class="comment">
+                <h1>form/radio</h1>
+                
+            </div>
+
+                <div class="result">
+                    <form id="survey-form">
+        <div class="radio-wrapper">
+            <label for="radio">What do you think about this site</label>
+            <br>
+            <div class="radio-container">
+                <input type="radio" class="radio-button" name="radioButton" value="option1" id="radio1-option1" data-rule-required="true" data-msg-required="Please rate us">
+                <label for="radio1-option1">
+                    <span class="radio-btn"></span>
+                    <span>Excellant</span>
+                </label><br>
+                <input type="radio" class="radio-button" name="radioButton" value="option2" id="radio1-option2" data-rule-required="true" data-msg-required="Please rate us">
+                <label for="radio1-option2">
+                    <span class="radio-btn"></span>
+                    <span>Good</span>
+                </label><br>
+                <input type="radio" class="radio-button" name="radioButton" value="option3" id="radio1-option3" data-rule-required="true" data-msg-required="Please rate us">
+                <label for="radio1-option3">
+                    <span class="radio-btn"></span>
+                    <span>Bad</span>
+                </label>
+            </div>
+        </div>
+    </form>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;<span class="hljs-keyword">form</span> id=<span class="hljs-string">"survey-form"</span>&gt;
+        &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"radio-wrapper"</span>&gt;
+            &lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"radio"</span>&gt;What <span class="hljs-keyword">do</span> you think <span class="hljs-keyword">about</span> this site&lt;/<span class="hljs-keyword">label</span>&gt;
+            &lt;<span class="hljs-keyword">br</span>&gt;
+            &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"radio-container"</span>&gt;
+                &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"radio-button"</span> name=<span class="hljs-string">"radioButton"</span> value=<span class="hljs-string">"option1"</span> id=<span class="hljs-string">"radio1-option1"</span> data-rule-required=<span class="hljs-string">"true"</span> data-msg-required=<span class="hljs-string">"Please rate us"</span>&gt;
+                &lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"radio1-option1"</span>&gt;
+                    &lt;span <span class="hljs-keyword">class</span>=<span class="hljs-string">"radio-btn"</span>&gt;&lt;/span&gt;
+                    &lt;span&gt;Excellant&lt;/span&gt;
+                &lt;/<span class="hljs-keyword">label</span>&gt;&lt;<span class="hljs-keyword">br</span>&gt;
+                &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"radio-button"</span> name=<span class="hljs-string">"radioButton"</span> value=<span class="hljs-string">"option2"</span> id=<span class="hljs-string">"radio1-option2"</span> data-rule-required=<span class="hljs-string">"true"</span> data-msg-required=<span class="hljs-string">"Please rate us"</span>&gt;
+                &lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"radio1-option2"</span>&gt;
+                    &lt;span <span class="hljs-keyword">class</span>=<span class="hljs-string">"radio-btn"</span>&gt;&lt;/span&gt;
+                    &lt;span&gt;Good&lt;/span&gt;
+                &lt;/<span class="hljs-keyword">label</span>&gt;&lt;<span class="hljs-keyword">br</span>&gt;
+                &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"radio-button"</span> name=<span class="hljs-string">"radioButton"</span> value=<span class="hljs-string">"option3"</span> id=<span class="hljs-string">"radio1-option3"</span> data-rule-required=<span class="hljs-string">"true"</span> data-msg-required=<span class="hljs-string">"Please rate us"</span>&gt;
+                &lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"radio1-option3"</span>&gt;
+                    &lt;span <span class="hljs-keyword">class</span>=<span class="hljs-string">"radio-btn"</span>&gt;&lt;/span&gt;
+                    &lt;span&gt;Bad&lt;/span&gt;
+                &lt;/<span class="hljs-keyword">label</span>&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/<span class="hljs-keyword">form</span>&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="form-textarea" data-section="form" data-heading="textarea">
+
+            <div class="comment">
+                <h1>form/textarea</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div class="form-group">
+            <label for="comments">Comments</label>
+            <textarea class="form-control" id="comments" name="comments" rows="6"></textarea>
+        </div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"form-group"</span>&gt;
+            &lt;label <span class="hljs-keyword">for</span>=<span class="hljs-string">"comments"</span>&gt;Comments&lt;/label&gt;
+            &lt;textarea <span class="hljs-type">class</span>=<span class="hljs-string">"form-control"</span> <span class="hljs-property">id</span>=<span class="hljs-string">"comments"</span> <span class="hljs-property">name</span>=<span class="hljs-string">"comments"</span> rows=<span class="hljs-string">"6"</span>&gt;&lt;/textarea&gt;
+        &lt;/<span class="hljs-keyword">div</span>&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="list-highlighted-ordered-list" data-section="list" data-heading="highlighted-ordered-list">
+
+            <div class="comment">
+                <h1>list/highlighted-ordered-list</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div class="clearfix">
+    <div class="col-xs-12">
+        <ol class="highlighed-ordered-list">
+            <li>
+                <span class="order-no">1</span>
+                <span><strong>Impactful use of technology</strong></span>
+            </li>
+            <li>
+                <span class="order-no">2</span>
+                <span><strong>Continuous improvement of business processes</strong></span>
+            </li>
+            <li>
+                <span class="order-no">3</span>
+                <span><strong>Impactful use of technology</strong></span>
+            </li>
+            <li>
+                <span class="order-no">4</span>
+                <span><strong>Continuous improvement of business processes</strong></span>
+            </li>
+            <li>
+                <span class="order-no">5</span>
+                <span><strong>Impactful use of technology</strong></span>
+            </li>
+            <li>
+                <span class="order-no">6</span>
+                <span><strong>Continuous improvement of business processes</strong></span>
+            </li>
+        </ol>
+    </div>
+</div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-xs-12"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ol</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"highlighed-ordered-list"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"order-no"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Impactful use of technology<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"order-no"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Continuous improvement of business processes<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"order-no"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Impactful use of technology<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"order-no"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Continuous improvement of business processes<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"order-no"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Impactful use of technology<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"order-no"</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Continuous improvement of business processes<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ol</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="list-stepwise" data-section="list" data-heading="stepwise">
+
+            <div class="comment">
+                <h1>list/stepwise</h1>
+                <p>List for showing steps</p>
+            </div>
+
+                <div class="result">
+                    <ul class="tab-links list clearfix">
+            <li class="active" id="tab1">
+                <a href="javascript:void(0)">
+                    <span class="step-title">Pre-Requisites</span>
+                    <span class="step-no">1</span>
+                </a>
+            </li>
+            <li id="tab2">
+                <a href="javascript:void(0)">
+                    <span class="step-title">Submit<br>
+                    Registration</span>
+                    <span class="step-no">2</span>
+                </a>
+            </li>
+            <li id="tab3">
+                <a href="javascript:void(0)">
+                    <span class="step-title">Activate
+                    Account</span>
+                    <span class="step-no">3</span>
+                </a>
+            </li>
+            <li id="tab4">
+                <a href="javascript:void(0)">
+                    <span class="step-title">Add Users
+                    (Optional)</span>
+                    <span class="step-no">4</span>
+                </a>
+            </li>
+            <li id="tab5">
+                <a href="javascript:void(0)">
+                    <span class="step-title">Access
+                    Services</span>
+                    <span class="step-no">5</span>
+                </a>
+            </li>
+        </ul>
+    <div class="pages-container">
+        <div class="page active" id="page1">
+            <div class="page-wrapper clearfix">
+                <h4 class="red-text title">Pre-Requisites</h4>
+            </div>
+        </div>
+        <div class="page" id="page2">
+            <div class="page-wrapper clearfix">
+                <h4 class="red-text title">Submit</h4>
+            </div>
+        </div>
+        <div class="page" id="page3">
+            <div class="page-wrapper clearfix">
+                <h4 class="red-text title">Activate
+                    Account</h4>
+            </div>
+        </div>
+        <div class="page" id="page4">
+            <div class="page-wrapper clearfix">
+                <h4 class="red-text title">Access
+                    Services</h4>
+            </div>
+        </div>
+        <div class="page" id="page5">
+            <div class="page-wrapper clearfix">
+                <h4 class="red-text title">Add Users
+                    (Optional)</h4>
+            </div>
+        </div>
+        <div class="button-container">
+            <a href="javascript:void(0)" class="button next">Next</a>
+            <a href="javascript:void(0)" class="button disabled prev">Previous</a>
+        </div>
+    </div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tab-links list clearfix"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"active"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"tab1"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"step-title"</span>&gt;</span>Pre-Requisites<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"step-no"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"tab2"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"step-title"</span>&gt;</span>Submit<span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+                    Registration<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"step-no"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"tab3"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"step-title"</span>&gt;</span>Activate
+                    Account<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"step-no"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"tab4"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"step-title"</span>&gt;</span>Add Users
+                    (Optional)<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"step-no"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"tab5"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"step-title"</span>&gt;</span>Access
+                    Services<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"step-no"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"pages-container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page active"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"page1"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page-wrapper clearfix"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"red-text title"</span>&gt;</span>Pre-Requisites<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"page2"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page-wrapper clearfix"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"red-text title"</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"page3"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page-wrapper clearfix"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"red-text title"</span>&gt;</span>Activate
+                    Account<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"page4"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page-wrapper clearfix"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"red-text title"</span>&gt;</span>Access
+                    Services<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"page5"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"page-wrapper clearfix"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"red-text title"</span>&gt;</span>Add Users
+                    (Optional)<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button-container"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button next"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button disabled prev"</span>&gt;</span>Previous<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="list-underlined" data-section="list" data-heading="underlined">
+
+            <div class="comment">
+                <h1>list/underlined</h1>
+                
+            </div>
+
+                <div class="result">
+                    <ul class="underlined-list">
+<li>item1</li>
+<li>item2</li>
+<li>item3</li>
+</ul>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"underlined-list"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>item1<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>item2<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>item3<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="list-unordered" data-section="list" data-heading="unordered">
+
+            <div class="comment">
+                <h1>list/unordered</h1>
+                <p>For the list items(ordered or unordered).</p>
+            </div>
+
+                <div class="result">
+                    <ul class="list">
+<li>item1</li>
+<li>item2</li>
+<li>item3</li>
+</ul>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"list"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>item1<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>item2<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>item3<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="listing-" data-section="listing" data-heading="">
+
+            <div class="comment">
+                <h1>listing</h1>
+                
+            </div>
+
+                <div class="result">
+                    <ul class="list-container clearfix">
+    <li class="listitem clearfix ">
+        <figure class="img-container no-border vertical-align-parent"><img class="vertical-align-element" src="Res/images/accolades1.png">
+        </figure>
+        <div class="text-wrapper">
+            <h3 class="red-text title"><strong>CIO 50 Awards &amp; Forum 2011</strong></h3>
+            <p class="desc">Organised by magazine publisher ITP Business, the annual Supply Chain and Transport Awards (SCATA) has established itself as the ultimate celebration of the Middle East logistics industry&apos;s achievements...</p>
+            <a class="cta red-text" href="#">Read More</a>
+        </div>
+    </li>
+    <li class="listitem clearfix">
+        <figure class="img-container no-border vertical-align-parent"><img class="vertical-align-element" src="Res/images/accolades2.png">
+        </figure>
+        <div class="text-wrapper">
+            <h3 class="red-text title"><strong>CIO 50 Awards &amp; Forum 2011</strong></h3>
+            <p class="desc">Organised by magazine publisher ITP Business, the annual Supply Chain and Transport Awards (SCATA) has established itself as the ultimate celebration of the Middle East logistics industry&apos;s achievements...</p>
+            <a class="cta red-text" href="javascript:void(0)">Read More</a>
+        </div>
+    </li>
+    <li class="listitem clearfix">
+        <figure class="img-container no-border vertical-align-parent"><img class="vertical-align-element" src="Res/images/accolades3.png">
+        </figure>
+        <div class="text-wrapper">
+            <h3 class="red-text title"><strong>CIO 50 Awards &amp; Forum 2011</strong></h3>
+            <p class="desc">Organised by magazine publisher ITP Business, the annual Supply Chain and Transport Awards (SCATA) has established itself as the ultimate celebration of the Middle East logistics industry&apos;s achievements...</p>
+            <a class="cta red-text" href="javascript:void(0)">Read More</a>
+        </div>
+    </li>
+</ul>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;ul <span class="hljs-keyword">class</span>=<span class="hljs-string">"list-container clearfix"</span>&gt;
+    &lt;li <span class="hljs-keyword">class</span>=<span class="hljs-string">"listitem clearfix "</span>&gt;
+        &lt;figure <span class="hljs-keyword">class</span>=<span class="hljs-string">"img-container no-border vertical-align-parent"</span>&gt;&lt;img <span class="hljs-keyword">class</span>=<span class="hljs-string">"vertical-align-element"</span> src=<span class="hljs-string">"Res/images/accolades1.png"</span>&gt;
+        &lt;/figure&gt;
+        &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"text-wrapper"</span>&gt;
+            &lt;h3 <span class="hljs-keyword">class</span>=<span class="hljs-string">"red-text title"</span>&gt;&lt;strong&gt;CIO <span class="hljs-number">50</span> Awards &amp;amp; Forum <span class="hljs-number">2011</span>&lt;/strong&gt;&lt;/h3&gt;
+            &lt;p <span class="hljs-keyword">class</span>=<span class="hljs-string">"desc"</span>&gt;Organised by magazine publisher ITP Business, <span class="hljs-function">the annual Supply Chain and Transport <span class="hljs-title">Awards</span> (<span class="hljs-params">SCATA</span>) has established itself <span class="hljs-keyword">as</span> the ultimate celebration of the Middle East logistics industry&amp;apos</span>;s achievements...&lt;/p&gt;
+            &lt;a <span class="hljs-keyword">class</span>=<span class="hljs-string">"cta red-text"</span> href=<span class="hljs-string">"#"</span>&gt;Read More&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li <span class="hljs-keyword">class</span>=<span class="hljs-string">"listitem clearfix"</span>&gt;
+        &lt;figure <span class="hljs-keyword">class</span>=<span class="hljs-string">"img-container no-border vertical-align-parent"</span>&gt;&lt;img <span class="hljs-keyword">class</span>=<span class="hljs-string">"vertical-align-element"</span> src=<span class="hljs-string">"Res/images/accolades2.png"</span>&gt;
+        &lt;/figure&gt;
+        &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"text-wrapper"</span>&gt;
+            &lt;h3 <span class="hljs-keyword">class</span>=<span class="hljs-string">"red-text title"</span>&gt;&lt;strong&gt;CIO <span class="hljs-number">50</span> Awards &amp;amp; Forum <span class="hljs-number">2011</span>&lt;/strong&gt;&lt;/h3&gt;
+            &lt;p <span class="hljs-keyword">class</span>=<span class="hljs-string">"desc"</span>&gt;Organised by magazine publisher ITP Business, <span class="hljs-function">the annual Supply Chain and Transport <span class="hljs-title">Awards</span> (<span class="hljs-params">SCATA</span>) has established itself <span class="hljs-keyword">as</span> the ultimate celebration of the Middle East logistics industry&amp;apos</span>;s achievements...&lt;/p&gt;
+            &lt;a <span class="hljs-keyword">class</span>=<span class="hljs-string">"cta red-text"</span> href=<span class="hljs-string">"javascript:void(0)"</span>&gt;Read More&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li <span class="hljs-keyword">class</span>=<span class="hljs-string">"listitem clearfix"</span>&gt;
+        &lt;figure <span class="hljs-keyword">class</span>=<span class="hljs-string">"img-container no-border vertical-align-parent"</span>&gt;&lt;img <span class="hljs-keyword">class</span>=<span class="hljs-string">"vertical-align-element"</span> src=<span class="hljs-string">"Res/images/accolades3.png"</span>&gt;
+        &lt;/figure&gt;
+        &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"text-wrapper"</span>&gt;
+            &lt;h3 <span class="hljs-keyword">class</span>=<span class="hljs-string">"red-text title"</span>&gt;&lt;strong&gt;CIO <span class="hljs-number">50</span> Awards &amp;amp; Forum <span class="hljs-number">2011</span>&lt;/strong&gt;&lt;/h3&gt;
+            &lt;p <span class="hljs-keyword">class</span>=<span class="hljs-string">"desc"</span>&gt;Organised by magazine publisher ITP Business, <span class="hljs-function">the annual Supply Chain and Transport <span class="hljs-title">Awards</span> (<span class="hljs-params">SCATA</span>) has established itself <span class="hljs-keyword">as</span> the ultimate celebration of the Middle East logistics industry&amp;apos</span>;s achievements...&lt;/p&gt;
+            &lt;a <span class="hljs-keyword">class</span>=<span class="hljs-string">"cta red-text"</span> href=<span class="hljs-string">"javascript:void(0)"</span>&gt;Read More&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="listing-arrowed-list" data-section="listing" data-heading="arrowed-list">
+
+            <div class="comment">
+                <h1>listing/arrowed-list</h1>
+                
+            </div>
+
+                <div class="result">
+                    <ul class="list laws-list clearfix">
+        <li class="col-sm-6"><a href="javascript:void(0)">Commercial Agency Law</a></li>
+        <li class="col-sm-6 active"><a href="javascript:void(0)">Companies Law</a></li>
+        <li class="col-sm-6"><a href="javascript:void(0)">Control Law</a></li>
+        <li class="col-sm-6"><a href="javascript:void(0)">Electronic Transactions Law</a></li>
+    </ul>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"list laws-list clearfix"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-sm-6"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>Commercial Agency Law<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-sm-6 active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>Companies Law<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-sm-6"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>Control Law<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-sm-6"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>Electronic Transactions Law<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="pagination-" data-section="pagination" data-heading="">
+
+            <div class="comment">
+                <h1>pagination</h1>
+                
+            </div>
+
+                <div class="result">
+                    <nav class="pagination-nav">
+        <ul class="pagination">
+            <li class="disabled"><a href="javascript:void(0)" aria-label="Previous"><span aria-hidden="true">Previous</span></a></li>
+            <li><a href="javascript:void(0)">1 <span class="sr-only">(current)</span></a></li>
+            <li><a href="javascript:void(0)">2</a></li>
+            <li class="active"><a href="javascript:void(0)">3</a></li>
+            <li><a href="javascript:void(0)">4</a></li>
+            <li><a href="javascript:void(0)">5</a></li>
+            <li><a href="javascript:void(0)">6</a></li>
+            <li><a href="javascript:void(0)">7</a></li>
+            <li><a href="javascript:void(0)">8</a></li>
+            <li class="dots"><span>...</span></li>
+            <li><a href="javascript:void(0)" aria-label="Next"><span aria-hidden="true">Next</span></a></li>
+        </ul>
+    </nav>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"pagination-nav"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"pagination"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"disabled"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">aria-label</span>=<span class="hljs-value">"Previous"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>Previous<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>1 <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sr-only"</span>&gt;</span>(current)<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>7<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>8<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dots"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">aria-label</span>=<span class="hljs-value">"Next"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="sharing-icons-" data-section="sharing-icons" data-heading="">
+
+            <div class="comment">
+                <h1>sharing-icons</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div class="title-icons text-left">
+    <a class="share" href="javascript:void(0)"></a><span class="pipe"></span>
+    <a class="print" href="javascript:void(0)"></a><span class="pipe"></span>
+    <a class="rss" href="javascript:void(0)"><img class="rssFeed" src="../Res/images/icons/icon-rss.png"></a>
+    <div class="addthis_sharing_toolbox" data-url="www.google.com" data-title="Sharing Dubai Trade" tabindex="-1"></div>
+</div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"title-icons text-left"</span>&gt;
+    &lt;a <span class="hljs-keyword">class</span>=<span class="hljs-string">"share"</span> href=<span class="hljs-string">"javascript:void(0)"</span>&gt;&lt;/a&gt;&lt;span <span class="hljs-keyword">class</span>=<span class="hljs-string">"pipe"</span>&gt;&lt;/span&gt;
+    &lt;a <span class="hljs-keyword">class</span>=<span class="hljs-string">"print"</span> href=<span class="hljs-string">"javascript:void(0)"</span>&gt;&lt;/a&gt;&lt;span <span class="hljs-keyword">class</span>=<span class="hljs-string">"pipe"</span>&gt;&lt;/span&gt;
+    &lt;a <span class="hljs-keyword">class</span>=<span class="hljs-string">"rss"</span> href=<span class="hljs-string">"javascript:void(0)"</span>&gt;&lt;img <span class="hljs-keyword">class</span>=<span class="hljs-string">"rssFeed"</span> src=<span class="hljs-string">"../Res/images/icons/icon-rss.png"</span>&gt;&lt;/a&gt;
+    &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"addthis_sharing_toolbox"</span> data-url=<span class="hljs-string">"www.google.com"</span> data-title=<span class="hljs-string">"Sharing Dubai Trade"</span> tabindex=<span class="hljs-string">"-1"</span>&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="sidebar-" data-section="sidebar" data-heading="">
+
+            <div class="comment">
+                <h1>sidebar</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div class="row">
+    <div class="col-xs-9">
+    </div>
+    <div class="sidebar col-xs-3">
+        <nav class="nav-sidebar hidden-xs">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="main-heading text-uppercase"><a href="javascript:void(0)">about</a></li>
+                <li data-pagename="vision-mission"><a href="vision-mission.html">Vision and Mission</a></li>
+                <li data-pagename="dubai-trade-board"><a href="dubai-trade-board.html">Trade Board &amp; Management</a></li>
+                <li data-pagename="ceo-welcome-message"><a href="ceo-welcome-message.html">CEO Welcome Message</a></li>
+                <li data-pagename="tradelines"><a href="tradelines.html">Tradelines</a></li>
+                <li data-pagename=""><a href="javascript:void(0)">Statistics</a></li>
+                <li data-pagename="video-gallery"><a href="video-gallery.html">Video Gallery</a></li>
+                <li data-pagename="dubai-trade-evolution"><a href="dubai-trade-evolution.html">Dubai Trade Evolution</a></li>
+                <li class="active" data-pagename="media-kit"><a href="media-kit.html">Media Kit</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-xs-9"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sidebar col-xs-3"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nav-sidebar hidden-xs"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nav nav-pills nav-stacked"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"main-heading text-uppercase"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>about<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">data-pagename</span>=<span class="hljs-value">"vision-mission"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"vision-mission.html"</span>&gt;</span>Vision and Mission<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">data-pagename</span>=<span class="hljs-value">"dubai-trade-board"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"dubai-trade-board.html"</span>&gt;</span>Trade Board &amp;amp; Management<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">data-pagename</span>=<span class="hljs-value">"ceo-welcome-message"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"ceo-welcome-message.html"</span>&gt;</span>CEO Welcome Message<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">data-pagename</span>=<span class="hljs-value">"tradelines"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"tradelines.html"</span>&gt;</span>Tradelines<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">data-pagename</span>=<span class="hljs-value">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span>&gt;</span>Statistics<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">data-pagename</span>=<span class="hljs-value">"video-gallery"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"video-gallery.html"</span>&gt;</span>Video Gallery<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">data-pagename</span>=<span class="hljs-value">"dubai-trade-evolution"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"dubai-trade-evolution.html"</span>&gt;</span>Dubai Trade Evolution<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"active"</span> <span class="hljs-attribute">data-pagename</span>=<span class="hljs-value">"media-kit"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"media-kit.html"</span>&gt;</span>Media Kit<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="social-" data-section="social" data-heading="">
+
+            <div class="comment">
+                <h1>social</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div class="social-component text-center">
+                                    <a href="javascript:void(0)" class="fb">
+                                        <i class="fa fa-facebook "></i>
+                                    </a>
+                                    <a href="javascript:void(0)" class="twitter">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="javascript:void(0)" class="linkedin">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"social-component text-center"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fb"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-facebook "</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"twitter"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-twitter"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"linkedin"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fa fa-linkedin"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+		<div class="section" id="sticky_buttons-" data-section="sticky buttons" data-heading="">
+
+            <div class="comment">
+                <h1>sticky buttons</h1>
+                <p>This is for the sticky navigation buttons on the left edge of the screen.</p>
+            </div>
+
+                <div class="result">
+                    <div style="position:relative;height:150px;">
+<div class="sticky-sidebar pollbar">
+<a href="javascript:void(0)" class="sidebar-button poll">
+<span>POLLS</span>
+<img class="poll-image" src="Res/images/poll.png">
+</a>
+<a href="javascript:void(0)" class="sidebar-button survey">
+<span>SURVEYS</span>
+<img class="poll-image" src="Res/images/survey.png">
+</a>
+<div>
+</div></div></div>
+                </div>
+
+                <div class="markup hljs">
+<pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"position:relative;height:150px;"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sticky-sidebar pollbar"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sidebar-button poll"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>POLLS<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"poll-image"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"Res/images/poll.png"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:void(0)"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sidebar-button survey"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>SURVEYS<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"poll-image"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"Res/images/survey.png"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</pre>
+                </div>
+
+		</div>
+</div>
+</div>
+
+<script type="text/javascript" src="../app/Res/js/vendor/jquery.validate.js"></script>
+<script type="text/javascript" src="../app/Res/js/custom/bxslider.js"></script>
+<script type="text/javascript" src="../app/Res/js/global.js"></script>

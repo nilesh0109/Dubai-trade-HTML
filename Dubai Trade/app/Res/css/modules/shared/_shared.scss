@@ -1,0 +1,773 @@
+/* SG
+# Icons/inbox
+
+
+```
+<i class="fa fa-inbox fa-lg red-text"></i>
+```
+*/
+/* SG
+# Icons/tachometer
+
+
+```
+<i class="fa fa-tachometer fa-lg red-text"></i>
+
+```
+*/
+/* SG
+# Icons/search
+
+```
+<i class="fa fa-search fa-lg"></i>
+```
+*/
+/* SG
+# Icons/twitter
+
+```
+<i class="fa fa-twitter fa-lg"></i>
+```
+*/
+/* SG
+# Icons/facebook
+
+```
+<i class="fa fa-facebook fa-lg"></i>
+```
+*/
+/* SG
+# Icons/instagram
+
+```
+<i class="fa fa-instagram fa-lg"></i>
+```
+*/
+/* SG
+# Icons/linkedin
+
+```
+<i class="fa fa-linkedin fa-lg"></i>
+```
+*/
+/* SG
+# Icons/youtube
+
+```
+<i class="fa fa-youtube fa-lg"></i>
+```
+*/
+
+/* SG
+# Icons/home
+
+```
+<i class="fa fa-home fa-2x"></i>
+```
+*/
+
+/* SG
+# Icons/angleup
+This section covers all the font-awesome icons that we have used across the website.
+For complete list of icons , please refer http://fontawesome.io/icons/
+
+```
+<i class="fa fa-angle-up fa-3x"></i>
+```
+*/
+/* SG
+# Icons/calendar
+
+```
+<i class="fa fa-calendar fa-lg "></i>
+```
+*/
+
+/* SG
+# Icons/edit
+
+```
+<i class="fa fa-edit"></i>
+```
+*/
+/* SG
+# Icons/check-circle
+
+```
+<i class="fa fa-check-circle-o fa-lg"></i>
+```
+*/
+/* SG
+# Icons/minus-circle
+
+```
+<i class="fa fa-minus-circle fa-lg"></i>
+```
+*/
+/* SG
+# Icons/plus-circle
+
+```
+<i class="fa fa-plus-circle">  </i>
+```
+*/
+/* SG
+# Icons/plus
+
+```
+<i class="fa fa-plus"></i>
+```
+*/
+/* SG
+# Icons/minus
+
+```
+<i class="fa fa-minus"></i>
+```
+*/
+/* SG
+# Icons/arrow-right
+
+```
+<i class="fa fa-arrow-right fa-lg"></i>
+```
+*/
+/* SG
+# Icons/arrow-left
+
+```
+<i class="fa fa-arrow-left fa-lg"></i>
+```
+*/
+
+/* SG
+# Icons/eye
+
+```
+<i class="fa fa-eye"></i>
+
+```
+*/
+
+/* SG
+# Icons/download
+
+```
+<i class="fa fa-download"></i>
+
+```
+*/
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.remove-pad {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*--- only for inside content elements not for arabic ---*/
+.float-l {
+    float: left;
+}
+
+.float-r {
+    float: right;
+}
+
+.display-inline-block-ele {
+    display: inline-block;
+}
+
+.display-block-ele {
+    display: block;
+}
+
+.display-none-ele {
+    display: none;
+}
+
+.display-table-ele {
+    display: table;
+}
+
+.display-table-cell-ele {
+    display: table-cell;
+}
+
+/* SG
+# Common/Bold Text
+
+```
+<strong> Bolded text </strong>
+
+```
+
+*/
+/* SG
+# Common/Italicized Text
+
+```
+<em> italicized text </em>
+
+```
+
+*/
+
+/* SG
+# Common/Red Text
+
+You can just use the appropriate classnames for the following colored text. 
+
+```
+<span class="red-text"> highlighed text </span>
+
+```
+
+*/
+.red-text {
+    color: $red-color !important;
+}
+
+/* SG
+For the different sized Title across the websites you can use the below markup. 
+# Typography/title-h2
+
+font-size :`30px`
+margin-top: `35px`
+margin-bottom: `35px`
+
+```
+<h2 class="title"> page title </h2>
+```
+*/
+h2.title {
+    margin-bottom: 35px;
+    margin-top: 35px;
+    font-size: $font-30;
+
+    @media (max-width: $screen-xs-max) {
+        text-align: center;
+
+        //  margin-bottom: 15px;
+
+        &.mob-left {
+            text-align: $text-left;
+        }
+    }
+}
+
+/* SG
+# Typography/title-h3
+
+font-size :`30px`
+margin-top: `0px`
+margin-bottom: `0px`
+
+```
+<h3 class="title"> page title </h3>
+```
+*/
+
+h3.title {
+    margin-top: 0;
+    font-size: $font-30;
+}
+
+/* SG
+# Typography/title-h4
+
+font-size :`18px`
+margin-top: `0px`
+margin-bottom: `20px`
+
+```
+<h4 class="title"> page title </h4>
+```
+*/
+
+h4.title {
+    margin-bottom: 20px;
+
+    @media (max-width: $screen-xs-max) {
+        text-align: center;
+    }
+}
+
+/* SG
+# Typography/title-h6
+
+font-size :`22px`
+margin-top: `0px`
+margin-bottom: `0px`
+
+```
+<h6 class="title"> page title </h6>
+```
+*/
+
+h6.title {
+    font-size: 1.4em;
+}
+
+/* SG
+For the different sized Headings inside the innerpages you can use the below markup. 
+# Typography/heading-h2
+
+font-size :`28px`
+margin-top: `25px`
+margin-bottom: `10px`
+
+```
+<h2 class="heading"> section title </h2>
+```
+*/
+
+h2.heading {
+    font-size: 28px;
+    margin: 25px 0 10px;
+}
+
+/* SG
+
+# Typography/heading-h4
+
+font-size :`20px`
+margin-top: `25px`
+margin-bottom: `10px`
+
+```
+<h4 class="heading"> section title </h4>
+
+```
+*/
+
+h4.heading {
+    font-size: $font-20;
+    margin: 25px 0 10px;
+}
+
+/* SG
+
+# Typography/heading-h5
+
+font-size :`16px`
+margin-top: `10px`
+margin-bottom: `10px` 
+
+```
+<h5 class="heading"> section title </h5>
+
+```
+*/
+
+h5.heading {
+    font-size: $font-16;
+    margin: 10px 0;
+}
+
+/* SG 
+# Floating-images/left
+
+For floating the image on left side on detail pages , please use the below markup .
+
+```
+<div class="clearfix">
+<figure class="img-container">
+<img src="../Res/images/accolades/accolades2.png">
+</figure>
+<div class="textWrapper">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+Lorem Ipsum.</div>
+</div>
+```
+*/
+.img-container {
+    @extend .float-l;
+
+    @include margin-right($space-20);
+}
+
+.textWrapper {
+    overflow: hidden;
+}
+
+/* SG 
+# Floating-images/right
+
+For floating the image on right side on detail pages , please use the below markup .
+
+```
+<div class="clearfix">
+<figure class="img-container-right">
+<img src="../Res/images/accolades/accolades1.png">
+</figure>
+<div class="textWrapper">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+Lorem Ipsum.</div>
+</div>
+```
+*/
+.img-container-right {
+    @extend .float-r;
+
+    @include margin-left($space-20);
+}
+
+/* SG 
+# list/unordered 
+For the list items(ordered or unordered).
+
+```
+<ul class="list">
+<li>item1</li>
+<li>item2</li>
+<li>item3</li>
+</ul>
+```
+
+*/
+.list {
+    list-style: none;
+    list-style-type: none;
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+    padding-start: 0;
+}
+
+/* SG 
+# list/underlined 
+
+```
+<ul class="underlined-list">
+<li>item1</li>
+<li>item2</li>
+<li>item3</li>
+</ul>
+```
+*/
+.underlined-list li {
+    text-decoration: underline;
+}
+
+.line-separater {
+    background: #ccc;
+    height: 1px;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.asterisk {
+    @include margin-left(-3px);
+}
+
+/* SG 
+# Common /vertically centered
+```
+<div class="vertical-align-parent" style="height:200px;">
+<div class="vertical-center-element">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+Lorem Ipsum.
+</div>
+</div>
+```
+*/
+
+/* SG 
+# Common /centered
+```
+<div class="vertical-align-parent" style="height:200px;">
+<div class="vertical-align-element">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+Lorem Ipsum.
+</div>
+</div>
+```
+*/
+.vertical-align-parent {
+    position: relative;
+}
+
+.vertical-align-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vertical-center-element {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+ol,
+ol li {
+    list-style-type: none;
+}
+
+.sub-title {
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+ /* SG 
+# Mobile Aligned/left 
+For aligning any element(Generally text) only on mobile screens towards left, please use the class `mob-align-left`.
+Please Note this will not impact the alignment of element on tablet and deskop screens .
+
+```
+<div class="mob-align-left">LEFT ON MOBILE</div>
+
+```
+*/
+/* SG 
+# Mobile Aligned/center 
+For aligning any element(Generally text) only on mobile screens towards center, please use the class `mob-align-center`.
+Please Note this will not impact the alignment of element on tablet and deskop screens .
+
+```
+<div class="mob-align-center">CENTER ON MOBILE</div>
+```
+*/
+
+/* SG 
+# Mobile Aligned/right
+For aligning any element(Generally text) only on mobile screens towards right, please use the class `mob-align-right`.
+Please Note this will not impact the alignment of element on tablet and deskop screens .
+
+```
+<div class="mob-align-right">RIGHT ON MOBILE</div>
+```
+*/
+body {
+    .mob-align-left {
+        @media (max-width: $screen-xs-max) {
+            text-align: $text-left;
+        }
+    }
+
+    .mob-align-right {
+        @media (max-width: $screen-xs-max) {
+            text-align: $text-right;
+        }
+    }
+
+    .mob-align-center {
+        @media (max-width: $screen-xs-max) {
+            text-align: center;
+        }
+    }
+}
+
+/* SG
+# Common/back
+```
+<a href="javascript:void(0)" class="back-btn">back</a>
+```
+*/
+a.back-btn {
+    margin-top: 30px;
+    display: block;
+    margin-bottom: 30px;
+    font-size: $font-20;
+    display: inline-block;
+    color: $red-color;
+
+    &:hover {
+        color: $red-color;
+    }
+}
+
+.back-btn:before {
+    content: "";
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+
+    @include margin-right(3px);
+
+    @include margin-left(2px);
+
+    @include border-right(2px, #d0322c);
+
+    border-bottom: 2px solid #d0322c;
+    background-color: transparent;
+    transform: rotate(135deg);
+}
+
+/* SG
+# Common/download-btn
+```
+<a href="javascript:void(0)" class="download-link red-text">
+                    <img src="../Res/images/icons/icon-download.png">
+                    <strong class="text">Download the Vessel Schedule flyer</strong>
+                </a>
+```
+*/
+
+.download-link {
+    > img {
+        width: 32px;
+        height: 32px;
+    }
+
+    > strong {
+        @include margin-right($space-10);
+
+        position: relative;
+
+        &:after {
+            content: "";
+            border: 1px solid $red-color;
+            margin-top: 2px;
+            margin-top: 5px;
+            position: absolute;
+            width: 100%;
+
+            @include left(0);
+
+            top: 100%;
+        }
+    }
+}
+
+/* SG
+# Common/Red-btn
+```
+<div class="red-button-wrapper"><a href="javascript:void(0)" class="red-btn">Click Here</a></div>
+```
+*/
+.red-button-wrapper {
+    margin: 5px 0;
+
+    > a {
+        display: inline-block;
+    }
+}
+
+.red-btn {
+    background: $red;
+    padding: 5px 15px;
+    color: $white;
+    text-decoration: none !important;
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.content {
+    a.red-text {
+        &:hover {
+            color: $red-color !important;
+        }
+
+        &:visited {
+            color: $purple !important;
+
+            &:before, &:after, > :before, > :after {
+                border-color: $purple !important;
+            }
+        }
+    }
+}
+
+a {
+    cursor: pointer;
+}
+
+body a:focus {
+    outline: 0;
+}
+
+body > .wrapper {
+    background-color: $white;
+    position: relative;
+    padding-bottom: 300px;
+    min-height: 100%;
+
+    footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+    }
+}
+
+body {
+    font-size: 16px;
+}
+
+body.home {
+    overflow-x: hidden;
+}
+
+.map-container {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.content {
+    background-image: url("../images/home/zigzag.png");
+    background-repeat: no-repeat;
+    background-position: right 60px;
+
+    @media (max-width: $screen-xs-max) {
+        background: none;
+    }
+}
+
+.content p.line-height-1 {
+    line-height: 1;
+}
+
+a.link {
+    color: $red;
+    text-decoration: none;
+}
+
+body #at-cv-lightbox, .at-cv-lightbox-background {
+    display: none;
+}
+
+.animatedparent {
+    transform: translate3d(0, 0, 0);
+}
+
+.result-wrapper {
+    padding: 60px 0;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.highlight {
+    background-color: #F58A3C;
+}
+
+.margin-text {
+    margin: 20px 0 200px;
+}
+
+.dashboard .top-nav-wrap, .services .top-nav-wrap {
+    display: none;
+}
+
+body .wrapper {
+    overflow-x: hidden;
+}

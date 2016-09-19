@@ -1,0 +1,99 @@
+<form id="classified-form">
+	<div class='classifed-sorting-filter-wrapper clearfix'>
+		<div class='col-sm-12 selectFilters'>
+			<div class='filter-label'><strong>Filter by Category:</strong></div>
+			<div class="selectList-wrapper vis" id='main-category-wrapper' data-target="#sub-category1-wrapper" data-src="../Res/js/select.html">
+				<select class='selectList not_chosen' id='main-category' name='main-category' >
+					<option value="" disabled selected>Main Category</option>
+					<option value="Category2">Category 1</option>
+					<option value="Category1">Category 2</option>
+				</select>
+			</div>
+			<div class="selectList-wrapper" id='sub-category1-wrapper' data-target="#sub-category2-wrapper" data-src="../Res/js/select.html">
+				<select class='selectList not_chosen' id='sub-category1' disabled name='sub-category1' >
+					<option value="" disabled selected>sub Category1</option>
+					<option value="subCategory1">subCategory1</option>
+					<option value="subCategory2">subCategory2</option>
+				</select>
+			</div>
+			<div class="selectList-wrapper" id='sub-category2-wrapper' data-target="#sub-category3-wrapper" data-src="../Res/js/select.html">
+				<select class='selectList not_chosen' id='sub-category2' disabled name='sub-category2' >
+					<option value="" disabled selected>sub Category2</option>
+					<option value="subCategory1">subCategory1</option>
+					<option value="subCategory2">subCategory2</option>
+				</select>
+			</div>
+			<div class="selectList-wrapper" id='sub-category3-wrapper' data-target="#sub-category4-wrapper" data-src="../Res/js/select.html">
+				<select class='selectList not_chosen' id='sub-category3' disabled name='sub-category3' >
+					<option value="" disabled selected>sub Category3</option>
+					<option value="subCategory1">subCategory1</option>
+					<option value="subCategory2">subCategory2</option>
+				</select>
+			</div>
+			<div class="selectList-wrapper" id='sub-category4-wrapper' >
+				<select class='selectList not_chosen' id='sub-category4' disabled name='sub-category4'>
+					<option value="" disabled selected>sub Category4</option>
+					<option value="subCategory1">subCategory1</option>
+					<option value="subCategory2">subCategory2</option>
+				</select>
+			</div>
+		</div>
+		<div class='col-sm-3'>
+			<div class='filter-label date-label'><strong>Sort by Date:</strong></div>
+			<div class="date-picker input-group date">
+				<input type="text" class="form-control" name="from-date" placeholder="18/12/2016">
+				<div class="input-group-addon">
+					<i class="fa fa-calendar fa-lg "></i>
+				</div>
+			</div>
+		</div>
+		<div class='col-sm-3 to-filter'>
+			<span class='to'>To</span>
+			<div class="date-picker input-group date">
+				<input type="text" class="form-control" name="to-date" placeholder="19/12/2016">
+				<div class="input-group-addon">
+					<i class="fa fa-calendar fa-lg"></i>
+				</div>
+			</div>
+		</div>
+		
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date datetimepicker' id="datetimepicker1">
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar fa-lg"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+		<!--	<div class="datetime-picker input-group date">
+				<input type="text" class="form-control" name="to-date" placeholder="19/12/2016">
+				<div class="input-group-addon">
+					<i class="fa fa-calendar fa-lg"></i>
+				</div>
+			</div>  -->
+	
+		<div class='col-xs-12 col-sm-6'>
+			<button type='submit' class='submit-button'>SUBMIT</button>
+			<button type='reset' class='cancel-button'>CANCEL</button>
+		</div>
+	</div>
+	<div class="classifed-sorting clearfix">
+		<div class='col-sm-7 col-md-8'>
+			<span class='result-count'><em> showing 4920 in UAE DUbai</em></span>
+		</div>
+		<div class='col-sm-5 col-md-4'>
+			
+			<div class="selectList-wrapper" onchange="$(this).closest('form').submit();">
+				<select class='selectList' id='order-filter'  name='order-filter'>
+					
+					<option value="Category2">oldest to newest</option>
+					<option value="Category1">newest to oldest</option>
+				</select>
+				<div class='selectList-caret'></div>
+			</div>
+			
+		</div>
+	</div>
+</form>

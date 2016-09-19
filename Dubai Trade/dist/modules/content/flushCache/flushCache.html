@@ -1,0 +1,55 @@
+<div class='row'>
+	<h2 class='col-xs-12 title text-uppercase'><strong>Flush Cache</strong></h2>
+</div>
+<p class=' red-text'>Note : You must be authorized to perform Flush Cache activity. Please provide username and password to authenticate.</p>
+<form id="flush-cache-form" class="form-validate" autocomplete="off">
+	<div class='row'>
+		<div class="form-group clearfix">
+			<label for="username" class='col-sm-3 '>USERNAME:<span class='regMark red-text'>&#42;</span></label>
+			<div class='col-sm-9'>
+				<input type="text" id='user-name' name='user-name' data-rule-required="true" data-msg-required="Please enter username" autocomplete="off"/>
+			</div>
+		</div>
+		
+		<div class="form-group clearfix">
+			<label for="password" class='col-sm-3'>PASSWORD:<span class='regMark red-text'>&#42;</span></label>
+			<div class='col-sm-9'>
+				<input type="text" id='passowrd' name='passowrd' data-rule-required="true" data-msg-required="Please enter password" autocomplete="off"/>
+			</div>
+		</div>
+		<div class="form-group clearfix">
+			<label for="flush-select" class='col-sm-3 '>Cache Name:<span class='regMark red-text'>&#42;</span></label>
+			<div class='selectList-wrapper col-sm-9'>
+				<select class='selectList not_chosen required' data-rule-required="true" data-msg-required="Please select an option">
+					<option value="" disabled selected>Category</option>
+					<option value="Category1">Category1</option>
+					<option value="Category2">Category2</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="form-group clearfix">
+			<div class='col-sm-3'></div>
+			<div class='col-sm-9 captcha-container'>
+			
+			<input type="hidden" class="form-control" id="contact-captcha-hidden" name="contact-captcha" value="" disabled />
+			<div class="contact-captcha" id="contact-captcha">
+			</div>
+			<label class="reload-captcha" onclick="Captcha();"><span class="reload"></span></label>
+		</div>
+	</div>
+	
+	<div class="form-group clearfix">
+		<label for="captcha" class='col-sm-3 '>Please type the text you see above<span class='regMark red-text'>&#42;</span></label>
+		<div class='col-sm-9'>
+			<input type="text" class="form-control" id="input-captcha" name="input-captcha" equalTo='#contact-captcha-hidden'  data-rule-required="true" data-msg-equalTo="Captcha is not matching " data-msg-required="Please enter above captcha"  autocomplete="off"/>
+		</div>
+	</div>
+	
+	<div class="form-group clearfix">
+		<div class='col-sm-3'>
+		</div>
+		<button type="submit" class='submit-cache-form red-btn' >Clear Cache</button>
+	</div>
+</div>
+</form>

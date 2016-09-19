@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dubai Trade</title>
+        @@include('/modules/includes-header.html')
+        @@include('/modules/scripts.html')
+    </head>
+    <body class="contact-us">
+        <div class="wrapper">
+            <header class="header">
+                @@include('/modules/header/header.html')
+            </header>
+            <section class="inner-banner">
+                @@include('/modules/top-nav/top-nav.html')
+                @@include('/modules/inner-banner/inner-banner.html')
+            </section>
+            <section class="breadcrumb-container">
+                @@include('/modules/breadcrumb/breadcrumb.html')
+            </section>
+            <section class="content">
+                <div class="container">
+                    <div class="main-content">
+                        @@include('/modules/content/contact-us/contact-us.html')
+                    </div>
+                    
+                </div>
+                @@include('/modules/back-button/back-button.html')
+                @@include('/modules/sticky-pollbar/sticky-pollbar.html')
+            </section>
+            <footer class="footer">
+                @@include('/modules/footer/footer.html')
+            </footer>
+        </div>
+        
+        <script type="text/javascript" src="../Res/js/vendor/jquery.validate.js"></script>
+        <script type="text/javascript" src="../Res/js/custom/captcha.js"></script>
+       
+        <script type="text/javascript">
+        function initMap(){
+              var myLatlng = new google.maps.LatLng('24.980832' ,'55.092480');
+                    var mapOptions = {
+                    zoom: 10,
+                    center: myLatlng
+                }
+               var map = new google.maps.Map(document.getElementById('dubaiTrade'), mapOptions);
+                 var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: 'Dubai Trade'
+                });
+
+                google.maps.event.addDomListener(window, "resize", function() {
+                   var center = map.getCenter();
+                   google.maps.event.trigger(map, "resize");
+                   map.setCenter(center); 
+                });  
+        }
+    
+        </script>
+         <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+        @@include('/modules/includes-footer.html')
+    </body>
+</html>

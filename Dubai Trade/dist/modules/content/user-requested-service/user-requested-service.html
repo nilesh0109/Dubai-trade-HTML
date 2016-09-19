@@ -1,0 +1,46 @@
+<div>
+	<div class='user-agent-container'>
+		<input type="hidden" name="externalURL" value="${externalURL}" id="externalURL">
+		<div id="show-hide">
+			<c:set value="${id}" var="Id"></c:set>
+			<input type="hidden" name="id" value="${Id}" id="id">
+			<input type="hidden" name="isFav" value="${isFav}" id="isFav">
+			<input type="hidden" name="language" value="${param.languageCode}" id="language"> <input type="hidden" name="jsonURL" value='<%=PropertiesUtil.getProperty("serviceListJson")%>' id="jsonURL">
+			<c:if test="${empty externalURL && not empty agents && fn:length(agents) gt 1}">
+			<div class='useragentform-wrapper'>
+				<form id='user-agent' data-url="http://dtdev.dubaitrade.ae/portal/sso/gateway.do">
+					<div class='form-group'>
+						<span>Select User Agent:</span>
+						<select name="customer" id="customer" class='not_chosen' >
+							<option value="" disabled selected>----Select User Agent---</option>
+							<option value="${agent.agentName}-${agent.agentCode}">${agent.agentName}</option>
+						</select>
+						<label class='error-message'>Please choose user Agent</label>
+					</div>
+					<div class='form-group'>
+						<label><input type="checkbox" name="remember"id="remember"> Remember me</label>
+					</div>
+					<div class='form-group'>
+						<a id="submitFrame" href="javascript:void(0)" />Submit</a>
+					</div>
+				</form>
+			</div>
+			</c:if>
+		</div>
+	</div> 
+	@@include('/modules/content/related-services/related-services.html')
+
+	<div class='col-xs-12'>
+		<iframe name="frame1" id="frame1" width="100%" height="600" scrolling="no"
+		src="http://eservicesuat.dubaitrade.ae/portal/sso/gateway.do?serviceId=-2" onload="iframeResizer();"> </iframe>  
+		
+<!--
+		<iframe name="frame1" id="frame1" width="100%" height="600" scrolling="no"
+		src="http://localhost:3002/pages/home.html" onload="iframeResizer();"> </iframe>	 -->
+	</div>
+	
+
+</div>
+<script type='text/javascript'>
+	var JsonUrl = document.getElementById("jsonURL").value;
+</script>
