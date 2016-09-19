@@ -1,0 +1,44 @@
+.partners-wrapper {
+    .row {
+        text-align: center;
+        font-size: 0;
+
+        .box {
+            padding: 20px 0;
+            width: 22%;
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: middle;
+
+            @include margin-right(4%);
+
+            .icon-container {
+                //     text-align: $text-left;
+           
+            }
+
+            &:nth-child(4n) {
+                @include margin-right(0);
+
+                .icon-container {
+                    //       text-align: $text-right;
+               
+                }
+            }
+        }
+    }
+}
+
+#owl-partner {
+    display: block;
+
+    .owl-wrapper {
+        .owl-item {
+            .box {
+                width: auto;
+
+                @include margin-right(20px);
+            }
+        }
+    }
+}

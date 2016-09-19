@@ -1,0 +1,98 @@
+.why-rossom-wrapper {
+    .row {
+        text-align: $text-left;
+        font-size: 0;
+
+        .box {
+            padding: 20px 0;
+            width: 50%;
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: top;
+
+            @media (max-width: $screen-xs-max) {
+                width: 100%;
+                transform: translateX(0%) !important;
+                padding: 0;
+                padding-bottom: 15px;
+            }
+
+            .title {
+                font-size: $font-25;
+
+                @media (max-width: $screen-xs-max) {
+                    margin-top: 10px;
+                }
+            }
+
+            .desc {
+                font-size: $font-18;
+                margin-top: 10px;
+
+                @media (max-width: $screen-xs-max) {
+                    margin-top: 15px;
+                }
+            }
+
+            .textContainer {
+                overflow: hidden;
+            }
+
+            .icon-container {
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background: $red-color;
+            }
+
+            &:nth-child(even) {
+                @include padding-left(3%);
+
+                .icon-container {
+                    @extend .float-l;
+
+                    @include margin-right(25px);
+
+                    @media (max-width: $screen-xs-max) {
+                        float: none;
+                        margin: 0;
+                        text-align: center;
+                    }
+                }
+
+                text-align: $text-left;
+
+                @media (max-width: $screen-xs-max) {
+                    text-align: center;
+
+                    @include padding-left(0%);
+                }
+            }
+
+            &:nth-child(odd) {
+                @include padding-right(3%);
+
+                .icon-container {
+                    @extend .float-r;
+
+                    @include margin-left(25px);
+
+                    @media (max-width: $screen-xs-max) {
+                        float: none;
+                        margin: 0;
+                        text-align: center;
+                    }
+                }
+
+                text-align: $text-right;
+
+                @media (max-width: $screen-xs-max) {
+                    text-align: center;
+
+                    @include padding-right(0%);
+                }
+            }
+        }
+    }
+}

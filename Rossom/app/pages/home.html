@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rossom | Dubai Trade</title>
+    <link rel="stylesheet" type="text/css" href="../Res/css/owl.carousel.css"/>
+    <link rel="stylesheet" type="text/css" href="../Res/css/owl.theme.css"/>
+    @@include('/modules/includes-header.html')
+    @@include('/modules/scripts.html')
+  </head>
+  <body class="home">
+    <div class="wrapper">
+      <section class="content">
+        <header class="header"  data-spy="affix">
+          @@include('/modules/top-nav/top-nav.html')
+        </header>
+        <div class="main-content">
+          @@include('/modules/innerbanner/innerbanner.html')
+          @@include('/modules/content/home/about.html')
+          @@include('/modules/content/home/why-rossom.html')
+          @@include('/modules/content/home/partners.html')
+          @@include('/modules/content/home/customers.html')
+          @@include('/modules/content/home/news.html')
+          @@include('/modules/content/home/numbers.html')
+        </div>
+        <footer class="footer">
+          @@include('/modules/footer/footer.html')
+        </footer>
+      </section>
+    </div>
+    <div class="ajax-loader">
+      <img src="../Res/images/global/ajax-loader.gif" />
+    </div>
+    <script type="text/javascript" src="../Res/js/custom/skrollr.js"></script>
+    <script type="text/javascript" src="../Res/js/vendor/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="../Res/js/custom/owl.carousel.js"></script>
+    <script type="text/javascript" src="../Res/js/custom/jquery.countTo.js"></script>
+    <script type="text/javascript" src="../Res/js/custom/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="../Res/js/custom/inview.min.js"></script>
+    @@include('/modules/includes-footer.html')
+    <script src="../Res/js/home.js"></script>
+  </body>
+</html>

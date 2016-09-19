@@ -1,0 +1,157 @@
+.remove-pad {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.float-l {
+    float: left;
+}
+
+.float-r {
+    float: right;
+}
+
+.display-inline-block-ele {
+    display: inline-block;
+}
+
+.display-block-ele {
+    display: block;
+}
+
+.display-none-ele {
+    display: none;
+}
+
+.display-table-ele {
+    display: table;
+}
+
+.display-table-cell-ele {
+    display: table-cell;
+}
+
+.red-text {
+    color: $red-color;
+}
+
+.textWrapper {
+    overflow: hidden;
+}
+
+.mob-text-left {
+    @media (max-width: $screen-xs-max) {
+        text-align: $text-left;
+    }
+}
+
+.mob-text-center {
+    @media (max-width: $screen-xs-max) {
+        text-align: center;
+    }
+}
+
+.vertical-align-parent {
+    position: relative;
+}
+
+.vertical-align-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translateY(-50%, -50%);
+    -moz-transform: translateY(-50%, -50%);
+    -ms-transform: translateY(-50%, -50%);
+}
+
+.vertical-center-element {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    -webkit-transform: translateY(0%, -50%);
+    -moz-transform: translateY(0%, -50%);
+    -ms-transform: translateY(0%, -50%);
+}
+
+ol,
+ol li {
+    list-style-type: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+body .wrapper {
+    background-color: $white;
+}
+
+.content p.line-height-1 {
+    line-height: 1;
+}
+
+h2.page-title {
+    color: $red-color;
+    font-size: $font-36;
+    font-family: $font-helveticaLt;
+    padding: 20px 0;
+}
+
+.black-text {
+    color: $black;
+
+    &:hover {
+        color: $black;
+    }
+}
+
+.no-left-padding {
+    @include padding-left(0);
+
+    clear: both;
+}
+
+.no-right-padding {
+    @include padding-right(0);
+}
+
+.read-only {
+    visibility: hidden;
+    z-index: -1000;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+
+.offwhite-back {
+    background: $offwhite;
+}
+
+.ajax-loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 1;
+
+    > img {
+        top: 50%;
+
+        @include left(50%);
+
+        position: absolute;
+        margin-top: -50px;
+
+        @include margin-left(-50px);
+    }
+}
+
+body {
+    @media (min-width: $screen-sm-min) {
+        overflow: hidden;
+        height: 100% !important;
+    }
+}

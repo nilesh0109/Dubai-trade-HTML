@@ -1,0 +1,156 @@
+
+#contact{
+  padding-top: 60px;
+}
+
+.contact-form{
+    margin: 60px 0;
+}
+.contact-form input{
+  height: 50px;
+}
+.contact-form textarea{
+  height: 180px;
+}
+.comment-form button,
+.contact-form .contact-submit button,
+.comment-form input,
+.contact-form input,
+.comment-form textarea,
+.contact-form textarea{
+    background-color: #f2f2f2;
+    border-color: #dcdcdc;
+    border-radius: 5px;
+    outline: none;
+    box-shadow:none !important;
+    font-size: 16px;
+    font-weight: 100;
+    color: #808080;
+}
+.contact-form textarea{
+	max-width:100%;
+}
+
+.contact-form input:hover,
+.comment-form input:hover,
+.contact-form textarea:hover,
+.comment-form textarea:hover,
+.contact-form input:focus,
+.comment-form input:focus,
+.comment-form textarea:focus,
+.contact-form textarea:focus{
+    background-color: #e6e6e6;
+    border-color: #d4d4d3;
+    font-weight: 300;
+     -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-submit{
+  margin-top: 20px;
+}
+.comment-form button,
+.contact-form .contact-submit button {
+    width: 100%;
+    height: 50px;
+    background-color: #808080;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    font-weight: 500;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.comment-form button{
+  float: right !important;
+  width: auto !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  margin-top: 10px !important;
+  background-color: #343434 !important;
+}
+
+.comment-form button:hover{
+  background-color: #FFF !important;
+  color: #343434 !important;
+  border: #343434 1px solid !important;
+}
+
+.contact-form .contact-submit button i{
+  margin: 0 10px;
+}
+
+.contact-form .contact-submit button:hover{
+    background-color: #FFF;
+    color: #808080;
+    border: #808080 1px solid;
+}
+.contact-form .alert{
+  margin: 15px;
+}
+.contact-form .alert ul{
+  margin-top: 20px;
+}
+.contact-form .alert ul li{
+  margin-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.comment-form .error{ color:#fb3730;}
+
+
+footer {
+    .bottom-bar {
+        padding: 40px 0;
+        text-align: center;
+        background: $red-color;
+        color: $white;
+
+        @media (max-width: $screen-xs-max) {
+            padding: 20px 0;
+        }
+    }
+
+    .textWrapper {
+        position: relative;
+
+        .firstLine {
+            font-size: $font-32;
+            line-height: 1;
+            margin: 0;
+
+            @media (max-width: $screen-xs-max) {
+                font-size: $font-24;
+            }
+        }
+
+        .secondLine {
+            font-size: $font-16;
+            margin: 15px 0 0;
+
+            @media (max-width: $screen-xs-max) {
+                font-size: $font-14;
+            }
+        }
+
+        .footerLogoContainer {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+
+            @media (max-width: $screen-xs-max) {
+                position: static;
+                padding: 10px 0;
+            }
+        }
+    }
+}

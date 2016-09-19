@@ -1,0 +1,14 @@
+/* ---------------------------------- flexslider ------------------------------------- */
+.arabic .flexslider .slides > li {
+    float: right !important;
+}
+
+.arabic .flexslider .flex-direction-nav {
+    .flex-next {
+        transform: rotate(180deg);
+    }
+
+    .flex-prev {
+        transform: rotate(180deg);
+    }
+}

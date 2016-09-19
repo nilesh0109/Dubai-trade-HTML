@@ -1,0 +1,31 @@
+.customers-wrapper {
+    .row {
+        text-align: center;
+        font-size: 0;
+
+        .box {
+            padding: 20px 0;
+            font-size: 16px;
+            display: inline-block;
+
+            .icon-container {
+                > img {
+                    filter: grayscale(100%);
+                    -webkit-filter: grayscale(100%);
+                    -moz-filter: grayscale(100%);
+                    -o-filter: grayscale(100%);
+                    transition: .25s ease-in-out;
+                }
+
+                &:hover {
+                    > img {
+                        filter: grayscale(0%);
+                        -webkit-filter: grayscale(0%);
+                        -moz-filter: grayscale(0%);
+                        -o-filter: grayscale(0%);
+                    }
+                }
+            }
+        }
+    }
+}
