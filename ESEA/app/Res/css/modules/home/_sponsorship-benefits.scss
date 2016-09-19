@@ -1,0 +1,70 @@
+.home .sponsorship-benefits {
+    .sponsorship-banner {
+        margin: 30px 0;
+    }
+
+    .page-title {
+        padding: 30px 0;
+    }
+
+    .rounded-hands {
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+        text-align: center;
+        border-radius: 50%;
+        border: 5px solid #e8e8e8;
+
+        > img {
+            vertical-align: middle;
+            display: inline-block;
+
+            @include padding-left(5px);
+
+            padding-bottom: 12px;
+        }
+
+        &:after {
+            content: "";
+            display: inline-block;
+            height: 90px;
+            vertical-align: middle;
+        }
+    }
+
+    .sponsorship-text {
+        margin-bottom: 30px;
+    }
+
+    .underlined-heading {
+        margin-top: 30px;
+    }
+}
+
+.underlined-heading {
+    font-size: $font-30;
+    display: inline-block;
+
+    &:after {
+        content: "";
+        display: block;
+        max-width: 80%;
+        height: 1px;
+        background: $gray;
+        margin: 15px auto;
+    }
+
+    @media (max-width: $screen-sm-max) {
+        font-size: $font-20;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        display: block;
+        float: none !important;
+
+        &:after {
+            max-width: 150px;
+            margin: 5px auto 15px;
+        }
+    }
+}

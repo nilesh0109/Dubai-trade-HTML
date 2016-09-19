@@ -1,0 +1,131 @@
+#carousel {
+    width: 90%;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 0;
+
+    @media (max-width: $screen-xs-max) {
+        width: 80%;
+    }
+
+    .flex-viewport {
+        .slides {
+            li {
+                height: 140px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                text-align: center;
+                background: transparent;
+
+                > a {
+                    display: block;
+
+                    @include padding-right(40px);
+
+                    .thumbnail-wrapper {
+                        background: $white;
+                        padding: 10px;
+                        box-shadow: 0px 16px 12px -15px $gray;
+                    }
+                }
+
+                &:last-child {
+                    > a {
+                        @include padding-right(0px);
+                    }
+                }
+
+                &.flex-active-slide {
+                    .thumbnail-wrapper {
+                        background: $red-color;
+                    }
+                }
+
+                .thumbnail-container {
+                    background: $off-white;
+                    height: 91px;
+                    text-align: center;
+                    position: relative;
+
+                    img {
+                        width: auto;
+                        margin: 0 auto;
+                        max-height: 100%;
+                    }
+
+                    &:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        width: 50%;
+                        height: 100%;
+                        top: 0;
+                        background: rgb(255, 255, 255);
+
+                        /* Old browsers */
+                        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+                        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+                        background: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+
+                        /* FF3.6-15 */
+                        background: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 52%, rgba(255, 255, 255, 1) 100%);
+
+                        /* Chrome10-25,Safari5.1-6 */
+                        background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 52%, rgba(255, 255, 255, 1) 100%);
+
+                        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 );
+
+                        /* IE6-8 fallback on horizontal gradient */
+                    }
+                }
+
+                .thumbnail-text {
+                    padding: 5px 0;
+                    background: $white;
+                    font-family: $robotomedium;
+                    color: $red-color;
+                }
+            }
+        }
+    }
+
+    .flex-direction-nav {
+        .flex-prev {
+            opacity: 0.8;
+
+            @include right(initial);
+
+            @include left((-40px) !important);
+
+            @media (max-width: $screen-xs-max) {
+                @include left((-35px) !important);
+            }
+
+            @media (max-width: $screen-xs-min - 1) {
+                @include left((-30px) !important);
+            }
+        }
+
+        .flex-next {
+            opacity: 0.8;
+
+            @include left(initial);
+
+            @include right((-40px) !important);
+
+            @media (max-width: $screen-xs-max) {
+                @include right((-35px) !important);
+            }
+
+            @media (max-width: $screen-xs-min - 1) {
+                @include right((-30px) !important);
+            }
+        }
+
+        .flex-disabled {
+            opacity: 0.1 !important;
+        }
+    }
+}

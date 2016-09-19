@@ -1,0 +1,34 @@
+.search-content {
+    .detail-img-container {
+        width: 260px;
+        height: 260px;
+        border: 1px solid $lightgray;
+        display: block;
+    }
+
+    .result-title {
+        margin-bottom: 10px;
+        display: inline-block;
+        font-family: $robotolight;
+        font-size: $font-22;
+    }
+
+    .detailtextWrapper {
+        font-size: $font-22;
+        font-family: $robotolight;
+
+        ol {
+            margin-top: 20px;
+
+            > li {
+                + li {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    .red-btn {
+        font-size: $font-12;
+    }
+}

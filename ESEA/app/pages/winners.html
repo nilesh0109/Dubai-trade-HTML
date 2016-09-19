@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>E-services Excellance Award | Dubai Trade</title>
+        @@include('/modules/includes-header.html')
+        @@include('/modules/scripts.html')
+    </head>
+    <body class="7th-esea-winners">
+        <div class="wrapper">
+            <header class="header">
+                @@include('/modules/header/header.html')
+            </header>
+            <section class="inner-banner">
+                @@include('/modules/top-nav/top-nav.html')
+                @@include('/modules/inner-banner/inner-banner.html')
+                @@include('/modules/esea-carousel/esea-carousel.html')
+                @@include('/modules/nav-list/7th-nav-list.html')
+            </section>
+            <section class="content">
+                @@include('/modules/content/winners/winners.html')
+            </section>
+            <footer class="footer">
+                @@include('/modules/footer/footer.html')
+            </footer>
+        </div>
+          
+        @@include('/modules/includes-footer.html')
+        <script type="text/javascript" src="../Res/js/custom/lazyloader.js"></script>
+        <script type="text/javascript">
+            function lazyload()
+            {   
+                    $('.winner-wrapper').lazyLoader({
+                        jsonFile: '../Res/js/winners_2.json',
+                        mode: 'scroll',
+                        limit: 4,
+                        type:"winner",
+                        ajaxLoader : loaderPath
+                    });
+            }  
+            
+            $(function() {
+              lazyload();
+            });
+        </script>
+    </body>
+</html>

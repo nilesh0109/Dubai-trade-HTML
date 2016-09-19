@@ -1,0 +1,30 @@
+{
+  "globals": {
+    "jQuery": true,
+    "module": true,
+    "define": true,
+    "requirejs": true,
+    "require": true
+  },
+  "boss": true,
+  "browser": true,
+  "bitwise": true,
+  "curly": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "freeze": true,
+  "expr": true,
+  "immed": true,
+  "indent": 2,
+  "latedef": true,
+  "newcap": true,
+  "noempty": true,
+  "node": true,
+  "nonew": true,
+  "noarg": true,
+  "onevar": true,
+  "quotmark": "double",
+  "trailing": true,
+  "undef": true,
+  "unused":true
+}

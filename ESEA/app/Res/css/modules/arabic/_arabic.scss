@@ -1,0 +1,41 @@
+/* --------------------------- shared overwritten -------------------------------- */
+.ar .goback:before {
+    transform: rotate(180deg);
+}
+
+/* ----------------------------------- sponsors carousel overwritten -----------------------------------*/
+.ar .slick-carousel-container .slick-arrow.slick-next,
+.ar .slick-carousel-container .slick-arrow.slick-prev {
+    transform: rotate(180deg);
+}
+
+/* ---------------------------------- flexslider ------------------------------------- */
+.ar .flexslider .slides > li {
+    float: right !important;
+}
+
+.ar .flexslider .flex-direction-nav {
+    .flex-next {
+        &:before {
+            content: '\f001';
+        }
+    }
+
+    .flex-prev {
+        &:before {
+            content: '\f002';
+        }
+    }
+}
+
+.ar .winners .flexslider {
+    .flex-direction-nav {
+        .flex-next {
+            background: url("../images/icons/left-arrow.png") no-repeat;
+        }
+
+        .flex-prev {
+            background: url("../images/icons/right-arrow.png") no-repeat;
+        }
+    }
+}

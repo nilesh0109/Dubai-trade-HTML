@@ -1,0 +1,49 @@
+<h2 class='page-title text-uppercase text-center'>contact</h2>
+<div class='page-content contact container'>
+	<form class='contact-form validate-form'>
+		<div class='row'>
+			<div class='col-xs-12 col-sm-6'>
+				<input class='name' type='text'  id="name" name="name" placeholder="Name" data-rule-required="true" data-msg-required="Please enter your name">
+			</div>
+			<div class='col-xs-12 col-sm-6'>
+				<input class='company' type='text' id="company" placeholder="Company">
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-xs-12 col-sm-6'>
+				<input class='phone-number' type="tel"  id="phone-number" name="phone-number" placeholder="Contact" data-rule-required="true" data-msg-required="Please enter your phone number" data-msg-tel="Invalid phone number.Please use Numbers Only(i.e. 971501234567,041234567)" autocomplete="off"/>
+			</div>
+			<div class='col-xs-12 col-sm-6'>
+				
+				<div class='selectList-wrapper'>
+					<select class='categories not_chosen'>
+						<option value="" disabled selected>Categories</option>
+						<option value="a">Category A </option>
+						<option value="b">Category B </option>
+						<option value="c">Category C </option>
+						<option value="d">Category D </option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-xs-12 col-sm-6'>
+				<textarea class='message' type='text' placeholder="Message"></textarea>
+			</div>
+			
+			<div class='col-xs-12 col-sm-6 captcha'>
+				<div class='col-xs-4 captcha-container'>
+					<input type="hidden" class="form-control" id="contact-captcha-hidden" name="contact-captcha" value="" disabled />
+					<div class="contact-captcha" id="contact-captcha">
+					</div>
+				</div>
+				<div class='col-xs-8 captcha-inputbox'>
+					<input type="text" id="input-captcha" placeholder="Enter the code shown" name="input-captcha" equalTo='#contact-captcha-hidden'  data-rule-required="true" data-msg-equalTo="Captcha is not matching " data-msg-required="Please enter the above captcha"  />
+				</div>
+				<label class="reload-captcha" onclick="Captcha();"><span class="reload"></span></label>
+				<input type='submit' class='col-xs-12 red-btn text-uppercase text-center' />
+			</div>
+		</div>
+	</form>
+	
+</div>

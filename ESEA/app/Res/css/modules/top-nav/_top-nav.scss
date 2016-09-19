@@ -1,0 +1,67 @@
+.nav-container {
+    opacity: 0.8;
+    font-family: $robotomedium;
+    z-index: 1;
+    position: relative;
+
+    .top-nav {
+        @media (min-width: $screen-sm-min) {
+            display: table;
+        }
+
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+
+        > li {
+            @media (min-width: $screen-sm-min) {
+                display: table-cell;
+            }
+
+            text-align: center;
+            background: $off-white;
+            cursor: pointer;
+            padding: 20px 10px;
+
+            @include border-right(2px, $lightgray);
+
+            @media (max-width: $screen-xs-max) {
+                background: transparent;
+
+                @include border-right(0px, transparent);
+            }
+
+            > a {
+                color: $gray;
+                font-size: $font-22;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            &:last-child {
+                @include border-right(0px, $lightgray);
+            }
+
+            &.active {
+                background: $red-color;
+
+                @include border-right(2px, $red-color);
+
+                > a {
+                    color: $white;
+                }
+
+                @media (max-width: $screen-xs-max) {
+                    background: transparent;
+
+                    @include border-right(0px, $red-color);
+
+                    > a {
+                        color: $red-color;
+                    }
+                }
+            }
+        }
+    }
+}

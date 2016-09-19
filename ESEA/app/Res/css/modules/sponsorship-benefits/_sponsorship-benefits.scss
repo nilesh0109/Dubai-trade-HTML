@@ -1,0 +1,118 @@
+.sponsors-table {
+    display: table;
+    table-layout: fixed;
+    color: $gray;
+    width: 100%;
+    border: 1px solid $lightgray;
+    font-size: 24px;
+
+    @media (max-width: $screen-xs-max) {
+        font-size: 16px;
+    }
+
+    .table-row {
+        display: table-row;
+
+        .table-cell {
+            display: table-cell;
+            padding: 10px 5px;
+            text-align: center;
+            width: 17%;
+
+            p {
+                line-height: 1.2em;
+                font-size: 1em;
+            }
+
+            @include border-right(1px, $lightgray);
+
+            &:first-child {
+                text-align: $text-left;
+                width: 49%;
+                padding: 10px;
+            }
+
+            &:last-child {
+                @include border-right(0px, $lightgray);
+            }
+
+            @media (max-width: $screen-xs-max) {
+                border: none;
+                border-bottom: 1px solid $lightgray;
+                position: relative;
+                padding-left: 50% !important;
+                width: 100% !important;
+                display: block;
+                text-align: $text-left !important;
+
+                &:first-child {
+                    font-family: $robotomedium;
+                }
+
+                &:before {
+                    position: absolute;
+                    top: 12px;
+
+                    @include left(6px);
+
+                    width: 45%;
+                    padding-right: 10px;
+                    font-family: $robotomedium;
+                }
+
+                &:after {
+                    content: "";
+                    height: 100%;
+                    width: 1px;
+                    background: $lightgray;
+                    position: absolute;
+
+                    @include left(47.5%);
+
+                    top: 0px;
+                }
+
+                &:nth-child(1):before {
+                    content: "Package Details";
+                }
+
+                &:nth-child(2):before {
+                    content: "Platinum Sponsor";
+                }
+
+                &:nth-child(3):before {
+                    content: "Gold Sponsor";
+                }
+
+                &:nth-child(4):before {
+                    content: "Silver Details";
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            background: #ededed;
+        }
+
+        &:nth-child(odd) {
+            background: #f6f6f6;
+        }
+
+        &.table-head {
+            background: $red-color;
+            color: $white;
+
+            @media (max-width: $screen-xs-max) {
+                display: none;
+            }
+        }
+
+        .small-text {
+            font-size: 18px;
+
+            @media (max-width: $screen-xs-max) {
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+ul.pagination {
+    > li {
+        > a {
+            padding: 4px 10px;
+            color: $red-color;
+
+            &[aria-label="Previous"],
+            &[aria-label="Next"],
+            &[aria-label="First"],
+            &[aria-label="Last"] {
+                border-radius: 0;
+            }
+
+            &:hover {
+                color: #fff;
+                background: $red-color;
+                border-color: transparent;
+            }
+        }
+
+        &.disabled {
+            > a {
+                color: $gray;
+            }
+        }
+
+        &.active {
+            > a, > a:hover {
+                color: #fff;
+                background: $red-color;
+                cursor: pointer;
+                border-color: transparent;
+            }
+        }
+
+        &:nth-last-child(-n+2) {
+            @media (max-width: $screen-xs-max) {
+                display: inline;
+            }
+        }
+    }
+}

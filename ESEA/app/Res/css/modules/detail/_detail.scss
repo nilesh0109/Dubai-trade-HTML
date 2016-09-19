@@ -1,0 +1,205 @@
+.imgContainer {
+    @extend .float-l;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @include margin-right(20px);
+
+    width: 277px;
+    text-align: center;
+
+    @media (max-width: $screen-xs-max) {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+
+    .chairman {
+        margin-bottom: 20px;
+    }
+
+    .name {
+        font-size: $font-18;
+        display: block;
+    }
+
+    .designation {
+        font-size: $font-16;
+        color: $lightgray;
+        font-family: $opensansitalic;
+        display: block;
+    }
+}
+
+.content .textWrapper {
+    font-size: $font-25;
+
+    @media (max-width: $screen-xs-max) {
+        font-size: $font-16;
+    }
+
+    &.overflow {
+        overflow: visible;
+    }
+}
+
+.listcontainer {
+    li {
+        border-bottom: 1px solid $lightgray;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+
+        &:last-child {
+            border-bottom: 0px;
+        }
+
+        .sponsor-wrapper {
+            .imgContainer {
+                background: $white;
+                padding: 30px 10px;
+                border-radius: 5px;
+                border: 1px solid $lightgray;
+                margin-top: 10px;
+
+                @include border-left(15px, #e3b03d);
+            }
+
+            + .sponsor-wrapper {
+                margin-top: 40px;
+            }
+
+            &.silver-sponsor {
+                .imgContainer {
+                    @include border-left(15px, #cdcdcd);
+                }
+            }
+
+            &.category-sponsor {
+                .imgContainer {
+                    @include border-left(15px, $red-color);
+                }
+            }
+        }
+    }
+}
+
+.profile-wrapper {
+    h4.title {
+        margin: 30px 0;
+    }
+
+    > p {
+        margin: 30px 0;
+    }
+
+    .imgContainer {
+        background: $white;
+        padding: 30px 10px;
+        border: 2px solid $lightgray;
+        margin-top: 10px;
+    }
+
+    .red-bullet-list {
+        li {
+            font-size: $font-25;
+            margin: 10px 0;
+            font-family: $robotomedium;
+
+            @media (max-width: $screen-xs-max) {
+                font-size: 1em;
+            }
+
+            &:before {
+                content: "";
+                display: inline-block;
+
+                @extend .float-l;
+
+                width: 10px;
+                height: 10px;
+                background: $red-color;
+                margin-top: 10px;
+
+                @include margin-right(15px);
+            }
+
+            > * {
+                overflow: hidden;
+                line-height: 1.2;
+            }
+        }
+    }
+}
+
+.media-partner, .supporter {
+    background: $white;
+    margin-top: 10px;
+    display: inline-block;
+    width: 23%;
+    vertical-align: top;
+
+    @include margin-right(1.33%);
+
+    @media (max-width: $screen-md-max) {
+        width: 31%;
+        vertical-align: top;
+
+        @include margin-right(2%);
+    }
+
+    @media (max-width: $screen-sm-max) {
+        width: 47%;
+        vertical-align: top;
+
+        @include margin-right(2%);
+    }
+
+    @media (max-width: $screen-xs-min - 1) {
+        width: 100%;
+        vertical-align: top;
+
+        @include margin-right(0%);
+    }
+
+    .partner-logo {
+        border: 1px solid $lightgray;
+        border-radius: 5px;
+        padding: 10px 0;
+        position: relative;
+        z-index: 1;
+        background: $white;
+        text-align: center;
+        vertical-align: middle;
+        height: 150px;
+
+        > img {
+            max-height: 100%;
+            max-width: 97%;
+        }
+
+        &:after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+            width: 1px;
+            vertical-align: middle;
+        }
+    }
+
+    > .type {
+        background: $red-color;
+        color: $white;
+        padding: 10px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        position: relative;
+        top: -2px;
+        text-align: center;
+    }
+
+    &.full-width {
+        display: block;
+    }
+}

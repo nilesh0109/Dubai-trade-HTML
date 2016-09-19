@@ -1,0 +1,73 @@
+.error-page {
+    display: table;
+    height: 100%;
+    font-family: $robotolight;
+    margin: 0 auto 40px;
+
+    > .container {
+        display: table-cell;
+        vertical-align: middle;
+
+        [class*='msg-'] {
+            font-family: $bebas;
+            font-size: 2em;
+            color: $darkgray;
+            display: inline-block;
+            margin: 0 auto 20px;
+            padding: 40px 0;
+            overflow: hidden;
+            border-bottom: 2px solid #acabab;
+
+            > .firstLine {
+                font-size: 4em;
+                line-height: 1em;
+                display: block;
+            }
+
+            .error-span {
+                position: relative;
+
+                &:before, &:after {
+                    content: "";
+                    width: 1000px;
+                    background: #acabab;
+                    height: 2px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    position: absolute;
+                    top: 50%;
+                }
+
+                &:before {
+                    @include margin-right(5%);
+
+                    @include right(100%);
+                }
+
+                &:after {
+                    @include margin-left(5%);
+
+                    @include left(100%);
+                }
+            }
+        }
+
+        .secondLine {
+            font-size: $font-20;
+            font-family: $robotoregular;
+        }
+
+        p {
+            font-size: $font-18;
+        }
+
+        .link > a {
+            color: $red-color;
+            font-family: $robotomedium;
+        }
+    }
+}
+
+.page-500 {
+    margin-bottom: 71px;
+}

@@ -1,0 +1,44 @@
+.winner-detail {
+    overflow: hidden;
+    font-family: $robotolight;
+    font-size: $font-25;
+
+    > :first-child {
+        margin-top: 0;
+    }
+
+    > p {
+        line-height: 1.5;
+    }
+
+    .goback {
+        font-size: 0.85em;
+    }
+}
+
+.winner-logo-wrapper {
+    width: 280px;
+
+    @extend .float-l;
+
+    @include margin-right(20px);
+
+    @media (max-width: $screen-xs-max) {
+        float: none;
+        width: 100%;
+    }
+
+    .img-container {
+        width: 280px;
+        height: 260px;
+        border: 2px solid $lightgray;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    a.red-btn {
+        margin-top: 50px;
+        font-size: $font-14;
+        padding: 10px 20px;
+    }
+}

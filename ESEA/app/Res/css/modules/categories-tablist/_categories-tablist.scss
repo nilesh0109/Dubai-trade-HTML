@@ -1,0 +1,210 @@
+.categories-tablist {
+    .nav-tabs {
+        display: table;
+        border-spacing: 20px;
+        width: calc(100% + 40px);
+        table-layout: fixed;
+
+        @include margin-left(-20px);
+
+        &:before, &:after {
+            content: none;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            border-spacing: 10px;
+            width: calc(100% + 20px);
+
+            @include margin-left(-10px);
+        }
+
+        > li {
+            display: table-cell;
+            vertical-align: middle;
+            border: 1px solid $red-color;
+            background: $white;
+            float: none;
+            border-radius: 3px;
+            cursor: pointer;
+
+            > a {
+                font-family: $robotomedium;
+                border-radius: 0;
+                padding: 5px 0;
+                color: $red-color;
+                transition: all 0.25s ease-in-out;
+                cursor: pointer;
+
+                &:before, &:after {
+                    content: none;
+                }
+            }
+
+            &.active {
+                cursor: default;
+            }
+
+            &.active, &:hover {
+                border: 1px solid $red-color;
+                background: $red-color !important;
+
+                > a {
+                    border-radius: 0;
+                    padding: 5px 0;
+                    color: $white;
+                    background: transparent;
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        .tab-heading {
+            font-size: $font-28;
+            margin: 30px 0;
+
+            @include margin-left(96px);
+
+            @media (max-width: $screen-xs-max) {
+                font-size: $font-24;
+
+                @include margin-left(48px);
+            }
+
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 96px;
+                height: 96px;
+
+                @include margin-left(-96px);
+
+                @include margin-right(10px);
+
+                background: url("../images/icons/mob.png");
+                background-size: 100% 100%;
+                vertical-align: middle;
+
+                @media (max-width: $screen-xs-max) {
+                    width: 48px;
+                    height: 48px;
+
+                    @include margin-left(-48px);
+                }
+            }
+        }
+
+        h4.heading {
+            font-size: $font-24;
+
+            @media (max-width: $screen-xs-max) {
+                font-size: $font-20;
+            }
+        }
+
+        .ordered-list {
+            li {
+                .serial-no {
+                    @extend .float-l;
+                }
+
+                span.text {
+                    overflow: hidden;
+                    display: block;
+                }
+
+                + li {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        .categories-table {
+            margin-top: 30px;
+
+            .row {
+                margin: 0;
+
+                .table-header {
+                    background: $red-color;
+                    color: $white;
+                    padding: 10px 15px;
+                }
+            }
+
+            .table-content {
+                position: relative;
+                display: table;
+                width: 100%;
+
+                > .table-row {
+                    display: table-row;
+
+                    > .table-col {
+                        padding: 10px 15px;
+                        display: table-cell;
+                        width: 50%;
+                        border-bottom: 4px solid $white;
+                        vertical-align: middle;
+
+                        @include padding-left(40px);
+
+                        @media (max-width: $screen-xs-max) {
+                            @include padding-left(15px);
+                        }
+                    }
+
+                    &:last-child {
+                        > .table-col {
+                            border-bottom: 0;
+                        }
+                    }
+
+                    &:nth-child(even) {
+                        background: #ebebeb;
+                    }
+
+                    &:nth-child(odd) {
+                        background: $off-white;
+                    }
+                }
+
+                &:after {
+                    content: "";
+                    width: 1px;
+                    height: 100%;
+                    background: $lightgray;
+                    left: 50%;
+                    position: absolute;
+                    top: 0px;
+                }
+
+                border-top: 0px;
+                border: 1px solid $lightgray;
+            }
+        }
+
+        .nav-tabs {
+            font-size: 0.64em;
+            margin-top: 30px;
+
+            @media (max-width: $screen-xs-max) {
+                font-size: 1em;
+            }
+
+            @media (max-width: $screen-xs-min - 1) {
+                font-size: 0.75em;
+            }
+        }
+    }
+
+    &.sponsorship-tablist {
+        .tab-heading {
+            &:before {
+                content: "";
+                background: url("../images/icons/icon-preEvent.png");
+                background-size: 100% 100%;
+            }
+        }
+    }
+}

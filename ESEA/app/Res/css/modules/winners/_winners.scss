@@ -1,0 +1,110 @@
+.winner-wrapper {
+    .winner-container {
+        .winner-box {
+            border: 2px solid $lightgray;
+            display: block;
+            position: relative;
+            margin-top: 30px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+
+            .winner-content {
+                transition: all 0.25s ease-in-out;
+                height: 75%;
+                position: absolute;
+                width: 100%;
+                top: 0;
+            }
+
+            .winner-footer {
+                transition: all 0.25s ease-in-out;
+                border-top: 2px solid $lightgray;
+                position: absolute;
+                width: 100%;
+                bottom: -45px;
+                color: $lightgray;
+                background: $off-white;
+
+                > p {
+                    position: static;
+                    transform: translate(0%, 0%);
+                    line-height: 1.25;
+                    width: 100%;
+                    margin: 10px 0 0;
+
+                    span.detail {
+                        color: $gray;
+                        margin-top: 7px;
+                        display: block;
+                    }
+
+                    span.plus-sign {
+                        visibility: hidden;
+                        display: block;
+                        width: 35px;
+                        height: 35px;
+                        color: $red-color;
+                        background: $white;
+                        border-radius: 50%;
+                        margin: 10px auto;
+                        font-size: $font-30;
+                        text-align: center;
+                        font-weight: bold;
+                        line-height: 35px;
+                    }
+                }
+            }
+
+            &:before {
+                content: "";
+                margin-top: 125%;
+                display: block;
+            }
+
+            &:hover {
+                .winner-content {
+                    height: 45%;
+                }
+
+                .winner-footer {
+                    height: 55%;
+                    bottom: 0px;
+
+                    > p {
+                        position: absolute;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    span.award {
+                        color: $white;
+                    }
+
+                    span.detail {
+                        color: $white;
+
+                        &:after {
+                            content: "";
+                            width: 60%;
+                            height: 1px;
+                            background: $white;
+                            margin: 10px auto;
+                            display: block;
+                        }
+                    }
+
+                    background: $red-color;
+
+                    span.plus-sign {
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+
+    .load-more {
+        padding: 20px 0;
+    }
+}

@@ -1,0 +1,42 @@
+.text-Container {
+    .imgContainer {
+        @extend .float-l;
+
+        width: auto;
+        margin-top: 0px;
+
+        .name {
+            margin-top: 10px;
+        }
+
+        @media (max-width: $screen-xs-min - 1) {
+            float: none;
+        }
+    }
+
+    .legal-image {
+        @extend .float-r;
+
+        @include margin-left(20px);
+
+        @media (max-width: $screen-xs-max) {
+            display: none;
+        }
+    }
+
+    .text-wrapper {
+        font-family: $robotolight;
+        font-size: $font-25;
+        overflow: hidden;
+        line-height: 1.75;
+
+        @media (max-width: $screen-sm-max) {
+            clear: both;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            clear: none;
+            overflow: visible;
+        }
+    }
+}

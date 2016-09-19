@@ -1,0 +1,13 @@
+.home {
+    .gallery {
+        .galleryContainer {
+            @media (max-width: $screen-xs-max) {
+                .all {
+                    &:nth-child(n+5) {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}

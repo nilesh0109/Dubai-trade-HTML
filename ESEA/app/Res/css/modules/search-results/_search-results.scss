@@ -1,0 +1,121 @@
+.search-content {
+    .search-title {
+        color: $red-color;
+        font-size: $font-25;
+        margin-bottom: 20px;
+    }
+
+    .result-bar {
+        .result-count {
+            font-family: $font-arial;
+            font-size: $font-18;
+            margin-top: 14px;
+
+            @include margin-right(10px);
+
+            @extend .float-l;
+
+            @media (max-width: $screen-sm-max) {
+                float: none;
+                margin: 10px 0;
+            }
+        }
+
+        .search-string-container {
+            border: 1px solid $lightgray;
+            padding: 10px 5px;
+            overflow: hidden;
+            font-family: $font-arial;
+
+            .keyword {
+                @extend .float-l;
+
+                margin-top: 4px;
+
+                @include margin-right(20px);
+
+                @media (max-width: $screen-xs-max) {
+                    @include margin-right(10px);
+                }
+
+                @media (max-width: $screen-xs-min - 1) {
+                    float: none;
+                    margin-bottom: 5px;
+                    display: inline-block;
+                }
+            }
+
+            .search-button {
+                padding: 5px 30px;
+                font-family: $font-arial;
+                color: $white;
+                background: $red-color;
+                font-size: $font-16;
+
+                @include margin-left(20px);
+
+                @extend .float-r;
+
+                @media (max-width: $screen-xs-max) {
+                    padding: 5px 20px;
+
+                    @include margin-left(10px);
+                }
+
+                @media (max-width: $screen-xs-min - 1) {
+                    float: none;
+
+                    @include margin-left(0px);
+
+                    margin-top: 5px;
+                }
+            }
+
+            .textWrapper {
+                font-size: $font-16;
+
+                input {
+                    width: 100%;
+                    padding: 2px 10px;
+                }
+            }
+        }
+    }
+
+    .result-container {
+        margin: 20px 0;
+    }
+
+    .result {
+        border-bottom: 1px solid $lightgray;
+        padding: 20px 0;
+
+        &:first-child {
+            border-top: 1px solid $lightgray;
+        }
+
+        .result-title {
+            margin-bottom: 10px;
+            display: inline-block;
+            font-family: $robotolight;
+            font-size: $font-22;
+
+            &:hover {
+                color: $red-color;
+                text-decoration: underline;
+            }
+        }
+
+        .text {
+            font-family: $robotolight;
+            font-size: $font-20;
+        }
+
+        .timestamp {
+            font-size: $font-16;
+            font-family: $font-arial;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    }
+}

@@ -1,0 +1,145 @@
+.page-content {
+    font-family: $robotolight;
+
+    > p {
+        font-size: $font-25;
+
+        @media (max-width: $screen-xs-max) {
+            font-size: $font-16;
+        }
+    }
+
+    .nav-tabs {
+        border: 0;
+
+        > li {
+            background: #fff;
+
+            @media (max-width: $screen-xs-max) {
+                padding: 0 $space-5;
+            }
+
+            > a {
+                border: 0;
+                font-size: $font-24;
+                padding: 0;
+                margin: 0;
+                background: transparent;
+                color: $lightgray;
+
+                @media (max-width: $screen-xs-max) {
+                    font-size: $font-20;
+                }
+
+                @media (max-width: $screen-xs-min - 1) {
+                    font-size: $font-18;
+                }
+
+                &:hover {
+                    border: 0;
+                    background: transparent;
+                }
+
+                &:before {
+                    content: "";
+                    display: block;
+                    margin: 10px auto;
+                    background: url("../images/icons/tab-icons.png");
+                    width: 50px;
+                    height: 50px;
+                    background-position: 0px 0px;
+                    background-repeat: no-repeat;
+                    transition: background-position 0.25s ease-in-out;
+                }
+
+                &:after {
+                    content: "";
+                    width: 180px;
+                    height: 2px;
+                    background: $lightgray;
+                    display: block;
+                    margin: 10px auto 0;
+
+                    @media (max-width: $screen-xs-max) {
+                        width: 100px;
+                    }
+
+                    @media (max-width: $screen-xs-min - 1) {
+                        width: 60px;
+                    }
+                }
+            }
+
+            &.overview-tab {
+                > a {
+                    &:before {
+                        background-position: -168px 0px;
+                        width: 57px;
+                    }
+                }
+            }
+
+            &.vision-tab {
+                > a {
+                    &:before {
+                        background-position: -328px 14px;
+                        width: 54px;
+                    }
+                }
+            }
+
+            &.active {
+                > a {
+                    border: 0;
+                    color: $red-color;
+
+                    &:before {
+                        background-position: -90px 0px;
+                    }
+
+                    &:after {
+                        background: $red-color;
+                    }
+                }
+
+                &.overview-tab {
+                    > a {
+                        &:before {
+                            background-position: -231px 0px;
+                        }
+                    }
+                }
+
+                &.vision-tab {
+                    > a {
+                        &:before {
+                            background-position: -412px 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        font-size: $font-25;
+
+        .tab-content {
+            font-size: $font-16;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            font-size: $font-16;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+    }
+}
+
+.about-us .page-content .nav-tabs > li > a {
+    @media (max-width: $screen-xs-min - 1) {
+        font-size: $font-12;
+    }
+}

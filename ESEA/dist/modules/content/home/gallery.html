@@ -1,0 +1,36 @@
+<div>
+<div class='container animatedparent'>
+	<h2 class='page-title text-center nomargin-top text-uppercase animated fadeInDown'>MEDIA</h2>
+	<div class="galleryFilter">
+		<a href="javascript:void(0)" data-filter="news" class='animated fadeInLeft'> News</a>
+		<a href="javascript:void(0)" data-filter="image" class='animated fadeInLeft'> Images</a>
+		<a href="javascript:void(0)" data-filter="video" class='animated fadeInRight'>Videos</a>
+		<a href="javascript:void(0)" data-filter="all" class="current animated fadeInRight text-uppercase">All</a>
+	</div>
+</div>
+<div class="galleryContainer show-all clearfix">
+
+</div>
+<div class=' text-center red-btn-container'>
+	<a class='cta read-more red-btn' href='gallery.html?filter=all'>VIEW MORE</a>
+</div>
+
+<div class="gallery-popup vertical-align-parent">
+	<div class='gallery-content text-center vertical-align-element'>
+		<a class='prev-button navigation-btn'></a>
+		<span class='vertical-line'></span>
+		<a class='next-button navigation-btn'></a>
+		<a class='close-btn'>
+			
+		</a>
+		<img class='loader vertical-align-element' src='../Res/images/icons/ajax-loader2.gif' />
+		<div class='gallery-body'>
+			<img class='img-responsive' src='../res/images/gallery/youtube-video.jpg'>
+		</div>
+	</div>
+</div>
+</div>
+<script type='text/javascript'>
+var homeGalleryJson = '../Res/js/lazyload_2.json';
+var loaderPath= '../Res/images/icons/lazy-loader.gif';
+</script>

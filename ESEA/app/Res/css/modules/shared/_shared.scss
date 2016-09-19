@@ -1,0 +1,238 @@
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.remove-pad {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.float-l {
+    float: left;
+}
+
+.float-r {
+    float: right;
+}
+
+.display-inline-block-ele {
+    display: inline-block;
+}
+
+.display-block-ele {
+    display: block;
+}
+
+.display-none-ele {
+    display: none;
+}
+
+.display-table-ele {
+    display: table;
+}
+
+.display-table-cell-ele {
+    display: table-cell;
+}
+
+.red-text {
+    color: $red-color;
+}
+
+.link {
+    color: $red-color;
+
+    &:hover, &:active, &:focus {
+        color: $red-color;
+    }
+}
+
+.textWrapper {
+    overflow: hidden;
+}
+
+.mob-text-left {
+    @media (max-width: $screen-xs-max) {
+        text-align: $text-left;
+    }
+}
+
+.mob-text-center {
+    @media (max-width: $screen-xs-max) {
+        text-align: center;
+    }
+}
+
+.mesh-back {
+    background-image: url("../images/home/texture.png");
+}
+
+.home .mesh-back {
+    background-image: url("../images/home/grid.png");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.list,
+.sub-list {
+    list-style: none;
+    list-style-type: none;
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+    padding-start: 0;
+}
+
+.vertical-align-parent {
+    position: relative;
+}
+
+.vertical-align-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vertical-center-element {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+ol,
+ol li {
+    list-style-type: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+body .wrapper {
+    background-color: $white;
+}
+
+.content p.line-height-1 {
+    line-height: 1;
+}
+
+h2.page-title {
+    padding: 40px 0;
+    font-size: $font-40;
+    font-family: $robotomedium;
+
+    &.nomargin-top {
+        margin-top: 0px;
+        background-color: transparent;
+    }
+
+    &:after {
+        content: "";
+        height: 2px;
+        width: 250px;
+        margin: 30px auto 0;
+        background-color: $lightgray;
+        display: block;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        margin-top: 0px;
+    }
+}
+
+h4.heading {
+    font-size: $font-28;
+
+    &:after {
+        content: "";
+        height: 1px;
+        width: 180px;
+        margin-top: 15px;
+        background-color: $lightgray;
+        display: block;
+
+        @media (max-width: $screen-xs-max) {
+            width: 130px;
+        }
+    }
+
+    &.centered-underline {
+        &:after {
+            margin: 20px auto;
+        }
+    }
+
+    @media (max-width: $screen-xs-max) {
+        font-size: $font-20;
+    }
+}
+
+h3.heading {
+    font-size: $font-30;
+    font-family: $robotomedium;
+    margin: 30px 0;
+
+    @media (max-width: $screen-xs-max) {
+        font-size: $font-20;
+    }
+}
+
+h4.title {
+    font-size: $font-30;
+}
+
+h5.title {
+    font-size: $font-26;
+}
+
+.bold {
+    font-family: $robotomedium;
+}
+
+.regular {
+    font-family: $robotoregular;
+}
+
+.page-content {
+    padding-bottom: 40px;
+}
+
+.goback:before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    vertical-align: middle;
+    background: url("../images/icons/arrow.png") no-repeat;
+    margin: 30px 0;
+
+    @include margin-right($space-10);
+}
+
+.red-btn {
+    padding: 5px 40px;
+    color: $red-color;
+    background-color: transparent;
+    border: 2px solid $red-color;
+    display: inline-block;
+    margin: 30px 0;
+    font-family: $robotomedium;
+    font-size: $font-10;
+    border-radius: 4px;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+        color: $white;
+        background-color: $red-color;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}

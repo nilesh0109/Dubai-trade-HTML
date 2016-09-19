@@ -1,0 +1,50 @@
+.home {
+    .content {
+        > div {
+            overflow: hidden;
+
+            &:not(footer) {
+                padding-bottom: 40px;
+            }
+        }
+
+        .red-btn-container {
+            font-size: $font-24;
+            margin: 15px 0;
+        }
+
+        .page-title {
+            padding-top: 124px;
+
+            @media (max-width: $screen-xs-max) {
+                padding-top: 82px;
+            }
+        }
+
+        .cta.read-more {
+            clear: both;
+            padding: 10px 40px;
+        }
+
+        .imgContainer {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.scrollify-section {
+    overflow: hidden;
+
+    @media (max-width: $screen-xs-max) {
+        overflow: visible !important;
+    }
+
+    .vertical-center-element {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.about-us .read-more {
+    margin-top: 50px;
+}

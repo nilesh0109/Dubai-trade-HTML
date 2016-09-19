@@ -1,0 +1,94 @@
+<h2 class='page-title text-uppercase text-center'>SUBMISSION</h2>
+<div class='container'>
+	<form class='submission-form validate-form' autocomplete="off">
+		<h4 class="title bold">Dubai Trade Innovation Award</h4>
+		<h5 class="title regular"><span>Company Details</span></h5>
+		<div class='row'>
+			<div class='col-xs-12 col-sm-6 required'>
+				<input type='text'  id="company-name" name="company-name" placeholder="Company Name" data-rule-required="true" data-msg-required="Please enter the company name" autocomplete="off" />
+			</div>
+			<div class='col-xs-12 col-sm-6 required'>
+				<input type='tel' id="phone" placeholder="Phone" data-rule-required="true" data-msg-required="Please enter your phone number" data-msg-tel="Invalid phone number.Please use Numbers Only(i.e. 971501234567,041234567)" autocomplete="off" />
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-xs-12 col-sm-6 required'>
+				<input type='text'  id="contact-person" name="contact-person" placeholder="Contact Person" data-rule-required="true" data-msg-required="Please enter the contact person name" autocomplete="off" />
+			</div>
+			<div class='col-xs-12 col-sm-6 required'>
+				<input type='url' id="website" name="website" placeholder="Company Website" data-rule-required="true" data-msg-required="Please enter the company website url" data-msg-url="Please enter a valid url" autocomplete="off" />
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-xs-12 col-sm-6 required'>
+				<input type="email"  id="email" name="email" placeholder="Email" data-rule-required="true" data-rule-email="true" data-msg-required="Please enter your email address" data-msg-email="Please enter a valid email address" autocomplete="off"/>
+			</div>
+			<div class='col-xs-12 col-sm-6 required'>
+				<div class='selectList-wrapper'>
+					<select class='categories not_chosen' name="category" id="category" data-rule-required="true" data-msg-required="Please select one of the business activities">
+						<option value="" disabled selected>Key Business Activities</option>
+						<option value="a">Category A </option>
+						<option value="b">Category B </option>
+						<option value="c">Category C </option>
+						<option value="d">Category D </option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<h5 class="title regular"><span>Entry Details</span></h5>
+		<div class='row'>
+			<div class='col-xs-12 col-sm-6 required'>
+				<textarea class='message' type='text' id="summary" name="summary" placeholder="Project/Initiative Summary(2000 chars left)" data-rule-required="true" data-msg-required="Please enter the project summary"></textarea>
+			</div>
+			
+			<div class='col-xs-12 col-sm-6 required'>
+				<textarea class='message' type='text' id="challange" name="challange" placeholder="Business or technical challange (Drivers for change)(2000 chars left)" data-rule-required="true" data-msg-required="Please enter the challange"></textarea>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-xs-12 col-sm-6 required'>
+				<textarea class='message' type='text' id="solution-delivered" name="solution-delivered" placeholder="innovative Solution Delivered(2000 chars left)" data-rule-required="true" data-msg-required="Please enter the solution delivered"></textarea>
+			</div>
+			
+			<div class='col-xs-12 col-sm-6 required'>
+				<textarea class='message' type='text' id="impact" name="impact" placeholder="Areas of business impacted (2000 chars left)" data-rule-required="true" data-msg-required="Please enter the impact"></textarea>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-xs-12 col-sm-6 required'>
+				<textarea class='message' type='text' id="key-success" name="key-success" placeholder="Key success measures for the project/initiative (2000 chars left)" data-rule-required="true" data-msg-required="Please enter your key success measures"></textarea>
+			</div>
+			
+			<div class='col-xs-12 col-sm-6 required'>
+				<textarea class='message' type='text' id="solution-approach" name="solution-approach" placeholder="Solution implementation Approach (Key milestones / Timelines / Implementation challenges) (2000 chars left)" data-rule-required="true" data-msg-required="Please enter the solution implementation"></textarea>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-xs-12 col-sm-6'>
+				<textarea class='message' type='text' placeholder="Any innovative technologies utilized for the solution (if applicable) (2000 chars left)"></textarea>
+			</div>
+		</div>
+		<h5 class="title regular"><span>Attachments</span></h5>
+		<div class="row">
+			<div class="col-xs-12">
+
+				<a href="javascript:void(0)" class="link add-link">Add an attachment</a>
+			</div>
+		</div>
+		<h5 class="title regular"><span>Terms and Conditions</span></h5>
+		<div class='row'>
+			<div class="col-xs-12 checkbox-wrapper">
+				<input type="checkbox" name="termsNConditions" id="termsNConditions" data-rule-required="true" data-msg-required="please accept the terms and conditions to proceed">
+				<label for="termsNConditions">
+					I agree to Dubai Trade Innovation Awards <a href="javascript:void(0)" class="link required">Terms and Conditions</a>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<input type='submit' class='red-btn text-uppercase text-center' />
+			</div>
+		</div>
+	</form>
+	
+</div>
